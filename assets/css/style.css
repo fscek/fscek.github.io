@@ -1,0 +1,99 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fragment Mono", monospace;
+    background-color: #D67DB3; /* Updated primary background color */
+    color: #000000; /* Updated text color to black */
+}
+
+.display-font {
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: #000000; /* Updated headings to be black for consistency */
+}
+
+header {
+    background-color: #D67DB3; /* Updated to use the primary color */
+    color: #000000; /* Ensuring text is black for readability */
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #000000; /* Updated link color to black for consistency */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #D67DB3; /* Maintaining primary color */
+    color: #000000; /* Text color in footer is black */
+}
+
+.scrolling_text {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+
+.text {
+    font-weight: 400;
+    text-transform: lowercase;
+    color: #000000;
+    display: inline-block;
+    animation: animate_text 20s linear infinite;
+    font-size: 6em;
+    font-family: 'Terminal Grotesque', monospace; /* Custom font */
+
+}
+
+.text span {
+    margin: 0 0.2em;
+}
+
+@keyframes animate_text {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+
+  }
+  @font-face {
+    font-family: 'Terminal Grotesque';
+    src: url('../fonts/terminal-grotesque/terminal-grotesque-webfont.woff2') format('woff2'),
+         url('../fonts/terminal-grotesque/terminal-grotesque-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

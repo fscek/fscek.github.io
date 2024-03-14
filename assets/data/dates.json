@@ -1,0 +1,26 @@
+[
+    {
+      "date": "2024-04-26",
+      "clubnight": "TBA",
+      "venue": "AKC Attack",
+      "city": "Zagreb, Croatia 🇭🇷"
+    },
+    {
+      "date": "2024-05-03",
+      "clubnight": "TBA",
+      "venue": "KC Grad",
+      "city": "Belgrade, Serbia 🇷🇸"
+    },
+    {
+        "date": "2024-06-08",
+        "clubnight": "TBA",
+        "venue": "",
+        "city": "Varaždin, Croatia 🇭🇷"
+      },
+      {
+        "date": "2024-06-28",
+        "clubnight": "Velvet Festival",
+        "venue": "",
+        "city": "Punat, Croatia 🇭🇷"
+      }
+]
