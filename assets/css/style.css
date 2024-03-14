@@ -91,8 +91,6 @@ footer {
     display: inline-block;
     animation: animate_text 20s linear infinite;
     font-size: 6em;
-    margin-top: -2%;
-    margin-bottom: -2%;
     font-family: 'Terminal Grotesque', monospace; /* custom font */
 
 }
