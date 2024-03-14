@@ -64,17 +64,17 @@ footer {
 }
 
 #readMore {
-    background-color: #0000FF; /* Button background color */
-    color: #FFE31B; /* Button text color */
+    background-color: #000000;
+    color: #D67DB3;
     border: none;
-    padding: 10px 20px;
+    padding: 1em 1em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 0.7em;
     margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
+    cursor: crosshair;
+    border-radius: 1em;
 }
 
 .scrolling_text {
@@ -91,7 +91,9 @@ footer {
     display: inline-block;
     animation: animate_text 20s linear infinite;
     font-size: 6em;
-    font-family: 'Terminal Grotesque', monospace; /* Custom font */
+    margin-top: -2%;
+    margin-bottom: -2%;
+    font-family: 'Terminal Grotesque', monospace; /* custom font */
 
 }
 
