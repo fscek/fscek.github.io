@@ -22,11 +22,28 @@
     </header>
     <main>
         <section id="about">
-            <h2 class="display-font">about</h2>
-            <p class="fragment-mono-regular">SZCH (pronounced [ʃt͡ɕ]) is a DJ and producer hailing from the Istrian peninsula and currently based in Zagreb, Croatia. [...]</p>
+            <h2 class="display-font">about (definitely written by someone else)</h2>
+            <div id="bio" class="bio">
+                <p>SZCH (pronounced [ʃt͡ɕ]) is a DJ and producer hailing from the Istrian peninsula and currently based in Zagreb, Croatia.</p>
+                <p id="moreText" style="display: none;">
+                    Belonging to the new generation of Croatian artists, SZCH’s productions and sets are encapsulated in his characteristic meme and online microculture influenced humour, paired with his high energy, allowing him to cross traditional genre boundaries in club music and beyond, bridging them using various edits as set pieces, unanticipated BPM switches and distinctive mixing techniques, be it UK hardcore, baile-Jersey club fusions, gqom or Japanese garage-flavoured hyperpop.
+                    <br><br>
+                    As an autodidactic artist, he is unrestrained by conventional artistic influences and manages to set himself apart while still capturing and mastering the essence of his expressiveness and carrying it through his unique style.
+                    <br><br>
+                    He has introduced his music across various European countries, including Germany, France, Ukraine, the Netherlands, Switzerland, the UK, and Poland. Alongside his performances, he has also made notable appearances in live radio shows at Red Light Radio, Operator, Berlin Community Radio, Balamii, and through recorded shows for NTS Radio and LYL.
+                    <br><br>
+                    His music has caught the attention of notable artists like Objekt, rRoxymore, Ross From Friends, Peggy Gou, Baltra, and Charlie Bones, among others.
+                    <br><br>
+                    Most recently, Value, initiated by SZCH, is a project rooted in Zagreb with a global reach, focusing on the club community. It serves as a platform that bridges the online and physical spaces, spotlighting talents in music, art, and photography. The essence of Value lies in its commitment to providing a space for creative expression and connection, through club nights, live performances, and exhibitions. It's a place where both new and established artists can share their work in an environment that values subtlety, intellectual engagement, and community.
+                    <br><br>
+                </p>
+
+                <button onclick="toggleBio()" id="readMore">read more</button>
+            </div>
+            
         </section>
         <section id="dates">
-            <h2 class="display-font">dates</h2>
+            <h2 class="display-font">where can you see me</h2>
             <ul id="club-dates-list">
                 <!-- content will be dynamically inserted here by the dates-script.js -->
             </ul>
@@ -51,5 +68,6 @@
         <p class="fragment-mono-regular">&copy; 2024 SZCH. All rights reserved.</p>
     </footer>
     <script src="assets/js/dates-script.js"></script>
+    <script src="assets/js/toggle-bio.js"></script>
 </body>
 </html>

@@ -59,6 +59,24 @@ footer {
     color: #000000; /* Text color in footer is black */
 }
 
+.bio p {
+    margin-bottom: 1em;
+}
+
+#readMore {
+    background-color: #0000FF; /* Button background color */
+    color: #FFE31B; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 .scrolling_text {
     width: 100%;
     overflow: hidden;
