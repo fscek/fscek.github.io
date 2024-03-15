@@ -1,3 +1,2 @@
 - Insert 3D hero in the art page (Three.js?)
 - Images on the homepage?
-- home button turns normal blend mode after hover on desktop or on click on mobile
