@@ -1,2 +1,3 @@
 - Insert 3D hero in the art page (Three.js?)
 - Images on the homepage?
+- Simple chat on the homepage?
