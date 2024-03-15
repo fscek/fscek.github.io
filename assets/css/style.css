@@ -266,6 +266,10 @@ footer {
     max-width: 95%; /* width of the news container */
 }
 
+.news-title {
+    font-size: 24px;
+}
+
 .news-container h2 {
     text-align: center;
     margin-bottom: 20px;

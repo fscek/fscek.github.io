@@ -8,7 +8,8 @@ fetch('../assets/data/news.json')
         const newsItem = document.createElement('div');
         newsItem.className = 'news-item';
 
-        let newsContent = `<h3>${item.title}</h3>`;
+        // Here the "news-title" class is applied to the title
+        let newsContent = `<h3 class="news-title">${item.title}</h3>`;
         if (item.image) {
             newsContent += `<img src="${item.image}" alt="${item.title}" style="width:100%;max-width:600px;height:auto;">`;
         }
