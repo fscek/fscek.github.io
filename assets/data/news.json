@@ -1,0 +1,19 @@
+[
+    {
+      "title": "New test",
+      "date": "2024-03-15",
+      "content": "Test, This is a very big test<br>A paragraph too small is a paragraph never lived.",
+      "image": "",
+      "link": "www.google.com",
+      "tags": ["Release"]
+    },
+    {
+        "title": "Test 2",
+        "date": "2024-03-10",
+        "content": "Test",
+        "image": "",
+        "link": "",
+        "tags": ["Tour"]
+      }
+  ]
+  

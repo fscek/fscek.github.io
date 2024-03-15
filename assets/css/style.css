@@ -244,6 +244,52 @@ footer {
     z-index: 50;
 }
 
+/* news page css */
+.news-container {
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 8px; /* softens the edges */
+    margin: 20px auto; /* centralizes the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    max-width: 95%; /* width of the news container */
+}
+
+.news-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* styling for individual news items */
+.news-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* separating news items */
+}
+
+.news-item:last-child {
+    border-bottom: none; /* removing the border from the last item */
+}
+
+.news-item h3 {
+    margin: 0;
+    color: #D67DB3; /* using the primary color for headlines */
+}
+
+.news-item p {
+    margin: 5px 0 10px; /* spacing around the paragraph */
+}
+
+.news-item a {
+    color: #000000; /* ensuring links are visible */
+    text-decoration: underline; /* underlining links for clarity */
+}
+
+.news-item a:hover {
+    color: #D67DB3; /* hover effect for links */
+}
+
+
 /* threeJS css - commented out
 #threejs-container {
     width: 100%; 
