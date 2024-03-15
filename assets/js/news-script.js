@@ -2,9 +2,7 @@ fetch('../assets/data/news.json')
 .then(response => response.json())
 .then(newsItems => {
     const newsSection = document.getElementById('news-section');
-    
-    // clears existing content in the news section
-    newsSection.innerHTML = '';
+    newsSection.innerHTML = ''; // Clear existing content
 
     newsItems.forEach(item => {
         const newsItem = document.createElement('div');
@@ -15,8 +13,12 @@ fetch('../assets/data/news.json')
             newsContent += `<img src="${item.image}" alt="${item.title}" style="width:100%;max-width:600px;height:auto;">`;
         }
         newsContent += `<p>${item.date}</p><p>${item.content}</p>`;
-        if (item.link) {
-            newsContent += `<a href="${item.link}">Read More</a>`;
+
+        // Handling multiple links
+        if (item.links && item.links.length > 0) {
+            item.links.forEach(link => {
+                newsContent += `<a href="${link.url}">${link.text}</a><br>`;
+            });
         }
 
         newsItem.innerHTML = newsContent;

@@ -4,7 +4,10 @@
       "date": "2024-03-15",
       "content": "Test, This is a very big test<br>A paragraph too small is a paragraph never lived.",
       "image": "",
-      "link": "www.google.com",
+      "links": [
+        {"url": "https://google.com", "text": "buy"},
+        {"url": "https://google.hr", "text": "listen"}
+      ],
       "tags": ["Release"]
     },
     {
@@ -12,7 +15,10 @@
         "date": "2024-03-10",
         "content": "Test",
         "image": "",
-        "link": "",
+        "links": [
+        {"url": "https://google.com", "text": "listen"},
+        {"url": "https://google.hr", "text": "buy"}
+      ],
         "tags": ["Tour"]
       }
   ]
