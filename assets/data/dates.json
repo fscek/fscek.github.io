@@ -3,24 +3,28 @@
       "date": "2024-04-26",
       "clubnight": "TBA",
       "venue": "AKC Attack",
-      "city": "Zagreb, Croatia 🇭🇷"
+      "city": "Zagreb, Croatia 🇭🇷",
+      "url": ""
     },
     {
       "date": "2024-05-03",
       "clubnight": "TBA",
       "venue": "KC Grad",
-      "city": "Belgrade, Serbia 🇷🇸"
+      "city": "Belgrade, Serbia 🇷🇸",
+      "url": ""
     },
     {
         "date": "2024-06-08",
         "clubnight": "TBA",
         "venue": "",
-        "city": "Varaždin, Croatia 🇭🇷"
+        "city": "Varaždin, Croatia 🇭🇷",
+        "url": ""
       },
       {
         "date": "2024-06-28",
         "clubnight": "Velvet Festival",
         "venue": "",
-        "city": "Punat, Croatia 🇭🇷"
+        "city": "Punat, Croatia 🇭🇷",
+        "url": "https://www.velvetfestival.hr/"
       }
 ]

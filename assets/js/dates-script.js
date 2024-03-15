@@ -4,12 +4,17 @@ fetch('assets/data/dates.json')
     const datesList = document.getElementById('club-dates-list');
     dates.forEach(date => {
       const listItem = document.createElement('li');
-      let venueInfo = date.venue ? ` at ${date.venue}` : ""; // Check if venue exists
-      listItem.textContent = `${date.date} - ${date.clubnight}${venueInfo} - ${date.city}`;
+
+      // If there's a URL, make the entire line a hyperlink
+      if (date.url) {
+        listItem.innerHTML = `<a href="${date.url}" target="_blank" style="text-decoration: underline;">${date.date} - ${date.clubnight} at ${date.venue ? date.venue : ""} - ${date.city}</a>`;
+      } else {
+        listItem.textContent = `${date.date} - ${date.clubnight}${date.venue ? ` at ${date.venue}` : ""} - ${date.city}`;
+      }
+
       datesList.appendChild(listItem);
     });
   })
   .catch(error => {
     console.error('Error fetching club dates:', error);
-    // Optionally handle the error, e.g., display a message to the user
   });

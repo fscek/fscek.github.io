@@ -1,8 +1,5 @@
-// Assuming Three.js and GLTFLoader are included in your HTML via <script> tags
-// and you're using modules
-
-import * as THREE from 'assets/js/three.module.js';
-import { GLTFLoader } from 'assets/js/GLTFLoader.js';
+import * as THREE from './three.module.js';
+import { GLTFLoader } from './GLTFLoader.js';
 
 // Setup scene, camera, and renderer
 const scene = new THREE.Scene();
@@ -11,36 +8,42 @@ const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('threejs-container').appendChild(renderer.domElement);
 
-camera.position.set(0, 0, 2);
+camera.position.z = 5;
 
-// Lighting
-const ambientLight = new THREE.AmbientLight(0x404040);
-scene.add(ambientLight);
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-directionalLight.position.set(0, 1, 0);
-scene.add(directionalLight);
-
-const loader = new GLTFLoader();
-
-loader.load(
-  'assets/models/szch-3d-a-w.gltf',
-  function (gltf) {
+// GLTF Model Loading
+const gltfLoader = new GLTFLoader();
+gltfLoader.load('assets/models/szch-3d-a-w-compressed.glb', function(gltf) {
     scene.add(gltf.scene);
-    animate();
-  },
-  undefined,
-  function (error) {
-    console.error('An error happened during loading the model:', error);
-  }
-);
 
+    gltf.scene.traverse(function(node) {
+        if (node.isMesh) {
+            node.castShadow = true;
+            node.receiveShadow = true;
+        }
+    });
+
+    // Call animate here to ensure it starts after the model is loaded
+    animate();
+
+}, undefined, function(error) {
+    console.error('An error happened while loading the model:', error);
+});
+
+// Animation loop
 function animate() {
-  requestAnimationFrame(animate);
-  renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+
+    // Example: Rotate the model (optional, remove if not needed)
+    // if (gltf && gltf.scene) {
+    //     gltf.scene.rotation.y += 0.005;
+    // }
+
+    renderer.render(scene, camera);
 }
 
+// Responsive adjustments
 window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
 });
