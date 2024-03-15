@@ -1,5 +1,3 @@
-- Created hyperlinks in the dates.json and implement them in the dates.js
-- Inser 3D hero in the art page (Three.js?)
-- Images on the web?
-- Hyperlinks for "Value" in the bio + also link somewhere at the bottom?
-- bio read more button expand+collapse animation for the text?
+- Insert 3D hero in the art page (Three.js?)
+- Images on the homepage?
+- home button turns normal blend mode after hover on desktop or on click on mobile
