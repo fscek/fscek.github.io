@@ -1,0 +1,22 @@
+[
+    {
+      "title": "Test EP 2",
+      "releaseDate": "2024-03-15",
+      "description": "test",
+      "image": "",
+      "links": [
+        {"platform": "Spotify", "url": "https://spotify.com"},
+        {"platform": "Bandcamp", "url": "https://bandcamp.com"}
+      ]
+    },
+    {
+      "title": "Test EP",
+      "releaseDate": "2024-03-12",
+      "description": "test",
+      "image": "",
+      "links": [
+        {"platform": "Soundcloud", "url": "https://soundcloud.com"}
+      ]
+    }
+  ]
+  

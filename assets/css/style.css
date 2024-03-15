@@ -309,6 +309,21 @@ footer {
     color: #D67DB3; /* hover effect for links */
 }
 
+/* styling for the music page */
+
+.underline-link {
+    text-decoration: underline;
+}
+
+.release-item, .mix-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.release-item:last-child, .mix-item:last-child {
+    border-bottom: 1px solid #000000; /* Lighter separator */
+}
+
 
 /* threeJS css - commented out
 #threejs-container {
