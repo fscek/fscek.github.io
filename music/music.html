@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>szch.me music</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div id="pageOverlay" class="overlay" onclick="toggleMenu()"></div>
+    <header>
+        <div class="home-icon" onclick="location.href='../index.html'">
+            <img src="../assets/images/home-btn.png" alt="Home" style="width: 33px; height: auto;">
+        </div>
+        <div class="scrolling_text">
+            <div class="text">
+                <span>szch.me music </span><span>szch.me music </span><span>szch.me music </span><span>szch.me music </span><span>szch.me music </span>
+            </div>
+            <div class="text">
+                <span>szch.me music </span><span>szch.me music </span><span>szch.me music </span><span>szch.me music </span><span>szch.me music </span>
+            </div>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="../assets/images/hamburger-menu-open.png" alt="Menu open" id="menuIcon">
+        </div>
+        <div class="menu-content" id="menuContent">
+            <span class="close-menu" onclick="toggleMenu()">
+                <img src="../assets/images/hamburger-menu-close-D67DB3.png" alt="Menu close" style="display:none;" id="closeIcon">
+            </span>
+            <ul>
+                <li><a href="../index.html">take me home</a></li>
+                <li><a href="../news/news.html">news</a></li>
+                <li><a href="../music/music.html">music</a></li>
+                <li><a href="../visuals/visuals.html">visuals</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section id="releases-section" class="music-container">
+            <h2 class="display-font">Releases</h2>
+            <!-- releases items dynamically inserted here -->
+        </section>
+        <section id="mixes-section" class="music-container">
+            <h2 class="display-font">Mixes</h2>
+            <!-- mixes items dynamically inserted here -->
+        </section>
+    </main>
+    <footer>
+        <p class="fragment-mono-regular">&copy; 2024 SZCH. All rights reserved.</p>
+    </footer>
+    <script src="../assets/js/menu-toggle.js"></script>
+    <!-- scripts for handling releases and mixes data -->
+    <script src="../assets/js/releases-script.js"></script>
+    <script src="../assets/js/mixes-script.js"></script>
+</body>
+</html>
