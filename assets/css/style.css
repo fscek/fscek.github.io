@@ -70,6 +70,16 @@ footer {
     margin-bottom: 1em;
 }
 
+/*home icon css style */
+.home-icon {
+    cursor: crosshair;
+    padding: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 105;
+}
+
 /* socials and text decorations */
 /* underlines all anchor tags within the #socials section */
 #socials a {
