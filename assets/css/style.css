@@ -320,9 +320,19 @@ footer {
     padding-bottom: 20px;
 }
 
-.release-item:last-child, .mix-item:last-child {
-    border-bottom: 1px solid #000000; /* Lighter separator */
+.release-title, .mix-title {
+    font-size: 1.3em; /* Adjust this value as needed */
+    margin-bottom: 0.5em; /* Adds some space below the title */
 }
+
+/* If the titles are specifically within sections with IDs */
+#releases-section h2, #mixes-section h2 {
+    font-size: 2em; /* Adjust the size as needed */
+}
+
+/*.release-item:last-child, .mix-item:last-child {
+    border-bottom: 1px solid #000000; /* Lighter separator
+} /*
 
 
 /* threeJS css - commented out
