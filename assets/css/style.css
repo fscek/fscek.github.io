@@ -81,6 +81,11 @@ footer {
     mix-blend-mode: soft-light;
 }
 
+.home-icon:active {
+    filter: brightness(0); /* Makes the icon black on click for mobile */
+    mix-blend-mode: overlay;
+}
+
 /* socials and text decorations */
 /* underlines all anchor tags within the #socials section */
 #socials a {
