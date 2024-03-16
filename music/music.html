@@ -34,26 +34,27 @@
             <ul>
                 <li><a href="../index.html">take me home</a></li>
                 <li><a href="../news/news.html">news</a></li>
-                <li><a href="../music/music.html">music</a></li>
+                <li><a href="./music.html">music</a></li>
                 <li><a href="../visuals/visuals.html">visuals</a></li>
             </ul>
         </div>
     </header>
     <main>
         <section id="releases-section" class="music-container">
-            <h2 class="display-font">Releases</h2>
-            <!-- releases items dynamically inserted here -->
+            <h2 class="display-font">releases</h2>
+            <div id="year-filter-container-releases"></div> <!-- Container for year filters -->
+            <div class="releases-content-container"></div> <!-- Container for releases content -->
         </section>
         <section id="mixes-section" class="music-container">
-            <h2 class="display-font">Mixes</h2>
-            <!-- mixes items dynamically inserted here -->
+            <h2 class="display-font">mixes</h2>
+            <div id="year-filter-container-mixes"></div> <!-- Placeholder for mixes year filters -->
+            <div class="mixes-content-container"></div> <!-- Container for mixes content -->
         </section>
     </main>
     <footer>
         <p class="fragment-mono-regular">&copy; 2024 SZCH. All rights reserved.</p>
     </footer>
     <script src="../assets/js/menu-toggle.js"></script>
-    <!-- scripts for handling releases and mixes data -->
     <script src="../assets/js/releases-script.js"></script>
     <script src="../assets/js/mixes-script.js"></script>
 </body>

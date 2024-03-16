@@ -2,6 +2,7 @@
     {
       "title": "Test EP 2",
       "releaseDate": "2024-03-15",
+      "year": 2024,
       "description": "test",
       "image": "",
       "links": [
@@ -12,11 +13,11 @@
     {
       "title": "Test EP",
       "releaseDate": "2024-03-12",
+      "year": 2024,
       "description": "test",
       "image": "",
       "links": [
         {"platform": "Soundcloud", "url": "https://soundcloud.com"}
       ]
     }
-  ]
-  
+]
