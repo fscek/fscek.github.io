@@ -310,6 +310,38 @@ footer {
 }
 
 /* styling for the music page */
+/* releases + mixes */
+
+#year-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the buttons */
+    padding: 10px 0;
+    max-width: 40%;
+}
+
+.year-filter-button {
+    background-color: #000000;
+    color: #D67DB3;
+    padding: 0.4em 0.6em;
+    margin: 5px; /* Adjust margin to manage space between buttons */
+    text-align: center;
+    font-size: 0.7em;
+    cursor: crosshair;
+    border-radius: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    flex-basis: 20%; /* Adjust this to control the button width */
+    min-width: 30px;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 1.5em;
+}
+
+.year-filter-button:hover, .year-filter-button.active {
+    background-color: #D67DB3;
+    color: #000000;
+}
 
 .underline-link {
     text-decoration: underline;
