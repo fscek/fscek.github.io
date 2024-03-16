@@ -125,6 +125,19 @@ footer {
     transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0s linear 0s;
 }
 
+/* bio "read more" adjustments for smaller screens */
+@media (max-width: 768px) {
+    #moreText.show {
+        max-height: 1200px;
+    }
+}
+
+@media (max-width: 480px) {
+    #moreText.show {
+        max-height: 1800px;
+    }
+}
+
 #readMore {
     background-color: #000000;
     color: #D67DB3;
