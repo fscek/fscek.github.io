@@ -274,7 +274,7 @@ footer {
     border-radius: 8px; /* softens the edges */
     margin: 20px auto; /* centralizes the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
-    max-width: 95%; /* width of the news container */
+    max-width: 100%; /* width of the news container */
 }
 
 .news-title {
@@ -357,6 +357,8 @@ footer {
 .release-item, .mix-item {
     margin-bottom: 20px;
     padding-bottom: 20px;
+    opacity: 1; /* fully visible by default */
+    transition: opacity 0.5s ease; /* transition for opacity changes */
 }
 
 .release-title, .mix-title {
