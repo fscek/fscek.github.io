@@ -1,4 +1,4 @@
-// This function generates the year filters for mixes
+// Generate and append year filter buttons dynamically for mixes
 function generateMixesYearFilters() {
     const startYear = 2016;
     const currentYear = new Date().getFullYear();
@@ -17,28 +17,38 @@ function generateMixesYearFilters() {
     }
 }
 
-// This function fetches and renders the mixes based on the selected year
+// This function fetches and renders the mixes based on the selected year with fade transition
 function fetchAndRenderMixes(selectedYear) {
     fetch('../assets/data/mixes.json')
     .then(response => response.json())
     .then(mixes => {
-        const filteredMixes = mixes.filter(mix => new Date(mix.date).getFullYear() === selectedYear);
         const mixesContainer = document.querySelector('.mixes-content-container');
-        mixesContainer.innerHTML = ''; // Clear existing content
+        // Start fade-out
+        mixesContainer.style.opacity = 0;
 
-        filteredMixes.forEach(mix => {
-            const mixDiv = document.createElement('div');
-            mixDiv.className = 'mix-item';
-            let mixHTML = `<h3 class="mix-title">${mix.title}</h3><p>${mix.date}</p><p>${mix.description}</p>`;
-            if (mix.image) {
-                mixHTML += `<img src="${mix.image}" alt="${mix.title}" class="mix-image">`;
-            }
-            if (mix.link) {
-                mixHTML += `<a href="${mix.link}" target="_blank" class="underline-link">Listen</a>`;
-            }
-            mixDiv.innerHTML = mixHTML;
-            mixesContainer.appendChild(mixDiv);
-        });
+        setTimeout(() => {
+            mixesContainer.innerHTML = ''; // Clear existing content after fade-out
+
+            const filteredMixes = mixes.filter(mix => new Date(mix.date).getFullYear() === selectedYear);
+            filteredMixes.forEach(mix => {
+                const mixDiv = document.createElement('div');
+                mixDiv.className = 'mix-item';
+                let mixHTML = `<h3 class="mix-title">${mix.title}</h3><p>${mix.date}</p><p>${mix.description}</p>`;
+                if (mix.image) {
+                    mixHTML += `<img src="${mix.image}" alt="${mix.title}" class="mix-image">`;
+                }
+                if (mix.link) {
+                    mixHTML += `<a href="${mix.link}" target="_blank" class="underline-link">Listen</a>`;
+                }
+                mixDiv.innerHTML = mixHTML;
+                mixesContainer.appendChild(mixDiv);
+            });
+
+            // Reset container's opacity to trigger fade-in
+            requestAnimationFrame(() => {
+                mixesContainer.style.opacity = 1;
+            });
+        }, 400); // Matches the CSS transition duration
     })
     .catch(error => console.error('Error fetching mixes:', error));
 }

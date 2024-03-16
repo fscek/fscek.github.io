@@ -88,7 +88,7 @@ footer {
 }
 
 .home-icon:active {
-    filter: brightness(0); /* Makes the icon black on click for mobile */
+    filter: brightness(0); /* makes the icon black on click for mobile */
     mix-blend-mode: overlay;
 }
 
@@ -239,12 +239,12 @@ footer {
     z-index: 99;
     overflow-y: auto;
     padding: 20px;
-    transform: translateX(100%); /* Initially off-screen */
-    transition: transform 0.5s ease; /* Smooth transition for the transform */
+    transform: translateX(100%); /* initially off-screen */
+    transition: transform 0.5s ease; /* smooth transition for the transform */
 
 }
 .menu-content.active {
-    transform: translateX(0); /* Move into view */
+    transform: translateX(0); /* move into view */
 }
 
 .menu-content ul {
@@ -334,7 +334,7 @@ footer {
 #year-filter-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center align the buttons */
+    justify-content: center;
     padding: 10px 0;
     max-width: 40%;
 }
@@ -343,14 +343,14 @@ footer {
     background-color: #000000;
     color: #D67DB3;
     padding: 0.4em 0.6em;
-    margin: 5px; /* Adjust margin to manage space between buttons */
+    margin: 5px; /* margin to manage space between buttons */
     text-align: center;
     font-size: 0.8em;
     cursor: crosshair;
     border-radius: 1em;
     transition: background-color 0.3s, color 0.3s;
     display: inline-block;
-    flex-basis: 20%; /* Adjust this to control the button width */
+    flex-basis: 20%; /* controls the button width */
     min-width: 30px;
     border-color: #000;
     border-width: 2px;
@@ -379,13 +379,23 @@ footer {
     margin-bottom: 0.5em; /* Adds some space below the title */
 }
 
-/* If the titles are specifically within sections with IDs */
+/* for fading text content in and out */
+.releases-content-container {
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+
+.mixes-content-container {
+    transition: opacity 0.4s ease;
+    opacity: 1; /* Initial opacity */
+}
+
 #releases-section h2, #mixes-section h2 {
     font-size: 2em; /* Adjust the size as needed */
 }
 
 /*.release-item:last-child, .mix-item:last-child {
-    border-bottom: 1px solid #000000; /* Lighter separator
+    border-bottom: 1px solid #000000; /* separator
 } /*
 
 
