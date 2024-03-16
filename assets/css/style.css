@@ -20,7 +20,7 @@ header {
     color: #000000;
     padding: 3.5em 0;
     text-align: center;
-    border-top: 30px solid #000000;
+    border-top: 20px solid #000000;
     border-bottom: 6px solid #000000;
     position: -webkit-sticky; /* For Safari */
     position: sticky;
@@ -81,7 +81,7 @@ footer {
     cursor: crosshair;
     padding: 20px;
     position: fixed;
-    top: 20px;
+    top: 27px;
     left: 20px;
     z-index: 105;
     mix-blend-mode: soft-light;
