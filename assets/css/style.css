@@ -380,3 +380,9 @@ footer {
     height: 500px;
     background-color: #1a0c0c;
   }  */
+
+  @media (max-width: 768px) {
+    .year-filter-button {
+        border-color: #000000;
+    }
+}
