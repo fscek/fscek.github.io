@@ -128,13 +128,13 @@ footer {
 /* bio "read more" adjustments for smaller screens */
 @media (max-width: 768px) {
     #moreText.show {
-        max-height: 1200px;
+        max-height: 1600px;
     }
 }
 
 @media (max-width: 480px) {
     #moreText.show {
-        max-height: 1800px;
+        max-height: 2500px;
     }
 }
 
