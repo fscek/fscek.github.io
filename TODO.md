@@ -1,3 +1,6 @@
 - Insert 3D hero in the art page (Three.js?)
 - Images on the homepage?
 - Simple chat on the homepage?
+- Contact button on the lower right side (sticky)?
+- Add a single (the latest instance) of the news to the homepage
+- Fade text transition using opacity 0/1 states when toggling between the years on the music page (for the releases/mixes)
