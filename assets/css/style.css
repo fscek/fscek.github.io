@@ -185,13 +185,14 @@ footer {
     }
   }
 
-  /* link custom font */
+  /* link custom fonts */
   @font-face {
     font-family: 'Terminal Grotesque';
     src: url('../fonts/terminal-grotesque/terminal-grotesque-webfont.woff2') format('woff2'),
          url('../fonts/terminal-grotesque/terminal-grotesque-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 /* hamburger menu */
