@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>the home to szch.me</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>the home to szch.me</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <style>
+            .scrolling_text {
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                white-space: nowrap;
+                margin-bottom: -4em;
+                z-index: 10;
+            }
+    
+            .text {
+                font-weight: 400;
+                text-transform: lowercase;
+                color: #000000;
+                display: inline-block;
+                animation: animate_text 20s linear infinite;
+                font-size: 6em;
+                font-family: 'Terminal Grotesque', monospace; /* Ensure you have this font locally */
+            }
+    
+            @keyframes animate_text {
+                from {
+                  transform: translate3d(0, 0, 0);
+                }
+                to {
+                  transform: translate3d(-100%, 0, 0);
+                }
+            }
+        </style>
+    </head>
+    <body>
     <div id="pageOverlay" class="overlay" onclick="toggleMenu()"></div>
     <header>
         <div class="home-icon" onclick="location.href='/'">
@@ -92,9 +121,8 @@
     <footer>
         <p class="fragment-mono-regular">&copy; 2024 SZCH. All rights reserved.</p>
     </footer>
-    <script src="assets/js/menu-toggle.js"></script>
+    <script src="assets/js/menu-toggle.js" defer></script>
     <script src="assets/js/dates-script.js"></script>
     <script src="assets/js/toggle-bio.js"></script>
-    <script type="module" src="assets/js/three-setup.js"></script>
 </body>
 </html>
