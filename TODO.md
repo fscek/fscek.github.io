@@ -6,3 +6,4 @@
 - Include overlay on the heading as well when the menu bar is open
 - Locally store and display body and display fonts
 - Implement JS embed logic for Soundcloud, Bandcamp and YouTube preview embeds
+- Custom 404 HTML page
