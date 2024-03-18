@@ -1,0 +1,19 @@
+[
+    {
+      "title": "Visual Artwork 1",
+      "date": "",
+      "description": "A description of the first visual artwork.<br>Testing out breaks.",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/test.jpg",
+      "links": [
+        {"platform": "View on Instagram", "url": "https://instagram.com/visual1"}
+      ]
+    },
+    {
+      "title": "Visual Artwork 2",
+      "description": "A description of the second visual artwork, no specific date.",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/test.jpg",
+      "links": [
+        {"platform": "View on Instagram", "url": "https://instagram.com/visual1"}
+      ]      
+    }
+  ]  
