@@ -387,7 +387,7 @@ footer {
 }
 
 .release-image {
-    max-width: 50%; /* keeps the image as responsive, so it doesn't overflow its container */
+    max-width: 70%; /* keeps the image as responsive, so it doesn't overflow its container */
     height: auto; /* keeps the image's aspect ratio */
     display: block; /* images are inline by default; this ensures margin properties work */
     margin: 0 0 20px 0; /* applies margin to the bottom; no auto margin for horizontal alignment */
@@ -409,7 +409,7 @@ footer {
 }
 
 .mix-image {
-    max-width: 90%; /* keeps the image as responsive, so it doesn't overflow its container */
+    max-width: 70%; /* keeps the image as responsive, so it doesn't overflow its container */
     height: auto; /* keeps the image's aspect ratio */
     display: block; /* images are inline by default; this ensures margin properties work */
     margin: 0 auto 20px; /* centers the image and adds space below it */
@@ -417,8 +417,44 @@ footer {
 }
 
 .mix-description {
-    padding-top: 10px; /* Adds padding above the description */
-    padding-bottom: 10px; /* Adds padding below the description */
+    padding-top: 10px; /* padding above the description */
+    padding-bottom: 10px; /* padding below the description */
+}
+
+/* visuals.html */
+/* styling for the visuals page */
+
+#visuals-section h2 {
+    font-size: 2em; /* Adjust the size as needed */
+}
+
+.visuals-link {
+    text-decoration: underline;
+}
+
+.visual-description {
+    padding-top: 10px; /* padding above the description */
+    padding-bottom: 10px; /* padding below the description */
+}
+
+.visual-title {
+    font-size: 1.3em;
+    margin-bottom: 0.5em; /* some space below the title */
+}
+
+.visual-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    opacity: 1; /* fully visible by default */
+    transition: opacity 0.5s ease; /* transition for opacity changes */
+}
+
+.visual-image {
+    max-width: 70%; /* keeps the image as responsive, so it doesn't overflow its container */
+    height: auto; /* keeps the image's aspect ratio */
+    display: block; /* images are inline by default; this ensures margin properties work */
+    margin: 0 0 20px 0; /* applies margin to the bottom; no auto margin for horizontal alignment */
+    border-radius: 5px; /* adds rounded corners for a softer look */
 }
 
 /*.release-item:last-child, .mix-item:last-child {
