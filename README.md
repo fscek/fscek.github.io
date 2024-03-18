@@ -8,4 +8,5 @@ It will also serve as my personal archive throughout the years (2024 marks the 1
 
 Using jsDeliver as the CDN, grabbing assets from [the other repo hosting the files](https://github.com/fscek/szch-me-assets), inserting them in their respective JSONs and rendering them using the JS scripts.
 
+Some future plans and improvements are addressed via the repository's GitHub Issues page.
 WIP at the moment, hosted on GitHub Pages and Cloudflare DNS.
