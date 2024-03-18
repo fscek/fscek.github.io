@@ -4,7 +4,7 @@
       "releaseDate": "2024-03-15",
       "year": 2024,
       "description": "test",
-      "image": "",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/test.jpg",
       "links": [
         {"platform": "Spotify", "url": "https://spotify.com"},
         {"platform": "Bandcamp", "url": "https://bandcamp.com"}

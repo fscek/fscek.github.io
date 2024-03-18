@@ -17,34 +17,42 @@ function generateMixesYearFilters() {
     }
 }
 
-// This function fetches and renders the mixes based on the selected year with fade transition
+// Fetch and render mixes based on the selected year with fade transition
 function fetchAndRenderMixes(selectedYear) {
     fetch('../assets/data/mixes.json')
     .then(response => response.json())
     .then(mixes => {
         const mixesContainer = document.querySelector('.mixes-content-container');
-        // Start fade-out
         mixesContainer.style.opacity = 0;
 
         setTimeout(() => {
-            mixesContainer.innerHTML = ''; // Clear existing content after fade-out
+            mixesContainer.innerHTML = ''; // Clear existing mixes content
 
-            const filteredMixes = mixes.filter(mix => new Date(mix.date).getFullYear() === selectedYear);
-            filteredMixes.forEach(mix => {
-                const mixDiv = document.createElement('div');
-                mixDiv.className = 'mix-item';
-                let mixHTML = `<h3 class="mix-title">${mix.title}</h3><p>${mix.date}</p><p>${mix.description}</p>`;
-                if (mix.image) {
-                    mixHTML += `<img src="${mix.image}" alt="${mix.title}" class="mix-image">`;
+            mixes.forEach(mix => {
+                if (!mix.date || new Date(mix.date).getFullYear() === selectedYear) {
+                    const mixDiv = document.createElement('div');
+                    mixDiv.className = 'mix-item';
+                    let mixHTML = `<h3 class="mix-title">${mix.title}</h3>`;
+
+                    if (mix.date) {
+                        mixHTML += `<p>${mix.date}</p>`;
+                    }
+                    mixHTML += `<p class="mix-description">${mix.description}</p>`;
+
+                    if (mix.image) {
+                        mixHTML += `<img src="${mix.image}" alt="${mix.title}" class="mix-image">`;
+                    }
+
+                    // Iterate over the links array and append each link to mixHTML
+                    mix.links.forEach(link => {
+                        mixHTML += `<a href="${link.url}" target="_blank" class="mixes-link">${link.platform}</a><br>`;
+                    });
+
+                    mixDiv.innerHTML = mixHTML;
+                    mixesContainer.appendChild(mixDiv);
                 }
-                if (mix.link) {
-                    mixHTML += `<a href="${mix.link}" target="_blank" class="underline-link">Listen</a>`;
-                }
-                mixDiv.innerHTML = mixHTML;
-                mixesContainer.appendChild(mixDiv);
             });
 
-            // Reset container's opacity to trigger fade-in
             requestAnimationFrame(() => {
                 mixesContainer.style.opacity = 1;
             });
@@ -53,10 +61,8 @@ function fetchAndRenderMixes(selectedYear) {
     .catch(error => console.error('Error fetching mixes:', error));
 }
 
-// Initialize the script for mixes
 document.addEventListener('DOMContentLoaded', () => {
     generateMixesYearFilters();
-    // Optionally trigger the most recent year's button to show the mixes
     const mostRecentYearButton = document.querySelector('#year-filter-container-mixes .year-filter-button');
     if (mostRecentYearButton) {
         mostRecentYearButton.click();

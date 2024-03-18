@@ -1,4 +1,4 @@
-// generate and append year filter buttons dynamically for releases
+// Generate and append year filter buttons dynamically for releases
 function generateYearFiltersReleases() {
     const startYear = 2016; // starting from the first release year
     const currentYear = new Date().getFullYear();
@@ -16,47 +16,50 @@ function generateYearFiltersReleases() {
         filtersContainer.appendChild(button);
     }
 }
-
-// fetch and render releases based on the selected year with fade transition
+// Fetch and render releases based on the selected year with fade transition
 function fetchAndRenderReleases(selectedYear) {
     fetch('../assets/data/releases.json')
     .then(response => response.json())
     .then(releases => {
         const contentContainer = document.querySelector('.releases-content-container');
-        // start fade-out
-        contentContainer.style.opacity = 0;
+        contentContainer.style.opacity = 0; // Start fade-out
 
-        // wait for fade-out to complete before updating content
         setTimeout(() => {
-            contentContainer.innerHTML = ''; // clear existing releases content after fade-out
+            contentContainer.innerHTML = ''; // Clear existing releases content after fade-out
 
-            const filteredReleases = releases.filter(release => new Date(release.releaseDate).getFullYear() === selectedYear);
+            const filteredReleases = releases.filter(release => release.year === selectedYear);
             filteredReleases.forEach(release => {
                 const releaseItem = document.createElement('div');
                 releaseItem.className = 'release-item';
+
+                // Image handling
+                const imageUrl = release.image ? release.image : null;
+                const imageElement = imageUrl ? `<img src="${imageUrl}" alt="${release.title}" loading="lazy" class="release-image">` : '';
+
+                // Date handling
+                const dateElement = release.releaseDate ? `<p>${release.releaseDate}</p>` : '';
+
+                // Links handling
+                const linksHtml = release.links.map(link => `<a href="${link.url}" target="_blank" class="release-link">${link.platform}</a>`).join('<br>');
+
+                // Build HTML string for the release item
                 let releaseHTML = `<h3 class="release-title">${release.title}</h3>`;
-                if (release.image) {
-                    releaseHTML += `<img src="${release.image}" alt="${release.title}" class="release-image">`;
-                }
-                releaseHTML += `<p>${release.releaseDate}</p><p>${release.description}</p>`;
-                release.links.forEach(link => {
-                    releaseHTML += `<a href="${link.url}" target="_blank" class="release-link">${link.platform}</a><br>`;
-                });
+                releaseHTML += imageElement + dateElement + `<p class="release-description">${release.description}</p>` + linksHtml;
+
+                // Set the inner HTML of the release item
                 releaseItem.innerHTML = releaseHTML;
                 contentContainer.appendChild(releaseItem);
             });
 
-            // start fade-in
+            // Start fade-in
             contentContainer.style.opacity = 1;
-        }, 400); // delay should match the CSS transition time
+        }, 400); // Delay should match the CSS transition time
     })
     .catch(error => console.error('Error fetching releases:', error));
 }
 
-// Initialize
 document.addEventListener('DOMContentLoaded', () => {
     generateYearFiltersReleases();
-    // trigger the most recent year's button to display releases
     const recentYearButton = document.querySelector('#year-filter-container-releases .year-filter-button');
     if (recentYearButton) {
         recentYearButton.click();

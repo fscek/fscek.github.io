@@ -1,17 +1,21 @@
 [
-    {
-      "title": "Test mix 2",
-      "date": "2024-03-15",
-      "description": "test.",
-      "image": "",
-      "link": "https://soundcloud.com"
-    },
-    {
-      "title": "Test mix 2",
-      "date": "2024-03-12",
-      "description": "test.",
-      "image": "",
-      "link": "https://soundcloud.com"
-    }
-  ]
-  
+  {
+    "title": "Test mix 2",
+    "date": "2024-03-15",
+    "description": "test.",
+    "image": "",
+    "links": [
+      {"platform": "Listen on SoundCloud", "url": "https://soundcloud.com/testmix2"}
+    ]
+  },
+  {
+    "title": "Test mix",
+    "date": "2024-03-12",
+    "description": "test.",
+    "image": "",
+    "links": [
+      {"platform": "Listen on Mixcloud", "url": "https://mixcloud.com/testmix"},
+      {"platform": "Watch on YouTube", "url": "https://youtube.com/testmix"}
+    ]
+  }
+]
