@@ -1,6 +1,6 @@
 // Generate and append year filter buttons dynamically for releases
 function generateYearFiltersReleases() {
-    const startYear = 2016; // starting from the first release year
+    const startYear = 2015; // starting from the first release year
     const currentYear = new Date().getFullYear();
     const filtersContainer = document.getElementById('year-filter-container-releases');
 
