@@ -1,9 +1,9 @@
 [
     {
-      "title": "fight or flight EP",
+      "title": "fight or flight",
       "releaseDate": "2024-02-03",
       "year": 2024,
-      "description": "thank you stable diffusion for being stable",
+      "description": "EP, digital, self-released",
       "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/2024-02-03_fight_or_flight_ep.webp",
       "links": [
         {"platform": "Spotify", "url": "https://open.spotify.com/album/305XUWwxHiDYLeazWIMBHQ?si=gbRquk1ZRF-YIsznxMTb4w"},
@@ -11,13 +11,460 @@
       ]
     },
     {
-      "title": "Test EP",
-      "releaseDate": "2024-03-12",
-      "year": 2024,
-      "description": "test",
-      "image": "",
+      "title": "asim bajrić - dobro jutro, moja voljena (szch bajre funk bootleg)",
+      "releaseDate": "2023-12-07",
+      "year": 2023,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2023/releases/2023_asim_edit_1.webp",
       "links": [
-        {"platform": "Soundcloud", "url": "https://soundcloud.com"}
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/asim-bajri-dobro-jutro-moja-voljena-szch-bajre-funk-bootleg"}
+      ]
+    },
+    {
+      "title": "abnormalno mala",
+      "releaseDate": "2023-12-07",
+      "year": 2023,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2023/releases/2023_abnormalno_mala.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/6qaiaAGDAjPdIcutSh7rvM?si=2eae23674b644023"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/abnormalno-mala"}
+      ]
+    },
+    {
+      "title": "JELEEL! - TAMALE! FEAT. JALEEL! (SZCH! EDIT)",
+      "releaseDate": "2023-07-21",
+      "year": 2023,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2023/releases/2023_tamale_edit.webp",
+      "links": [
+        {"platform": "Soundcloud", "url": "https://soundcloud.com/filipscekic/tamale-edit"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/jeleel-tamale-feat-jaleel-szch-edit"}
+      ]
+    },
+    {
+      "title": "withdrawals",
+      "releaseDate": "2023-01-21",
+      "year": 2023,
+      "description": "Aken Aten vol. 1 V/A on Aken Aten<br><br>single, CD. shout out to Lederrick",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2023/releases/2023_aken_aten_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/0PgiOrX5D9hTevYAFqzEto?si=2_RcuXduQXW_7V4TL4EqIA"},
+        {"platform": "Bandcamp", "url": "https://akenaten.bandcamp.com/album/aken-aten-vol-1"}
+      ]
+    },
+    {
+      "title": "tyyy",
+      "releaseDate": "2022-11-07",
+      "year": 2022,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2022/releases/2022_tyyy.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/tyyy"}
+      ]
+    },
+    {
+      "title": "vine boom club (swaggy mix)",
+      "releaseDate": "2022-10-29",
+      "year": 2022,
+      "description": "THE MANY FACES OF FILTH III V/A on SCUMTAPES<br><br>single, digital. shout out to the discord server",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2022/releases/2022_scumtapes_halloween_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/4dwsrP2vm9EN3pu9oKJq2m?si=jKRQZWbwTVaMZ_95_ojUQQ"},
+        {"platform": "Bandcamp", "url": "https://scumtapes.bandcamp.com/track/vine-boom-club-swaggy-mix"}
+      ]
+    },
+    {
+      "title": "ineed2b",
+      "releaseDate": "2022-08-01",
+      "year": 2022,
+      "description": "Return of Rave V/A on GHETTO TRAXX<br><br>single, USB stick & cassette tape. shout out to the whole GTR crew",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2022/releases/2022_return_of_rave_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/43XQByRJHWzsbyLb4Q4Xpa?si=2af664e3f3b545b1"},
+        {"platform": "Bandcamp", "url": "https://ghettotraxx.bandcamp.com/track/06-szch-ineed2b"}
+      ]
+    },
+    {
+      "title": "agent​-​O (outbreak mix)",
+      "releaseDate": "2022-07-30",
+      "year": 2022,
+      "description": "SN5F V/A on SNIF<br><br>single, digital",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2022/releases/2022_szch_sn5f_va.webp",
+      "links": [
+        {"platform": "Soundcloud", "url": "https://soundcloud.com/snifsnifsnif/szch-agent-o-outbreak-mix"},
+        {"platform": "Bandcamp", "url": "https://snifrecs.bandcamp.com/track/szch-agent-o-outbreak-mix"}
+      ]
+    },
+    {
+      "title": "random​↘​shit​▂​collected​-​P t ∞infinite ∞",
+      "releaseDate": "2022-05-16",
+      "year": 2022,
+      "description": "the definitive 'SZCH aliases' release featuring: helical scan, LONELY GUARDIAN, avia, Carro Armato, Orlando Battifiaca and The Exterminating Cunt<br><br>album, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2022/releases/2022_random_sh_collected.webp",
+      "links": [
+        {"platform": "Soundcloud", "url": "https://soundcloud.com/filipscekic/sets/randomshitcollected-p-t-infinite"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/album/random-shit-collected-p-t-infinite"}
+      ]
+    },
+    {
+      "title": "muzika za smrt",
+      "releaseDate": "2022-02-10",
+      "year": 2022,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2022/releases/2022_muzika_za_smrt.webp",
+      "links": [
+        {"platform": "Soundcloud", "url": "https://soundcloud.com/filipscekic/muzika-za-smrt"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/muzika-za-smrt"}
+      ]
+    },
+    {
+      "title": "e-quake",
+      "releaseDate": "2022-02-10",
+      "year": 2022,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2022/releases/2022_equake.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/e-quake"},
+        {"platform": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2020_Zagreb_earthquake"}
+      ]
+    },
+    {
+      "title": "never fold",
+      "releaseDate": "2021-12-19",
+      "year": 2021,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2021/releases/2021_never_fold.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/0qEszr5qS22NE1MrM6bxp4?si=EAZUqYhYQrKbNu9WOpZPxw"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/never-fold"}
+      ]
+    },
+    {
+      "title": "POV: you're a schengen area border guard",
+      "releaseDate": "2021-04-20",
+      "year": 2021,
+      "description": "ALLERGY+ V/A on Angels Gun Club<br><br>single, digital. grande Massi",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2021/releases/2021_agc_allergy+_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/0tonwo6sIUdO4mOeNFAQRp?si=8410f54b678843a1"},
+        {"platform": "Bandcamp", "url": "https://angelsgunclub.bandcamp.com/track/szch-pov-youre-a-schengen-area-border-guard"}
+      ]
+    },
+    {
+      "title": "boiler room anthem (encore mix)",
+      "releaseDate": "2020-11-02",
+      "year": 2020,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_boiler_room_anthem.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/24Zvlnk3zGMVZYkVNqI32e?si=LfpSwLPhQ7izNm6BlYtwxQ"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/boiler-room-anthem-encore-mix"}
+      ]
+    },
+    {
+      "title": "Cuban Chamber of Commerce - Ping 900 (SZCH Remix)",
+      "releaseDate": "2020-10-10",
+      "year": 2020,
+      "description": "Ping 900 remix package on kepasaparadoks.<br><br>remix, digital",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_ccoc_szch_remix.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/4isvM9NbZA3yBr5r0Dv2kl?si=3d467b62ce5748d5"},
+        {"platform": "Bandcamp", "url": "https://kepasaparadoks.bandcamp.com/track/cuban-chamber-of-commerce-ping-900-szch-remix"}
+      ]
+    },
+    {
+      "title": "ada ciganlija (hasty dub)",
+      "releaseDate": "2020-10-01",
+      "year": 2020,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_ada_ciganlija.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/ada-ciganlija-hasty-dub"}
+      ]
+    },
+    {
+      "title": "effervescent",
+      "releaseDate": "2020-10-01",
+      "year": 2020,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_effervescent.webp.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/4yhsjLf0uRLGgL8z4fZCNh?si=MXOHoVwsSUSkwGFrlPHPKA"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/effervescent"}
+      ]
+    },
+    {
+      "title": "hmmm tools",
+      "releaseDate": "2020-06-15",
+      "year": 2020,
+      "description": "full artwork and embroidery credits to Iva Čukelj (@ivoola)<br><br>EP, digital, self-released. shout out to Iva Čukelj and Ana Bradvica",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_hmmm_tools_ep.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/07pu1q2s0rqL0v0Hwbag1J?si=T2i03IiETGGyDKiUMuKX_Q"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/album/hmmm-tools"}
+      ]
+    },
+    {
+      "title": "2k18 burnout",
+      "releaseDate": "2020-03-10",
+      "year": 2020,
+      "description": "EP, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_2k18_burnout_ep.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/3Tm4L1R6UhmCPh6ikhJfs1?si=TkYWi6k_S8ilaONV-WYMfA"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/album/2k18-burnout"}
+      ]
+    },
+    {
+      "title": "nokia riddim",
+      "releaseDate": "2020-02-29",
+      "year": 2020,
+      "description": "BRKN Rec. 003 V/A on BRKN Rec.<br><br>single, cassette tape. shout out to Miro",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_brkn_003_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/75TunoSjqQ2WryKuGdz9D3?si=wADj5twCRnCWoWnqlZDvRQ"},
+        {"platform": "Bandcamp", "url": "https://brknrecords.bandcamp.com/track/a3-szch-nokia-riddim"}
+      ]
+    },
+    {
+      "title": "DJ FUCKWIND presents 'Centener Fam'",
+      "releaseDate": "2020-01-13",
+      "year": 2020,
+      "description": "LI$019 on Low Income $quad<br><br>album, cassette tape",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_centener_fam.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/4Dc2KlUz9OjBbsAEchdSW6?si=IoETrQQDTCypclvkUArfFQ"},
+        {"platform": "Bandcamp", "url": "https://lowincomesquad.bandcamp.com/album/li-019"}
+      ]
+    },
+    {
+      "title": "spider solitaire in the club (fumbling pee pee mix)",
+      "releaseDate": "2019-12-22",
+      "year": 2019,
+      "description": "ANATEMA Vol​.​2 V/A on Minor Adjustments. also featured as KOLPORTER - 'SNARLYY 😒'<br><br>2 singles, cassette tape. shout out to Bolelee and Lil Taty",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2019/releases/2019_anatema_vol2_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/5JRfTKwWhJskQCefX21h8P?si=yeOwusQTR92ij6ct8ex2Ew"},
+        {"platform": "Bandcamp", "url": "https://minoradjustmentsrecords.bandcamp.com/album/anatema-vol-2"}
+      ]
+    },
+    {
+      "title": "'the tekken arcade machine prototype that never got released in europe' char select &battle theme",
+      "releaseDate": "2019-04-09",
+      "year": 2019,
+      "description": "single, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2019/releases/2019_tekken_arcade_prototype.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/5rVNpJNkZj7xw3IbBwxNIv?si=e3c94158409f4a6f"},
+        {"platform": "Soundcloud", "url": "https://soundcloud.com/filipscekic/the-tekken-arcade-machine-prototype-that-never-got-released-in-europe-char-select-battle-theme"}
+      ]
+    },
+    {
+      "title": "cigarette box warning (deadly mix)",
+      "releaseDate": "2019-01-22",
+      "year": 2019,
+      "description": "'6 o'Clock Rock' V/A on Departures Records<br><br>single, cassette tape",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2019/releases/2019_6_oclock_rock_va.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://departuresrecords.bandcamp.com/track/cigarette-box-warning-deadly-mix"}
+      ]
+    },
+    {
+      "title": "love afair",
+      "releaseDate": "2018-06-28",
+      "year": 2018,
+      "description": "'Good & Badd' V/A on The New U.S. Government<br><br>single, cassette tape",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/2018_tnusg_va.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://thenewusgovernment.bandcamp.com/track/love-affair"}
+      ]
+    },
+    {
+      "title": "feigning interest (phone mix)",
+      "releaseDate": "2018-01-26",
+      "year": 2018,
+      "description": "AHT100, a tri-tape V/A on Always Human Tapes<br><br>single, cassette tape",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/2018_aht_100.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/62aiSif0fKd8HtsnjiEm74?si=0nALXOMESgCJxeSZhDZIjQ"},
+        {"platform": "Bandcamp", "url": "https://alwayshumantapes.bandcamp.com/track/szch-feigning-interest-phone-mix"}
+      ]
+    },
+    {
+      "title": "house to save the house",
+      "releaseDate": "2018-01-09",
+      "year": 2018,
+      "description": "album, 40 limited edition cassette tapes<br><br>big BIG shout out to everyone who helped out, <3 shout out to my mom",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/2018_house_to_save_the_house_ep.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/3DhagswMJLSjm3dJc5T0jt?si=Zta-AjVxQGS4VhC4CagyDw"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/album/house-to-save-the-house"}
+      ]
+    },
+    {
+      "title": "Ankerkluese - Tendril (Strahinja Arbutina & SZCH Remix)",
+      "releaseDate": "2017-12-04",
+      "year": 2017,
+      "description": "Ankerkluese 'Rec Room EP' on Drowned Records<br><br>remix, 12-inch vinyl. shout out to the Walle crew",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/releases/2017_ankerkluese_tendril_remix.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://drownedrecords.bandcamp.com/track/tendril-strahinja-arbutina-szch-remix"}
+      ]
+    },
+    {
+      "title": "House Crime Vol. 8",
+      "releaseDate": "2017-11-05",
+      "year": 2017,
+      "description": "released on House Crime<br><br>EP, 12-inch vinyl",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/releases/2017_house_crime_ep.webp.webp",
+      "links": []
+    },
+    {
+      "title": "Ana's Theme",
+      "releaseDate": "2017-08-25",
+      "year": 2017,
+      "description": "Converpilations Vol.1 V/A on Online Conversations<br><br>single, 12-inch vinyl. shout out to Sarp",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/releases/2017_online_conversations_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/70oIwBY6foT404U51lT8WA?si=94d7fba5abf842b0"},
+        {"platform": "Bandcamp", "url": "https://onlineconversations.bandcamp.com/album/converpilations-vol-1"}
+      ]
+    },
+    {
+      "title": "",
+      "releaseDate": "",
+      "year": 201,
+      "description": "",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/.webp",
+      "links": [
+        {"platform": "Spotify", "url": ""},
+        {"platform": "Bandcamp", "url": ""}
+      ]
+    },
+    {
+      "title": "Learning To Cope",
+      "releaseDate": "2017-08-20",
+      "year": 2017,
+      "description": "DEPWAX 005 on Departures Records<br><br>EP, 12-inch vinyl. shout out to Marcelo and the crew",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/releases/2017_learning_to_cope_ep.webp",
+      "links": []
+    },
+    {
+      "title": "Močvara / Vatra",
+      "releaseDate": "2017-03-20",
+      "year": 2017,
+      "description": "LI​$​005 on Low Income $quad<br><br>commissioned album, cassette tape. shout out to Flufflord",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/releases/2017_lis005_album.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/2V0XeFzIbGPa8483GI1YMS?si=a86578d6c5474a34"},
+        {"platform": "Bandcamp", "url": "https://lowincomesquad.bandcamp.com/album/li-005"}
+      ]
+    },
+    {
+      "title": "Brzi Boogie",
+      "releaseDate": "2017-02-11",
+      "year": 2017,
+      "description": "INPL001 on Infinite Pleasure<br><br>EP, 12-inch vinyl. shout out to Khalil",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/releases/2017_brzi_boogie_ep.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/7lNiS0RWfF0uUiK0ms25SD?si=d45W6RyAT0CiYVwkumg41Q"},
+        {"platform": "Bandcamp", "url": "https://infinite-pleasure.bandcamp.com/album/szch-brzi-boogie-inpl001"}
+      ]
+    },
+    {
+      "title": "Strahinja Arbutina x SZCH - Suk My Dik",
+      "releaseDate": "2016-06-13",
+      "year": 2016,
+      "description": "LI$003 V/A on Low Income $quad<br><br>single, cassette tape",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2016/releases/2016_lis003_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/2eBJCDpQaTpMMzIaXySB2T?si=6742a9b13ca04435"},
+        {"platform": "Bandcamp", "url": "https://lowincomesquad.bandcamp.com/track/strahinja-arbutina-x-szch-suk-my-dik"}
+      ]
+    },
+    {
+      "title": "delirium tremens",
+      "releaseDate": "2016-02-29",
+      "year": 2016,
+      "description": "LI$002 V/A on Low Income $quad<br><br>single, cassette tape",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2016/releases/2016_lis002_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/2AqJFg2wfIpmo06Yc20fx2?si=874f6cfa27584400"},
+        {"platform": "Bandcamp", "url": "https://lowincomesquad.bandcamp.com/track/szch-delirium-tremens"}
+      ]
+    },
+    {
+      "title": "Untitled",
+      "releaseDate": "2016-02-26",
+      "year": 2016,
+      "description": "LLL01<br><br>EP, 12-inch vinyl. shout out to RW",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2016/releases/2016_untitled_ep.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://777recs.bandcamp.com/album/untitled-lll01"}
+      ]
+    },
+    {
+      "title": "rl or just a bus ride?",
+      "releaseDate": "2016-01-05",
+      "year": 2016,
+      "description": "AHT045 on Always Human Tapes<br><br>EP, cassette tape. shout to Ryan and the crew",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2016/releases/2016_rl_or_just_a_bus_ride_ep.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://alwayshumantapes.bandcamp.com/album/rl-or-just-a-bus-ride-aht045"}
+      ]
+    },
+    {
+      "title": "seizure salad / ana (inspiration of japan)",
+      "releaseDate": "2015-11-30",
+      "year": 2015,
+      "description": "LI$001 V/A on Low Income $quad<br><br>2 singles, cassette tape. shout out to Strahinja and Igor",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2015/releases/2015_lis001_va.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/4GAWcSczqP2FN8g3a0s6Ok?si=lgl6yJukSRqKGE7dFgyVlw"},
+        {"platform": "Bandcamp", "url": "https://lowincomesquad.bandcamp.com/album/li-001"}
+      ]
+    },
+    {
+      "title": "'hype kids' mixtape",
+      "releaseDate": "2015-10-27",
+      "year": 2015,
+      "description": "shout out to mops for the tag<br><br>mixtape/album, digital, self-released",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2015/releases/2015_hype_kids_mixtape.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/hype-kids-mixtape"}
+      ]
+    },
+    {
+      "title": "IX_III",
+      "releaseDate": "2015-09-08",
+      "year": 2015,
+      "description": "AHT040 on Always Human Tapes<br><br>EP, cassette tape. art by Josh McGarvey",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2015/releases/2015_ix_iii_ep.webp",
+      "links": [
+        {"platform": "Bandcamp", "url": "https://alwayshumantapes.bandcamp.com/album/ix-iii-aht040"}
+      ]
+    },
+    {
+      "title": "",
+      "releaseDate": "",
+      "year": 201,
+      "description": "",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/.webp",
+      "links": [
+        {"platform": "Spotify", "url": ""},
+        {"platform": "Bandcamp", "url": ""}
+      ]
+    },
+    {
+      "title": "",
+      "releaseDate": "",
+      "year": 201,
+      "description": "",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/.webp",
+      "links": [
+        {"platform": "Spotify", "url": ""},
+        {"platform": "Bandcamp", "url": ""}
       ]
     }
 ]
