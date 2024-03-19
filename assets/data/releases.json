@@ -1,13 +1,13 @@
 [
     {
-      "title": "Test EP 2",
-      "releaseDate": "2024-03-15",
+      "title": "fight or flight EP",
+      "releaseDate": "2024-02-03",
       "year": 2024,
-      "description": "test",
-      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/test.jpg",
+      "description": "thank you stable diffusion for being stable",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/2024-02-03_fight_or_flight_ep.webp",
       "links": [
-        {"platform": "Spotify", "url": "https://spotify.com"},
-        {"platform": "Bandcamp", "url": "https://bandcamp.com"}
+        {"platform": "Spotify", "url": "https://open.spotify.com/album/305XUWwxHiDYLeazWIMBHQ?si=gbRquk1ZRF-YIsznxMTb4w"},
+        {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/album/fight-or-flight"}
       ]
     },
     {
