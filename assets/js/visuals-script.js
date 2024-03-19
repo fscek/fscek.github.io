@@ -12,7 +12,7 @@ function fetchAndRenderVisuals() {
         let visualHTML = `<h3 class="visual-title">${visual.title}</h3>`;
         if (visual.images && visual.images.length) {
           visual.images.forEach(image => {
-            visualHTML += `<img src="${image}" alt="${visual.title}" class="visual-image">`;
+            visualHTML += `<img src="${image}" alt="${visual.title}" loading="lazy" class="visual-image">`;
           });
         }
         if (visual.date) {
