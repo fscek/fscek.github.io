@@ -2,8 +2,8 @@
   {
     "title": "Test mix 2",
     "date": "2024-03-15",
-    "description": "test.",
-    "image": "",
+    "description": "test",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/mixes/.webp",
     "links": [
       {"platform": "Listen on SoundCloud", "url": "https://soundcloud.com/testmix2"}
     ]
