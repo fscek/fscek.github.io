@@ -394,6 +394,13 @@ footer {
     border-radius: 5px; /* adds rounded corners for a softer look */
 }
 
+/* media query for desktop screens */
+@media (min-width: 768px) { /* adjust the breakpoint as needed */
+    .release-image {
+        max-width: 30%; /* smaller max-width for larger screens */
+    }
+}
+
 .release-description {
     padding-top: 10px; /* Adds padding above the description */
     padding-bottom: 10px; /* Adds padding below the description */
@@ -414,6 +421,13 @@ footer {
     display: block; /* images are inline by default; this ensures margin properties work */
     margin: 0 auto 20px; /* centers the image and adds space below it */
     border-radius: 5px; /* adds rounded corners for a softer look */
+}
+
+/* media query for desktop screens */
+@media (min-width: 768px) { /* adjust the breakpoint as needed */
+    .mix-image {
+        max-width: 30%; /* smaller max-width for larger screens */
+    }
 }
 
 .mix-description {
