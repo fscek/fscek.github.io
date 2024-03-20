@@ -34,14 +34,18 @@ function fetchAndRenderMixes(selectedYear) {
                     mixDiv.className = 'mix-item';
                     let mixHTML = `<h3 class="mix-title">${mix.title}</h3>`;
 
-                    if (mix.date) {
-                        mixHTML += `<p>${mix.date}</p>`;
-                    }
-                    mixHTML += `<p class="mix-description">${mix.description}</p>`;
-
+                    // Append the image right after the title
                     if (mix.image) {
                         mixHTML += `<img src="${mix.image}" alt="${mix.title}" class="mix-image">`;
                     }
+
+                    // Append the date if it exists
+                    if (mix.date) {
+                        mixHTML += `<p>${mix.date}</p>`;
+                    }
+
+                    // Append the description
+                    mixHTML += `<p class="mix-description">${mix.description}</p>`;
 
                     // Iterate over the links array and append each link to mixHTML
                     mix.links.forEach(link => {
