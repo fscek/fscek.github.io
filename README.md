@@ -2,7 +2,7 @@ Welcome to the repository for my personal portfolio website, [szch.me](http://sz
 
 I didn't want to overcomplicate things, so it's a cute and simple static website instead.
 
-Multiple JSON files feed into JS scripts that render them, and that sort of makes it like a small and fake CMS solution, which covers my needs completely at this time.
+Multiple JSON files feed into JS scripts that render them, and that sort of makes it like a small makeshift CMS solution, which covers my needs completely at this time.
 The JS scripts fetches the JSONs, parse them and skip particular content if their specific fields are filled out.
 It will also serve as my personal archive throughout the years (2024 marks the 10th anniversary of my project), so year selectors were also implemented.
 
