@@ -430,10 +430,16 @@ footer {
     }
 }
 
+@media (min-width: 768px) { /* adjust the breakpoint as needed */
+    .mix-description {
+        max-width: 50%; /* smaller max-width for larger screens */
+    }
+}
+
 .mix-description {
     padding-top: 10px; /* padding above the description */
     padding-bottom: 10px; /* padding below the description */
-    max-width: 50%;
+    max-width: 70%;
 }
 
 /* visuals.html */
@@ -470,6 +476,18 @@ footer {
     display: block; /* images are inline by default; this ensures margin properties work */
     margin: 0 0 20px 0; /* applies margin to the bottom; no auto margin for horizontal alignment */
     border-radius: 5px; /* adds rounded corners for a softer look */
+}
+
+.not-found-404-links {
+    text-decoration: underline;
+}
+
+.ascii-art {
+    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font */
+    white-space: pre; /* Ensures whitespace is preserved */
+    font-size: 8px; /* Adjust based on your design needs */
+    line-height: 1.2; /* Adjust line height to ensure proper spacing */
+    text-align: center; /* Center align the ASCII art */
 }
 
 /*.release-item:last-child, .mix-item:last-child {
