@@ -1,24 +1,13 @@
 [
   {
-    "title": "Visual Artwork 1",
-    "date": "2016",
-    "description": "A description of the first visual artwork.<br>Testing out breaks.",
+    "title": "WORK IN PROGRESS",
+    "date": "",
+    "description": "will be built soon.<br>until then, please enjoy the other pages",
     "images": [
-      "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/test.jpg",
-      "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/test.jpg"
+      "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/sorry.webp"
     ],
     "links": [
-      {"platform": "View on Instagram", "url": "https://instagram.com/visual1"}
+      {"platform": "", "url": ""}
     ]
-  },
-  {
-    "title": "Visual Artwork 2",
-    "description": "A description of the second visual artwork, no specific date.",
-    "images": [
-      "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/test.jpg"
-    ],
-    "links": [
-      {"platform": "View on Instagram", "url": "https://instagram.com/visual2"}
-    ]      
   }
 ]
