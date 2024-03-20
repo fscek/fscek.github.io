@@ -1,25 +1,36 @@
 [
+  {
+    "title": "szch.me IS LIVE ‼️<br>journalists call it “The SZCH Intranet”",
+    "date": "2024-03-20",
+    "content": "and something else i forgot to mention in the title:<br>👴 SZCH TURNS 10 YEARS OLD IN 2024! 👴<br>will celebrate that by doing even more tracks and shows whenever i can<br><br>now, i had the idea of a site and archive for a while now, something that feels like... home. a lot of the stuff i've done over the years got scattered around the winds and storms of the internet, so it feels really, REALLY good to see it all come together under one roof (and a logical next step really). i think those kinds of things really help with motivation and the feeling of 'getting stuff done'.<br><br>after procrastinating for 6 months, i just started making it around a week ago and this is how it turned out, nice'n'cute: nothing complicated, easy to update and maintain.<br>tell all your friends and hop on here every once in a while to get some news and hear some music.<br><br>if you're into c0mput3rZ, feel free to check out the site's repository on GitHub.<br><br>did i just make this into a blog? 😯😯",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/news/2024/03/2024_03_szch_me_lives.webp",
+    "links": [
+      {"url": "https://github.com/fscek/fscek.github.io", "text": "szch.me GitHub repo"}
+    ],
+    "tags": ["Mix"]
+  },  
     {
-      "title": "New test",
-      "date": "2024-03-15",
-      "content": "Test, This is a very big test<br>A paragraph too small is a paragraph never lived.",
-      "image": "",
+      "title": "new mix released: 'fun mix 2'",
+      "date": "2024-02-23",
+      "content": "'fun mix 2' is now live on Soundcloud and YouTube<br><br>a bit of everything, just the way i like it",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/mixes/2024_fun_mix_2.webp",
       "links": [
-        {"url": "https://google.com", "text": "buy"},
-        {"url": "https://google.hr", "text": "listen"}
+        {"url": "https://soundcloud.com/filipscekic/fun-mix-2", "text": "SoundCloud"},
+        {"url": "https://www.youtube.com/watch?v=XmP_3t_7nEg", "text": "YouTube"}
       ],
-      "tags": ["Release"]
+      "tags": ["Mix"]
     },
     {
-        "title": "Test 2",
-        "date": "2024-03-10",
-        "content": "Test",
-        "image": "",
+        "title": "'fight or flight' EP released!",
+        "date": "2024-02-03",
+        "content": "so excited that this EP is out! can't wait to play 'mess' somewhere this summer.<br>available on all platforms<br><br>shout out to everyone playing the tracks and to Jaša Bužinel for a very nice writeup",
+        "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/2024-02-03_fight_or_flight_ep.webp",
         "links": [
-        {"url": "https://google.com", "text": "listen"},
-        {"url": "https://google.hr", "text": "buy"}
+        {"url": "https://open.spotify.com/album/305XUWwxHiDYLeazWIMBHQ?si=gbRquk1ZRF-YIsznxMTb4w", "text": "Spotify"},
+        {"url": "https://szch.bandcamp.com/album/fight-or-flight", "text": "Bandcamp"},
+        {"url": "https://thequietus.com/articles/33840-burial-aya-re-ni-polygonia-shackleton", "text": "read Jaša's text on The Quietus"}
       ],
-        "tags": ["Tour"]
+        "tags": ["Release"]
       }
   ]
   

@@ -8,14 +8,21 @@ fetch('../assets/data/news.json')
         const newsItem = document.createElement('div');
         newsItem.className = 'news-item';
 
-        // Here the "news-title" class is applied to the title
+        // Start with the title
         let newsContent = `<h3 class="news-title">${item.title}</h3>`;
-        if (item.image) {
-            newsContent += `<img src="${item.image}" alt="${item.title}" style="width:100%;max-width:600px;height:auto;">`;
-        }
-        newsContent += `<p>${item.date}</p><p>${item.content}</p>`;
+        
+        // Add the date here, before the image
+        newsContent += `<p>${item.date}</p>`;
 
-        // Handling multiple links
+        // Then add the image, if it exists
+        if (item.image) {
+            newsContent += `<img src="${item.image}" alt="${item.title}" class="news-image">`;
+        }
+
+        // Finally, add the content
+        newsContent += `<p>${item.content}</p>`;
+
+        // Handling multiple links, if any
         if (item.links && item.links.length > 0) {
             item.links.forEach(link => {
                 newsContent += `<a href="${link.url}">${link.text}</a><br>`;

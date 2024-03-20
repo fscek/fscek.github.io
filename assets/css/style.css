@@ -285,14 +285,16 @@ footer {
     padding: 20px;
     background-color: #fff;
     color: #000;
-    border-radius: 8px; /* softens the edges */
+    border-radius: 10px; /* softens the edges */
     margin: 20px auto; /* centralizes the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
-    max-width: 100%; /* width of the news container */
+    max-width: 90%; /* width of the news container */
+    text-align: center;
 }
 
 .news-title {
     font-size: 24px;
+    padding-bottom: 5px;
 }
 
 .news-container h2 {
@@ -300,11 +302,22 @@ footer {
     margin-bottom: 20px;
 }
 
+.news-image {
+    max-width: 70%;
+}
+
+/* media query for desktop screens */
+@media (min-width: 768px) { /* adjust the breakpoint as needed */
+    .release-image {
+        max-width: 30%; /* smaller max-width for larger screens */
+    }
+}
+
 /* styling for individual news items */
 .news-item {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee; /* separating news items */
+    border-bottom: 3px solid #eeeeee; /* separating news items */
 }
 
 .news-item:last-child {
