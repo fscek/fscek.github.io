@@ -409,6 +409,7 @@ footer {
 .mixes-content-container {
     transition: opacity 0.4s ease;
     opacity: 1; /* Initial opacity */
+    max-width: 75%;
 }
 
 #releases-section h2, #mixes-section h2 {
@@ -419,7 +420,7 @@ footer {
     max-width: 70%; /* keeps the image as responsive, so it doesn't overflow its container */
     height: auto; /* keeps the image's aspect ratio */
     display: block; /* images are inline by default; this ensures margin properties work */
-    margin: 0 auto 20px; /* centers the image and adds space below it */
+    margin: 0 0 20px 0; /* applies margin to the bottom; no auto margin for horizontal alignment */
     border-radius: 5px; /* adds rounded corners for a softer look */
 }
 
