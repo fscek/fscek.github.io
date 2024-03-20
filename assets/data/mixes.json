@@ -1,21 +1,244 @@
 [
   {
-    "title": "Test mix 2",
-    "date": "2024-03-15",
-    "description": "test",
-    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/mixes/.webp",
+    "title": "fun mix 2",
+    "date": "2024-02-23",
+    "description": "very valuable<br>continuing the 'fun mix' series with 'fun mix 2'<br><br>recorded live on 2023-11-24 at the Heiße Scheiße club night @ AKC Attack, Zagreb",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/mixes/2024_fun_mix_2.webp",
     "links": [
-      {"platform": "Listen on SoundCloud", "url": "https://soundcloud.com/testmix2"}
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/fun-mix-2"},
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=XmP_3t_7nEg"}
     ]
   },
   {
-    "title": "Test mix",
-    "date": "2024-03-12",
-    "description": "test.",
-    "image": "",
+    "title": "212°F no. 15 w// SZCH",
+    "date": "2023-12-06",
+    "description": "“Latest show is the mix by one and only SZCH!<br><br>DJ and producer who has obviously spent a significant part of his life on the internet, as seen in the aesthetics and production style that is memetized to a meta level and seems to have internal jokes with itself. This mix is the perfect example of all that was mentioned above. Expect eclectic mix filled with various bass/breaks/jersey/edits and more.<br>Big up and check out SZCH!”<br><br>shout out to the HS crew",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2023/mixes/2023_212f_szch.webp",
     "links": [
-      {"platform": "Listen on Mixcloud", "url": "https://mixcloud.com/testmix"},
-      {"platform": "Watch on YouTube", "url": "https://youtube.com/testmix"}
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/heisse-scheisse/212f-no-15-w-szch"}
+    ]
+  },
+  {
+    "title": "ANGELSCAST 54 - SZCH",
+    "date": "2023-04-12",
+    "description": "“hi, this is filip aka szch, your fav inter-schengen traveller<br><br>wanted to share this mix since i feel it encapsulates almost the entirety of what i like to play at a rave: a lot of styles, all my fav artists and labels - everything in one place, a singular file if you will. i wont bother you with genres and definitions, but if you know my music and my sets, you'll know this shit just hits the right spot for me. i hope it does the same for you!<br><br>recorded live at the nimaš izbire štrom rave in ljubljana on march 24 2023 with bungalovv, gpn gpn, nastynancy and vj knnz on the visuals game. shout outs to them, the crowd and all the fine people i've met that night. grazie mille anche agli angels gun club per aver pubblicato questo mix.<br><br>greets from croatia”",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2023/mixes/2023_angelscast_54.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/angelsgunclub/angelscast-54-szch"},
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=VjHlgVc2-tk"}
+    ]
+  },
+  {
+    "title": "never give up mix",
+    "date": "2023-03-11",
+    "description": "recorded live in Masters Club, Zagreb on 2023-02-25<br><br>s/o to nebuloz & jogurt & & s/o 2 all the dreamers & s/o 2everyone for sending their tracks in so i could play them at the clubbbb #blessed<br><br>very valuable",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2023/mixes/2023_never_give_up_mix.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/never-give-up-mix"},
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=ZJoeHonY3Zk"}
+    ]
+  },
+  {
+    "title": "fun mix",
+    "date": "2023-02-05",
+    "description": "recorded live in Dva Osam Club, Zagreb on 2023-01-27<br><br>s/o to El Commando, Mokosh & TNXPECH<br><br>very valuable",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2023/mixes/2023_fun_mix.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/fun-mix"},
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=w8-xm6aRoQQ"}
+    ]
+  },
+  {
+    "title": "Dodona Sessions Guest Mix - SZCH",
+    "date": "2022-01-18",
+    "description": "“In the 37th episode of Dodona Sessions and the 1st episode in the New Year 2022. comes Filip Šćekić, known under many aliases but under none as famous as the under the name SZCH.<br><br>Filip brings an 80 minute mix that represents his musical upbringing and the current state of affairs. Since 2014. SZCH has been active on the local club scene through his work in music production (as a part of the low income $quad collective) as well as a DJ.”",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2022/mixes/2022_dodona_sessions.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/dodona-sessions-mix"}
+    ]
+  },
+  {
+    "title": "Boiler Room Open Dancefloors: Zagreb - SZCH",
+    "date": "2021-11-20",
+    "description": "shout out to Volta for hosting the night and all my fellow artists",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2021/mixes/2021_boiler_room_zagreb.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/platform/open-dancefloors-zagreb-szch"},
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=2suW9WuEY-0"}
+    ]
+  },
+  {
+    "title": "Hvala Magazine #008 - Guest Mix by SZCH",
+    "date": "2021-09-24",
+    "description": "“the general idea of the mix is: listen to the first half while reading through the mag issue and listen to the other half while working through your own issues. or was it the other way around? no idea. k, byee”<br><br>shout out to Robert",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2021/mixes/2021_hvala_mag_008.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/hvalamag/mix008"},
+      {"platform": "Check out Hvala Magazine", "url": "https://hvala-mag.com"}
+    ]
+  },
+  {
+    "title": "CRUDE MIX I 52 - SZCH",
+    "date": "2020-11-13",
+    "description": "“For CRUDE's 52nd edition one of the infamous Low Income $quad co-founders steps in like a whirlwind.<br><br>+*++*++*+*++*++*+*+*++*++*+*++*++*+*+*++*++*+*++*++*+*<br><br>SZCH's mix is an explosive and polarising blend of freaky moods and unique sonic textures with a face-slapping energy all the way through, from start to finish.<br><br>+*++*++*+*++*++*+*+*++*++*+*++*++*+*+*++*++*+*++*++*+*<br><br>Bass-driven, speedy Hard Dance gems to light up your second Lockdown program. SZCH sets the tone with a rather vibrant pace and sassy rhythmics, blending into electrifying and pounding badass Technocore mashed up with a sparkle of swag and attitude.<br><br>This is a trip to mend your wings and fly to...”",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/mixes/2020_crude_52.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/crudeberlin/crude-mix-i-52-szch"}
+    ]
+  },
+  {
+    "title": "States United 17: SZCH",
+    "date": "2020-08-15",
+    "description": "International Winners radio show on n10.as radio",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/mixes/2020_states_united_17.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/international-winners/states-united-17-szch"}
+    ]
+  },
+  {
+    "title": "141.42",
+    "date": "2020-02-19",
+    "description": "recorded live at Masters Club, Zagreb, 2020-01-31<br><br>𝑀𝑦 𝑓𝑟𝑖𝑒𝑛𝑑𝑠: 𝑌𝑜𝑢 𝑜𝑘𝑎𝑦?<br>𝔐𝔢: 𝔜𝔢𝔞𝔥, ℑ’𝔪 𝔣𝔦𝔫𝔢.<br><br>𝙼𝚢 𝚑𝚎𝚊𝚍𝚙𝚑𝚘𝚗𝚎𝚜:<br><br>Gʀᴀɴ Tᴜʀɪꜱᴍᴏ 1 OST - Cʜᴇᴠʀᴏʟᴇᴛ Cᴀʀ Dᴇᴀʟᴇʀ<br>0:35 ━❍──────── -2:41<br>↻ ⊲ Ⅱ ⊳ ↺<br>VOLUME: ▁▂▃▄▅▆▇ 100%<br><br>shout out to DJ Labud",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/mixes/2020_141_42.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/141point42"}
+    ]
+  },
+  {
+    "title": "“eclectic mix 2019”",
+    "date": "2019-11-06",
+    "description": "1 year after the famous “eclectic mix 2018” was uploaded (57 likes and counting!!) it's time for the new one, predictibly called “eclectic mix 2019”<br><br>some wonky bits here and there but im just gonna blame the right monitor which died halfway thru instead of my shit mixing<br><br>now complete with a Tracklist℠",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2019/mixes/2019_eclectic_mix_2019.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/eclectic-mix-2019"}
+    ]
+  },
+  {
+    "title": "SZCH - 777 at LYL Radio",
+    "date": "2019-03-13",
+    "description": "“777 Recordings brings you Low Income $quad co-founder SZCH for this month’s broadcast, delivering one hour of fast breaks and global mayhem, involving tracks from Drexcyia, Yuzo Kushiro, Daddy Yankee and more.”<br><br>shout out to Ron",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2019/mixes/2019_777_lyl_radio.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/777recordings/szch-777-at-lyl-radio-13032019"},
+      {"platform": "777 LYL Radio show", "url": "https://lyl.live/episode/777fm-15"}
+    ]
+  },
+  {
+    "title": "“eclectic mix 2018”",
+    "date": "2018-10-09",
+    "description": "hey !<br><br>realized i haven't put out a mix in a pretty long time and was feeling pretty anxious about this recording just sitting there on the sd card.<br>so finally, here it is in full, some stuff i've been liking over the past year and me coughing all over it.<br><br>recorded back in march in a real club and in front of real people on the 'živa muzika' club night with 'maoupa mazzocchetti', 'nidia', 'mapalma' and yours jarno trulli.",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/mixes/2018_eclectic_mix_2018.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/eclectic-mix-2018"}
+    ]
+  },
+  {
+    "title": "VOLTA P009 - SZCH",
+    "date": "2018-06-12",
+    "description": "“Unarguably the most respected artist we’ve had on the roster so far, SZCH’s original take on house music and his unabashedly flamboyant stylistics have brought him worldwide acclaim - with multiple international releases and a couple of under-the-table YouTube/vinyl hits in his cookbook, he is one of the protagonists of the contemporary spin on lo-fi aesthetic, as well as Croatia’s dance music gemstone.<br><br>Aside from DJing and producing he has - as one third of low income $quad records - curated a number of standout experimental tape compilations in LP/EP format, contributing to Croatia’s visibility on the global underground map, perhaps more so than any other local label.<br>For our ninth instalment, he forwards a live recording of his recent DJ set - a context that most completely represents the opulent tongue-in-cheek mythology of SZCH.”<br><br><br><br>“recorded at the label's showcase in zadar, november '18, in a real room in front of real people<br><br>intended to be used as a mix cd given to ubers waiting in front of clubs at 5am (or for pumping yourself at the register while buying a 1€ wine)<br><br>shout out to the crew for the music and the company, ana for sending us love remotely, paško for the ride and for inviting us down to play, matija for the sarma, my sister for the new cellphone, my mom for wishing me good luck, shout out to game of thrones and shout out to all the people there for coming and singing along”",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/mixes/2018_volta_009.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/voltazg/volta-p009-szch"}
+    ]
+  },
+  {
+    "title": "CREM023 - SZCH",
+    "date": "2018-01-30",
+    "description": "shout out to Yesh",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/mixes/2018_crem_023.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/yesh-zagreb/crem023-szch"}
+    ]
+  },
+  {
+    "title": "SZCH Unknown To The Unknown NTS Radio Show Guest Mix",
+    "date": "2017-12-08",
+    "description": "bootleg nts shouts incoming",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/mixes/2017_uttu_nts.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/nts-uttu-mix-8-dec"}
+    ]
+  },
+  {
+    "title": "Inner Totality Family on Balamii Radio with SZCH",
+    "date": "2017-12-02",
+    "description": "Peckham's finest. shout out to Ronan",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/mixes/2017_inner_totality.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/balamii/innertotalityfamilydec2017"}
+    ]
+  },
+  {
+    "title": "Khalil Ryahi #1 at Red Light Radio w/ SZCH",
+    "date": "2017-07-17",
+    "description": "“My new show at Red Light Radio. For the first episode I was joined by my bruv @filipscekic aka SZCH.”<br><br>RIP RLR",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/mixes/2017_rlr_khalil_szch.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/khalilryahi/khalil-ryahi-1-rlr-wszch"}
+    ]
+  },
+  {
+    "title": "Berlin Community Radio - Philip FM invites SZCH",
+    "date": "2017_05_26",
+    "description": "shout out to Philip FM<br><br>RIP BCR",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/mixes/2017_bcr_philip_fm.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/bcr-session-26-maj"},
+      {"platform": "Check out Philip FM on NTS", "url": "https://www.nts.live/shows/philip-fm"}
+    ]
+  },
+  {
+    "title": "Infinite Pleasure FM #1 at Operator Radio w/ SZCH",
+    "date": "2017_05_23",
+    "description": "“2 hours of rakija infused electronix by SZCH (first hour) and Khalil Ryahi (second hour)”<br><br>shout out to Khalil",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/mixes/2017_infinite_pleasure_operator.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/infinitepleasure/infinite-pleasure-radio-at-operator-w-khalil-ryahi-szch"}
+    ]
+  },
+  {
+    "title": "Mushi-Shi Radio - SZCH",
+    "date": "2017",
+    "description": "deleted mix from 2017 (or 2016, not sure), now finally archived<br><br>recorded live in Funk Club, Zagreb",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/mixes/2017_mushi_shi_radio.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/mushi-shi-radio-szch/s-ZiEjAbwrCoi"}
+    ]
+  },
+  {
+    "title": "Baka Gaijin Podcast 071 by SZCH",
+    "date": "2016-12-27",
+    "description": "",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2016/mixes/2016_baka_gaijin_071.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/baka-gaijin/baka-gaijin-podcast-071-by-szch"}
+    ]
+  },
+  {
+    "title": "STIROPOR Podcast #22 - SZCH",
+    "date": "2016-01-08",
+    "description": "RIP Stiropor. it's been real<br><br>recorded at the NO BALANCE club night in 2015, RIP Sirup Club",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2016/mixes/2016_stiropor_podcast_22.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/stiropor-podcast-22-szch"}
+    ]
+  },
+  {
+    "title": "SZCH@ 7UP",
+    "date": "2015-11-05",
+    "description": "shout out to Ela & NO BALANCE",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2015/mixes/2015_7up.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/szch-sevenup-03_nov_15/s-THbYR"}
+    ]
+  },
+  {
+    "title": "a warmup i did for inga copeland one time in zagreb and someone wrote a review about it",
+    "date": "2015-10-29",
+    "description": "warm up for inga copeland x szch @ KSET, Zagreb<br><br>shout out ŽIVA MUZIKA & ZEZ",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2015/mixes/2015_inga_warmup.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/inga-x-szch-29-11-kset"}
     ]
   }
 ]
