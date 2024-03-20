@@ -1,6 +1,6 @@
 // Generate and append year filter buttons dynamically for mixes
 function generateMixesYearFilters() {
-    const startYear = 2016;
+    const startYear = 2015;
     const currentYear = new Date().getFullYear();
     const filtersContainer = document.getElementById('year-filter-container-mixes');
 
