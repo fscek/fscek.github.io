@@ -76,6 +76,11 @@ footer {
     margin-bottom: 1em;
 }
 
+/* adds fallback support for the International Phonetic Alphabet (IPA) symbols */
+.ipa {
+    font-family: 'Noto Sans', sans-serif;
+}
+
 /*home icon css style */
 .home-icon {
     cursor: crosshair;
@@ -288,7 +293,7 @@ footer {
     border-radius: 10px; /* softens the edges */
     margin: 20px auto; /* centralizes the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
-    max-width: 94%; /* width of the news container */
+    max-width: 96%; /* width of the news container */
     text-align: center;
 }
 
