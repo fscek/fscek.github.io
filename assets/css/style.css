@@ -409,7 +409,6 @@ footer {
 .mixes-content-container {
     transition: opacity 0.4s ease;
     opacity: 1; /* Initial opacity */
-    max-width: 75%;
 }
 
 #releases-section h2, #mixes-section h2 {
@@ -434,6 +433,7 @@ footer {
 .mix-description {
     padding-top: 10px; /* padding above the description */
     padding-bottom: 10px; /* padding below the description */
+    max-width: 50%;
 }
 
 /* visuals.html */
