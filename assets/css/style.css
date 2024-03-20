@@ -291,7 +291,7 @@ footer {
     background-color: #fff;
     color: #000;
     border-radius: 10px; /* softens the edges */
-    margin: 20px auto; /* centralizes the container */
+    margin: 15px auto; /* centralizes the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
     max-width: 96%; /* width of the news container */
     text-align: center;
@@ -322,7 +322,7 @@ footer {
 .news-item {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 3px solid #eeeeee; /* separating news items */
+    border-bottom: 3px solid #eeeeee; /* separating news items */;
 }
 
 .news-item:last-child {
