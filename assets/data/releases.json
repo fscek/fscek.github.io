@@ -188,7 +188,7 @@
       "releaseDate": "2020-10-01",
       "year": 2020,
       "description": "single, digital, self-released",
-      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_effervescent.webp.webp",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2020/releases/2020_effervescent.webp",
       "links": [
         {"platform": "Spotify", "url": "https://open.spotify.com/album/4yhsjLf0uRLGgL8z4fZCNh?si=MXOHoVwsSUSkwGFrlPHPKA"},
         {"platform": "Bandcamp", "url": "https://szch.bandcamp.com/track/effervescent"}
@@ -317,7 +317,7 @@
       "releaseDate": "2017-11-05",
       "year": 2017,
       "description": "released on House Crime<br><br>EP, 12-inch vinyl",
-      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/releases/2017_house_crime_ep.webp.webp",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2017/releases/2017_house_crime_ep.webp",
       "links": []
     },
     {
