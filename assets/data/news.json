@@ -1,5 +1,15 @@
 [
   {
+    "title": "Velvet Festival show ➕ ⚠️PSA⚠️",
+    "date": "2024-06-13",
+    "content": "just a quick announcement that i'll be playing at Velvet Festival soon, on friday, june 28. the link for the tickets is below.<br><br>as for the ⚠️PSA⚠️, after 10 years, this will be my final dj set for the foreseeable future, so please come say hi if you're at the festival!<br><br>i'm shifting my focus back to music production and other work as life takes over. i'll hopefully be back in a different form.<br><br>keep your ears peeled for the new tracks though! 👂👂<br><br>talk soon,<br>filip<br>",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/news/2024/06/2024_06_szch_velvet_fest_2024.webp",
+    "links": [
+      {"url": "https://app.core-event.co/events/velvet-festival-2024-fe74/register", "text": "Velvet Festival tickets"}
+    ],
+    "tags": ["News"]
+  },
+  {
     "title": "szch.me IS LIVE!<br>journalists call it “The SZCH Intranet”",
     "date": "2024-03-20",
     "content": "and something else i forgot to mention in the title:<br>👴 SZCH TURNS 10 YEARS OLD IN 2024! 👴<br><br>will celebrate that by doing even more tracks and shows whenever i can<br><br><br>now, i had the idea of a site and archive for a while now, something that feels like... home.<br><br>a lot of the stuff i've done over the years got scattered around the winds and storms of The Internet, so it feels really, REALLY good to see it all come together under one roof (and a logical next step really).<br>i think these kinds of things really help with motivation and the feeling of 'getting stuff done'.<br><br>after procrastinating for 6 months, i just started making the site a week ago and this is how it turned out. nice'n'cute™, nothing complicated, easy to update and maintain.<br><br>tell all your friends and hop on here every once in a while to get some news and hear some music.<br><br>& if you're into c0mput3rZ, feel free to check out the site's repository on GitHub.<br><br>did i just make this thing into a blog? 😯😯",
@@ -8,7 +18,7 @@
       {"url": "https://github.com/fscek/fscek.github.io", "text": "GitHub repo"}
     ],
     "tags": ["News"]
-  },  
+  },
     {
       "title": "new mix released: 'fun mix 2'",
       "date": "2024-02-23",
