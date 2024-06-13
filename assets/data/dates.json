@@ -22,9 +22,16 @@
       },
       {
         "date": "2024-06-28",
-        "clubnight": "➮ Velvet Festival",
+        "clubnight": "➔ Velvet Festival",
         "venue": "",
         "city": "Punat, Croatia 🇭🇷",
         "url": "https://www.velvetfestival.hr/"
+      },
+      {
+        "date": "2024-??-??",
+        "clubnight": "Value",
+        "venue": "✦",
+        "city": "",
+        "url": "https://www.value.ooo/"
       }
 ]
