@@ -532,7 +532,7 @@ hr.dotted {
     margin: 5px;
     text-align: center;
     font-size: 0.8em;
-    cursor: pointer;
+    cursor: crosshair;
     border-radius: 1em;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
     border-color: #000000;  /* Orange border for contrast */
