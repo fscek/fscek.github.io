@@ -496,11 +496,12 @@ footer {
     border-radius: 5px; /* adds rounded corners for a softer look */
 }
 
-.language-filter-button, .length-filter-button {
+/* Language Filter Buttons */
+.language-filter-button {
     background-color: #000000;
     color: #D67DB3;
     padding: 0.4em 0.6em;
-    margin: 5px; /* margin to manage space between buttons */
+    margin: 5px;
     text-align: center;
     font-size: 0.8em;
     cursor: crosshair;
@@ -509,16 +510,40 @@ footer {
     border-color: #000;
     border-width: 2px;
     border-style: solid;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 
-.language-filter-button:hover, .language-filter-button.active,
-.length-filter-button:hover, .length-filter-button.active {
+.language-filter-button:hover, .language-filter-button.active {
     background-color: #D67DB3;
     color: #000000;
 }
 
-.press-content-container {
+/* Length Filter Buttons - Differentiated */
+.length-filter-button {
+    background-color: #000000;
+    color: #D67DB3;  /* Orange color for text */
+    padding: 0.4em 0.6em;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.8em;
+    cursor: pointer;
+    border-radius: 1em;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    border-color: #000000;  /* Orange border for contrast */
+    border-width: 2px;
+    border-style: dashed;  /* Dashed border to differentiate */
+    margin-bottom: 1em;  /* Reduced bottom margin */
+}
+
+.length-filter-button:hover, .length-filter-button.active {
+    background-color: #D67DB3;  /* Same active background color as language buttons */
+    color: #000000;  /* Same active text color as language buttons */
+    transform: scale(1.05);  /* Slight scale effect for a visual pop */
+}
+
+
+.press-content-container,
+.press-reviews-container {
     padding: 20px;
     background-color: #fff;
     color: #000;
