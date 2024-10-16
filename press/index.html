@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>szch.me music</title>
+    <title>szch.me press</title>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,10 @@
         </div>
         <div class="scrolling_text">
             <div class="text">
-                <span>szch.me music </span><span>szch.me music </span><span>szch.me music </span><span>szch.me music </span><span>szch.me music </span>
+                <span>szch.me press </span><span>szch.me press </span><span>szch.me press </span><span>szch.me press </span><span>szch.me press </span>
             </div>
             <div class="text">
-                <span>szch.me music </span><span>szch.me music </span><span>szch.me music </span><span>szch.me music </span><span>szch.me music </span>
+                <span>szch.me press </span><span>szch.me press </span><span>szch.me press </span><span>szch.me press </span><span>szch.me press </span>
             </div>
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
@@ -34,23 +34,21 @@
             <ul>
                 <li><a href="/">take me home</a></li>
                 <li><a href="../news">news</a></li>
-                <li><a href="./">music</a></li>
+                <li><a href="../music">music</a></li>
                 <li><a href="../visuals">visuals</a></li>
-                <li><a href="../press">press</a></li>
+                <li><a href="./">press</a></li>
             </ul>
         </div>
     </header>
     <main>
-        <section id="releases-section" class="music-container">
-            <h2 class="display-font">releases</h2>
-            <div id="year-filter-container-releases"></div> <!-- Container for year filters -->
-            <div class="releases-content-container"></div> <!-- Container for releases content -->
-        </section>
-        <section id="mixes-section" class="music-container">
-            <h2 class="display-font">mixes</h2>
-            <div id="year-filter-container-mixes"></div> <!-- Container for year filters -->
-            <div class="mixes-content-container"></div> <!-- Container for mixes content -->
-        </section>
+        <section id="press-section" class="press-container">
+            <h2 class="display-font">press</h2>
+            <div id="language-filter-container-press"></div> <!-- Container for language filters -->
+            <div id="length-filter-container-press"></div> <!-- Container for length filters -->
+            <div class="press-content-container">
+                <p>text loading...</p>
+            </div> <!-- Container for press content -->
+        </section>          
     </main>
     <footer>
         <p class="fragment-mono-regular">&copy; 2024 SZCH. All rights reserved.</p>
@@ -58,5 +56,6 @@
     <script src="../assets/js/menu-toggle.js" defer></script>
     <script src="../assets/js/releases-script.js"></script>
     <script src="../assets/js/mixes-script.js"></script>
+    <script src="../assets/js/press-script.js"></script>
 </body>
 </html>
