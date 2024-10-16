@@ -81,6 +81,12 @@ footer {
     font-family: 'Noto Sans', sans-serif;
 }
 
+/* Dotted border */
+hr.dotted {
+    border-top: 3px dotted #0000FF;
+    margin-bottom: 1.4em;
+}
+
 /*home icon css style */
 .home-icon {
     cursor: crosshair;
@@ -572,6 +578,45 @@ footer {
     text-decoration: underline;
     font-size: 1em;
     color: #D67DB3;
+}
+
+.press-reviews-container {
+    background-color: #f9f9f9; /* Light background to differentiate from bios */
+}
+
+.review {
+    margin-bottom: 30px;
+}
+
+.review-title {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.review-subtitle {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #555;
+    font-style: italic;
+}
+
+.review-content {
+    margin-bottom: 20px;
+    color: #333;
+    font-style: italic;
+}
+
+.review-author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.review-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000;
+    text-decoration: underline;
 }
 
 .not-found-404-links {
