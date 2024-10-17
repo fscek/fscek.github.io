@@ -1,51 +1,58 @@
 [
-    {
+  {
       "date": "2024-04-26",
-      "clubnight": "✔️ Absent Manifesto w/ Mathis Ruffing, SZCH, TNXPECH, GJIGJ",
+      "clubnight": "Absent Manifesto w/ Mathis Ruffing, SZCH, TNXPECH, GJIGJ",
       "venue": "AKC Attack",
       "city": "Zagreb, Croatia 🇭🇷",
       "url": "https://attack.hr/absent-manifesto-w-mathis-ruffing-szch-tnxpech/"
-    },
-    {
+  },
+  {
       "date": "2024-05-03",
-      "clubnight": "✔️ All The Rhythms w/ Bucalo, Nikola Damjanovic, SZCH",
+      "clubnight": "All The Rhythms w/ Bucalo, Nikola Damjanovic, SZCH",
       "venue": "KC Grad",
       "city": "Belgrade, Serbia 🇷🇸",
       "url": "https://www.facebook.com/events/416932061274872"
-    },
-    {
-        "date": "2024-06-08",
-        "clubnight": "✔️ KVART Festival",
-        "venue": "Varteks",
-        "city": "Varaždin, Croatia 🇭🇷",
-        "url": "https://www.pecetri.com/kvart"
-      },
-      {
-        "date": "2024-06-28",
-        "clubnight": "✔️ Velvet Festival",
-        "venue": "",
-        "city": "Punat, Croatia 🇭🇷",
-        "url": "https://www.velvetfestival.hr/"
-      },
-      {
-        "date": "2024-10-19",
-        "clubnight": "KARAS+KVART - Transparency Agency (Karl Iaro & Luana Lojić) w/ 0.111mg, Babilonska, SZCH & princeza gusaka",
-        "venue": "Transparency Agency",
-        "city": "Zagreb, Croatia 🇭🇷",
-        "url": "https://www.hdlu.hr/eng/2024/10/creart-3-o-karaskvart/"
-      },
-      {
-        "date": "2024-11-15",
-        "clubnight": "TBA",
-        "venue": "???",
-        "city": "Ljubljana, Slovenia 🇸🇮",
-        "url": ""
-      },
-      {
-        "date": "2024-??-??",
-        "clubnight": "Value",
-        "venue": "✦",
-        "city": "",
-        "url": "https://www.value.ooo/"
-      }
+  },
+  {
+      "date": "2024-06-08",
+      "clubnight": "KVART Festival",
+      "venue": "Varteks",
+      "city": "Varaždin, Croatia 🇭🇷",
+      "url": "https://www.pecetri.com/kvart"
+  },
+  {
+      "date": "2024-06-28",
+      "clubnight": "Velvet Festival",
+      "venue": "",
+      "city": "Punat, Croatia 🇭🇷",
+      "url": "https://www.velvetfestival.hr/"
+  },
+  {
+    "date": "2024-10-12",
+    "clubnight": "Prokletnice u Kleti",
+    "venue": "Studio-galerija KLET",
+    "city": "Zagreb, Croatia 🇭🇷",
+    "url": "https://fashion.hr/moda/prokletnice-u-kleti-modni-event-koji-ovog-vikenda-ne-propustamo/"
+  },
+  {
+      "date": "2024-10-19",
+      "clubnight": "KARAS+KVART - Transparency Agency (Karl Iaro & Luana Lojić) w/ 0.111mg, Babilonska, SZCH & princeza gusaka",
+      "venue": "Transparency Agency",
+      "city": "Zagreb, Croatia 🇭🇷",
+      "url": "https://www.hdlu.hr/eng/2024/10/creart-3-o-karaskvart/"
+  },
+  {
+      "date": "2024-11-15",
+      "clubnight": "TBA",
+      "venue": "???",
+      "city": "Ljubljana, Slovenia 🇸🇮",
+      "url": ""
+  },
+  {
+      "date": "2024-??-??",
+      "clubnight": "Value",
+      "venue": "✦",
+      "city": "",
+      "url": "https://www.value.ooo/"
+  }
 ]
