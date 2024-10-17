@@ -159,7 +159,7 @@ hr.dotted {
     display: inline-block;
     font-size: 0.7em;
     cursor: crosshair;
-    border-radius: 1em;
+    border-radius: 1.3em;
 }
 
 /* scrolling text banner */
@@ -172,6 +172,35 @@ hr.dotted {
     z-index: 10;
     /* padding-right: 80px; commented out */ 
 }
+
+/* Styling for Upcoming and Past Buttons - Matching Music Page Buttons */
+.filter-button {
+    background-color: #000000;
+    color: #D67DB3;
+    padding: 0.4em 0.6em;
+    margin: 5px; /* margin to manage space between buttons */
+    text-align: center;
+    font-size: 0.8em;
+    cursor: crosshair;
+    border-radius: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    min-width: 30px;
+    border-color: #000;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 1.5em;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background-color: #D67DB3;
+    color: #000000;
+}
+
+#club-dates-list {
+    transition: opacity 0.3s ease-in-out; /* Adjust duration to match the JavaScript delay */
+  }  
 
 .text {
     font-weight: 400;
