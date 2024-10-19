@@ -42,8 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to filter and render dates
   function filterDates(showUpcoming) {
     const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); // Set currentDate to start of the day to compare dates only
+
     const filteredDates = allDates.filter(date => {
       const eventDate = new Date(date.date);
+      eventDate.setHours(0, 0, 0, 0); // Set eventDate to start of the day to compare dates only
+
       if (isNaN(eventDate)) {
         return false; // Skip dates that cannot be parsed
       }
