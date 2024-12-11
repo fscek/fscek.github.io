@@ -1,5 +1,28 @@
 [
     {
+      "title": "in my headd",
+      "releaseDate": "2024-11-30",
+      "year": 2024,
+      "description": "single, digital, released on Scumtapes",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/2024-11-30_in_my_headd.webp",
+      "links": [
+        {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=tYqKFUx_cNA"},
+        {"platform": "Soundcloud", "url": "https://soundcloud.com/filipscekic/in-my-headd"},
+        {"platform": "Bandcamp", "url": "https://scumtapes.bandcamp.com/track/s3s1-17-in-my-headd"}
+      ]
+    },
+    {
+      "title": "Praktikal - Stuff (SZCH Remix)",
+      "releaseDate": "2024-07-05",
+      "year": 2024,
+      "description": "Praktikal 'Stuff EP' on Radar Frequencies, digital",
+      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2024/releases/2024-07-05_praktikal_stuff_remix.webp",
+      "links": [
+        {"platform": "Spotify", "url": "https://open.spotify.com/track/2xEKgkFrZ3EfOsptGXuCaW?si=6626133c0a3c4c14"},
+        {"platform": "Bandcamp", "url": "https://radarfrequencies.bandcamp.com/album/stuff-ep"}
+      ]
+    },
+    {
       "title": "fight or flight",
       "releaseDate": "2024-02-03",
       "year": 2024,
