@@ -1,3 +1,12 @@
+# szch.me
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/fscek/fscek.github.io.svg)](https://github.com/fscek/fscek.github.io/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/fscek/fscek.github.io.svg)](https://github.com/fscek/fscek.github.io/commits/main)
+[![Build Status](https://github.com/fscek/fscek.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/fscek/fscek.github.io/actions/workflows/pages/pages-build-deployment)
+
+---
+
 Welcome to the repository for my personal portfolio website, [szch.me](http://szch.me). This site showcases my work as a music producer, DJ, and visual artist, featuring a selection of my recent releases, tour dates, examples of my visual art, and links to my social media profiles.
 
 I didn't want to overcomplicate things, so it's a cute and simple static website instead.
