@@ -1,137 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>the home to szch.me</title>
-        <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <style>
-            .scrolling_text {
-                width: 100%;
-                overflow: hidden;
-                display: flex;
-                white-space: nowrap;
-                margin-bottom: -4em;
-                z-index: 10;
-            }
-    
-            .text {
-                font-weight: 400;
-                text-transform: lowercase;
-                color: #000000;
-                display: inline-block;
-                animation: animate_text 20s linear infinite;
-                font-size: 6em;
-                font-family: 'Terminal Grotesque', monospace;
-            }
-    
-            @keyframes animate_text {
-                from {
-                  transform: translate3d(0, 0, 0);
-                }
-                to {
-                  transform: translate3d(-100%, 0, 0);
-                }
-            }
-        </style>
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the home to szch.me</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Page-specific tweaks -->
+    <style>
+      .scrolling_text {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        white-space: nowrap;
+        margin-bottom: -4em;
+        z-index: 10;
+      }
+      .text {
+        font-weight: 400;
+        text-transform: lowercase;
+        color: #000000;
+        display: inline-block;
+        animation: animate_text 20s linear infinite;
+        font-size: 6em;
+        font-family: 'Terminal Grotesque', monospace;
+      }
+      @keyframes animate_text {
+        from { transform: translate3d(0, 0, 0); }
+        to { transform: translate3d(-100%, 0, 0); }
+      }
+      /* helpers */
+      .kicker { font-family: 'Fragment Mono', monospace; text-transform: lowercase; opacity: .85; }
+      .cta-row { display: flex; gap: .75rem; flex-wrap: wrap; margin: .5rem 0 0; }
+      .cta-row a { border: 1px solid #000; padding: .45rem .7rem; border-radius: 999px; text-decoration: none; font-family: 'Fragment Mono', monospace; }
+      .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+      .feature { border: 1px solid #000; padding: 1rem; border-radius: 12px; }
+      .muted { opacity: .8; }
+    </style>
+
+    <!-- Meta / SEO -->
+    <meta name="description" content="Mixes, releases, visuals, updates, contact." />
+    <link rel="canonical" href="https://szch.me/" />
+    <meta property="og:title" content="szch.me" />
+    <meta property="og:description" content="Mixes, releases, visuals, updates, contact." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://szch.me/" />
+    <meta property="og:image" content="/assets/images/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "SZCH",
+        "alternateName": "Filip Šćekić",
+        "jobTitle": "DJ / Producer",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Rovinj, Croatia"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Zagreb",
+          "addressCountry": "HR"
+        },
+        "sameAs": [
+          "https://soundcloud.com/filipscekic",
+          "https://szch.bandcamp.com",
+          "https://instagram.com/szcheck",
+          "https://open.spotify.com/artist/4oVlyl66dRz2jZ6NkUllGA",
+          "https://ra.co/dj/szch",
+          "https://value.ooo"
+        ]
+      }
+    </script>
+  </head>
+  <body>
     <div id="pageOverlay" class="overlay" onclick="toggleMenu()"></div>
     <header>
-        <div class="home-icon" onclick="location.href='/'">
-            <img src="../assets/images/home-btn.png" alt="Home" style="width: 33px; height: auto;">
+      <div class="home-icon" onclick="location.href='/'" aria-label="home">
+        <img src="../assets/images/home-btn.png" alt="Home" style="width: 33px; height: auto;" />
+      </div>
+
+      <!-- marquee stays -->
+      <div class="scrolling_text" aria-hidden="true">
+        <div class="text">
+          <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
         </div>
-        <div class="scrolling_text">
-            <div class="text">
-                <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
-            </div>
-            <div class="text">
-                <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
-            </div>
-        </div>        
-        <div class="menu-icon" onclick="toggleMenu()">
-            <img src="assets/images/hamburger-menu-open.png" alt="Menu open" id="menuIcon">
+        <div class="text">
+          <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
         </div>
-        <div class="menu-content" id="menuContent">
-            <span class="close-menu" onclick="toggleMenu()">
-                <img src="assets/images/hamburger-menu-close-D67DB3.png" alt="Menu close" style="display:none;" id="closeIcon">
-            </span>        
-                <ul>
-                    <li><a href="/">take me home</a></li>
-                    <li><a href="./news">news</a></li>
-                    <li><a href="./music">music</a></li>
-                    <li><a href="./visuals">visuals</a></li>
-                    <li><a href="./press">press</a></li>
-                </ul>
-            </div>
-        </div>
-    
+      </div>
+
+      <div class="menu-icon" onclick="toggleMenu()" aria-label="open menu">
+        <img src="assets/images/hamburger-menu-open.png" alt="Open menu" id="menuIcon" />
+      </div>
+      <nav class="menu-content" id="menuContent" aria-label="main navigation">
+        <span class="close-menu" onclick="toggleMenu()">
+          <img src="assets/images/hamburger-menu-close-D67DB3.png" alt="Close menu" style="display:none;" id="closeIcon" />
+        </span>
+        <ul>
+          <li><a href="/">take me home</a></li>
+          <li><a href="./news">news</a></li>
+          <li><a href="./music">music</a></li>
+          <li><a href="./visuals">visuals</a></li>
+          <li><a href="./press">press</a></li>
+        </ul>
+      </nav>
     </header>
+
     <main>
-        <section id="about">
-            <h2 class="display-font">about</h2>
-            <h5 class="display-font">(definitely not written by someone else)</h5>
-            <div id="bio" class="bio">
-                <br>
-                <p>SZCH (pronounced <span class="ipa">[ʃt͡ɕ]</span>) is a DJ and producer hailing from the Istrian peninsula and currently based in Zagreb, Croatia.</p>
-                <p id="moreText" style="display: none;">
-                    Belonging to the new generation of Croatian artists, SZCH's productions and sets are encapsulated in his characteristic meme and online microculture influenced humour.
-                    <br><br><br>
-                    When paired with his high energy, that allows him to cross traditional genre boundaries in club music and beyond, using various edits, unanticipated BPM switches and distinctive mixing techniques as set pieces; be it UK hardcore, baile-Jersey club fusions, gqom or Japanese garage-flavoured hyperpop.
-                    <br><br>
-                    As an autodidactic artist, he is unrestrained by conventional artistic influences and manages to set himself apart while still capturing and mastering the essence of his expressiveness and carrying it through his unique style.
-                    <br><br><br>
-                    He has introduced his music across the European continent, including Germany, France, Ukraine, the Netherlands, Switzerland, the UK, and Poland. Alongside his performances, he has also made notable appearances in live radio shows at Red Light Radio, Operator, Berlin Community Radio, Balamii, and through recorded shows for NTS Radio and LYL.
-                    <br><br>
-                    His work has caught the attention of notable artists like Objekt, rRoxymore, Ross From Friends, Baltra, and Charlie Bones, among others.
-                    <br><br><br>
-                    Most recently, <a href="https://www.value.ooo" class="bold-underline">Value</a>, initiated by SZCH, is a project rooted in Zagreb with a global reach, focusing on the club community. It serves as a platform that bridges the online and physical spaces, spotlighting talents in music, art, and photography.
-                    <br><br>
-                    The essence of Value lies in its commitment to providing a space for creative expression and connection, through club nights, live performances, and exhibitions. It's a place where both new and established artists can share their work in an environment that values subtlety, intellectual engagement, and community.
-                    <br><br>
-                </p>
-                <button onclick="toggleBio()" id="readMore">read more</button>
-            </div>
-            </section>
-            <section id="dates">
-            <h2 class="display-font">where can you hear me</h2>
-            <ul id="club-dates-list">
-                <!-- content dynamically inserted here by the dates-script.js -->
-            </ul>
-        </section>    
-        <section id="socials">
-            <h2 class="display-font">online stuff</h2>
-            <ul>
-                <li><a href="https://soundcloud.com/filipscekic" class="fragment-mono-regular">Soundcloud</a></li>
-                <li><a href="https://szch.bandcamp.com" class="fragment-mono-regular">Bandcamp</a></li>
-                <li><a href="https://instagram.com/szcheck" class="fragment-mono-regular">Instagram</a></li>
-                <li><a href="https://open.spotify.com/artist/4oVlyl66dRz2jZ6NkUllGA" class="fragment-mono-regular">Spotify</a></li>
-                <li><a href="https://ra.co/dj/szch" class="fragment-mono-regular">Resident Advisor</a></li>
-                <li><a href="https://value.ooo" class="fragment-mono-regular">Value</a></li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2 class="display-font">talk2me</h2>
-            <p class="fragment-mono-regular"><a href="mailto:filip@value.ooo">filip@value.ooo</a><br><br></p>
-            <h2 class="display-font">got some music for me, a letter, etc?</h2>
-            <p class="fragment-mono-regular"><a href="https://cloud.szch.me/s/AJz8NkPnBqmxfAG">drop it here!</a></p>
+      <!-- HERO -->
+      <section id="hero" style="margin-top:2rem;">
+        <p class="kicker">dj / producer — from rovinj, based in zagreb</p>
+        <h1 class="display-font" style="margin:.25rem 0 0;">szch dot me</h1>
+        <div class="cta-row">
+          <a href="./music">music</a>
+          <a href="./visuals">visuals</a>
+          <a href="./news">updates</a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" style="margin-top:2.5rem;">
+        <h2 class="display-font">about</h2>
+        <div id="bio" class="bio">
+          <p>SZCH (pronounced <span class="ipa">[ʃt͡ɕ]</span>) - DJ/producer from Rovinj, based in Zagreb.</p>
+          <p id="moreText" class="muted" style="display:none;">Occasional mixes, releases, visuals and notes. For a fuller bio and press, see the <a href="./press" class="bold-underline">press</a> page. I co‑founded the Low Income Squad collective (later stepped back) and started <a href="https://www.value.ooo" class="bold-underline">Value</a>. See you around!</p>
+          <button onclick="toggleBio()" id="readMore" aria-expanded="false">read more</button>
+        </div>
+      </section>
+
+      <!-- DATES -->
+      <section id="dates" style="margin-top:2.5rem;">
+        <h2 class="display-font">dates</h2>
+        <ul id="club-dates-list"><noscript>Enable JavaScript to see dates.</noscript></ul>
+        <p id="next-date" class="fragment-mono-regular muted" style="margin-top:.5rem;"></p>
+      </section>
+
+      <!-- FEATURES: quick entry points -->
+      <section id="features" style="margin-top:2.5rem;">
+        <h2 class="display-font">listen / watch / read</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <h3 class="display-font" style="margin-top:0;">mixes</h3>
+            <p class="fragment-mono-regular">Radio shows and club recordings.</p>
+            <p><a href="https://soundcloud.com/filipscekic" class="fragment-mono-regular">soundcloud →</a></p>
+          </div>
+          <div class="feature">
+            <h3 class="display-font" style="margin-top:0;">releases</h3>
+            <p class="fragment-mono-regular">Bandcamp for originals, edits, and odds & ends.</p>
+            <p><a href="https://szch.bandcamp.com" class="fragment-mono-regular">bandcamp →</a></p>
+          </div>
+          <div class="feature">
+            <h3 class="display-font" style="margin-top:0;">press</h3>
+            <p class="fragment-mono-regular">Clippings &amp; radio.</p>
+            <p><a href="./press" class="fragment-mono-regular">press →</a></p>
+          </div>
+          <div class="feature">
+            <h3 class="display-font" style="margin-top:0;">value</h3>
+            <p class="fragment-mono-regular">A project I started in Zagreb.</p>
+            <p><a href="https://value.ooo" class="fragment-mono-regular">value.ooo →</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOCIALS -->
+      <section id="socials" style="margin-top:2.5rem;">
+        <h2 class="display-font">online stuff</h2>
+        <ul>
+          <li><a href="https://soundcloud.com/filipscekic" class="fragment-mono-regular">soundcloud</a></li>
+          <li><a href="https://szch.bandcamp.com" class="fragment-mono-regular">bandcamp</a></li>
+          <li><a href="https://instagram.com/szcheck" class="fragment-mono-regular">instagram</a></li>
+          <li><a href="https://open.spotify.com/artist/4oVlyl66dRz2jZ6NkUllGA" class="fragment-mono-regular">spotify</a></li>
+          <li><a href="https://ra.co/dj/szch" class="fragment-mono-regular">resident advisor</a></li>
+          <li><a href="https://value.ooo" class="fragment-mono-regular">value</a></li>
+        </ul>
+      </section>
+
+      <!-- CONTACT / SUBMIT -->
+      <section id="contact" style="margin-top:2.5rem;">
+        <h2 class="display-font">talk2me</h2>
+        <p class="fragment-mono-regular"><a href="mailto:filip@value.ooo">filip@value.ooo</a></p>
+        <h2 class="display-font" style="margin-top:1.25rem;">got music, a letter, etc?</h2>
+        <p class="fragment-mono-regular"><a href="https://cloud.szch.me/s/AJz8NkPnBqmxfAG">drop it here</a></p>
             <!-- placeholder for future contact form or captcha implementation -->
-        </section>
-        <!-- section> commented out for future implementation
-            <div id="threejs-container"></div>
-        </section> -->
+      </section>
     </main>
+
     <footer>
-        <p class="fragment-mono-regular">&copy; 2024-2025 SZCH. All rights reserved.</p>
-        <a href="https://github.com/fscek/fscek.github.io" target="_blank" class="review-link">GitHub</a>
+      <p class="fragment-mono-regular">&copy; 2024–2025 SZCH. All rights reserved.</p>
+      <a href="https://github.com/fscek/fscek.github.io" target="_blank" class="review-link" rel="noopener">GitHub</a>
     </footer>
+
+    <!-- Scripts -->
     <script src="assets/js/menu-toggle.js" defer></script>
-    <script src="assets/js/dates-script.js"></script>
-    <script src="assets/js/toggle-bio.js"></script>
-</body>
+    <script src="assets/js/dates-script.js" defer></script>
+    <script src="assets/js/toggle-bio.js" defer></script>
+  </body>
 </html>
