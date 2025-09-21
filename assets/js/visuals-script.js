@@ -36,21 +36,60 @@ function computeSlug(item, taken) {
   return ensureUniqueSlug(base, taken);
 }
 
-// --- utils ---
+// --- utils ------------------------------------------------------------------
 function v_getYearFromDate(dateStr) {
   const s = (dateStr ?? "").toString().trim();
   const m = /^(\d{4})/.exec(s);
   return m ? Number(m[1]) : null;
 }
-function v_formatDateHuman(dateStr, locale = "en-GB") {
-  const s = (dateStr ?? "").toString().trim();
+
+// Parse things like "2017–2024", "2017-2024", "2017 — 2024", "2017–present"
+function v_parseYearRange(rangeStr) {
+  const s = (rangeStr ?? "").toString().trim();
+  if (!s) return null;
+  // allow hyphen, en-dash, em-dash with optional spaces
+  const m = /^(\d{4})\s*[—–-]\s*(\d{4}|present|now|ongoing)$/i.exec(s);
+  if (!m) return null;
+  const start = Number(m[1]);
+  const endRaw = m[2].toLowerCase();
+  const isOpen = /^(present|now|ongoing)$/i.test(m[2]);
+  const end = isOpen ? new Date().getFullYear() : Number(m[2]);
+  return (Number.isFinite(start) && Number.isFinite(end)) ? { start, end, isOpen } : null;
+}
+
+// Preferred display: normalized date_range if set, else try range in date, else formatted date
+function v_niceDate(item, locale = "en-GB") {
+  // 1) explicit date_range
+  let r = v_parseYearRange(item.date_range);
+  if (r) return r.start === r.end ? String(r.start) : `${r.start}–${r.isOpen ? 'present' : r.end}`;
+
+  // 2) range accidentally stored in date
+  r = v_parseYearRange(item.date);
+  if (r) return r.start === r.end ? String(r.start) : `${r.start}–${r.isOpen ? 'present' : r.end}`;
+
+  // 3) fallback to single date
+  const s = (item.date ?? "").toString().trim();
   if (!s) return "";
-  if (/^\d{4}$/.test(s)) return s; // just year
+  if (/^\d{4}$/.test(s)) return s;
   const d = new Date(s);
   return Number.isNaN(d.getTime())
     ? s
     : new Intl.DateTimeFormat(locale, { day: "2-digit", month: "short", year: "numeric" }).format(d);
 }
+
+// Which year should this item live under (header + sort)?
+// Prefer END year of a range (in date_range OR date); else single date's year; else null.
+function v_yearForGrouping(item) {
+  let r = v_parseYearRange(item.date_range);
+  if (r) return r.end;
+  r = v_parseYearRange(item.date);
+  if (r) return r.end;
+
+  const y = v_getYearFromDate(item.date);
+  return y !== null ? y : null;
+}
+
+
 function v_isMeaningful(item) {
   const hasTitle = typeof item.title === "string" && item.title.trim();
   const hasImages = Array.isArray(item.images) && item.images.length && item.images[0]?.src;
@@ -64,7 +103,7 @@ function v_cleanLinks(arr) {
 }
 const clearHash = () => history.replaceState(null, "", window.location.pathname + window.location.search);
 
-// --- lightbox state ---
+// --- lightbox state ----------------------------------------------------------
 let suppressNextDocClick = false;
 
 const VB = {
@@ -76,7 +115,6 @@ function vb_mount() {
   if (VB.root) return;
   VB.root  = document.getElementById('visuals-lightbox');
   if (!VB.root) {
-    // create if not in HTML
     VB.root = document.createElement('div');
     VB.root.id = 'visuals-lightbox';
     VB.root.innerHTML = `
@@ -97,16 +135,15 @@ function vb_mount() {
   VB.next.addEventListener('click', () => vb_goto(VB.index + 1));
   VB.close.addEventListener('click', (e) => {
     e.preventDefault();
-    e.stopPropagation();          // don't bubble to document
+    e.stopPropagation();
     vb_close();
   });
   VB.root.addEventListener('click', (e) => {
     if (e.target === VB.root) {
-      e.stopPropagation();        // don't bubble to document
+      e.stopPropagation();
       vb_close();
     }
   });
-
 
   document.addEventListener('keydown', (e) => {
     if (!VB.root.classList.contains('is-open')) return;
@@ -125,9 +162,9 @@ function vb_mount() {
   }, {passive:true});
 }
 
-function vb_open(images, startIndex = 0, title = '') {
+function vb_open(images, startIndex = 0) {
   vb_mount();
-  VB.items = images.slice();         // array of {src, alt}
+  VB.items = images.slice();
   VB.index = Math.max(0, Math.min(startIndex, VB.items.length - 1));
   VB.root.classList.add('is-open');
   VB.root.setAttribute('aria-hidden', 'false');
@@ -138,7 +175,7 @@ function vb_open(images, startIndex = 0, title = '') {
 
 function vb_goto(i) {
   if (!VB.items.length) return;
-  VB.index = (i + VB.items.length) % VB.items.length; // wrap
+  VB.index = (i + VB.items.length) % VB.items.length;
   vb_render();
 }
 
@@ -158,7 +195,7 @@ function vb_close() {
   document.body.style.overflow = '';
 }
 
-// --- render ---
+// --- render -----------------------------------------------------------------
 function renderVisuals(items) {
   const section = document.getElementById("visuals-section");
   if (!section) return;
@@ -171,17 +208,20 @@ function renderVisuals(items) {
     return;
   }
 
-  // Sort newest → oldest
+  // Sort newest → oldest by best available key:
+  // 1) year from full date
+  // 2) year from YYYY-only date
+  // 3) end year from date_range
   items.sort((a, b) => {
+    const ya = v_yearForGrouping(a) ?? -Infinity;
+    const yb = v_yearForGrouping(b) ?? -Infinity;
+    if (yb !== ya) return yb - ya;
+
+    // tie-breaker: if both have full dates in same year, sort by actual date
     const ta = Date.parse(a.date || "");
     const tb = Date.parse(b.date || "");
     if (Number.isFinite(tb) && Number.isFinite(ta)) return tb - ta;
-    const ya = v_getYearFromDate(a.date);
-    const yb = v_getYearFromDate(b.date);
-    if (ya === null && yb === null) return 0;
-    if (ya === null) return 1;
-    if (yb === null) return -1;
-    return yb - ya;
+    return 0;
   });
 
   // Build year blocks: {header + grid}
@@ -189,7 +229,7 @@ function renderVisuals(items) {
   let yearGrid = null;
 
   items.forEach(item => {
-    const year = v_getYearFromDate(item.date) ?? "undated";
+    const year = v_yearForGrouping(item) ?? "undated";
     if (year !== currentYear) {
       currentYear = year;
       const yearHeader = document.createElement("h3");
@@ -219,11 +259,11 @@ function renderVisuals(items) {
       <div class="visual-meta">
         <h4 class="visual-title">${v_htmlEscape(item.title)}</h4>
         <p class="fragment-mono-regular muted">
-          ${item.date ? v_htmlEscape(v_formatDateHuman(item.date)) : ""}
-          ${item.client ? (item.date ? " · " : "") + v_htmlEscape(item.client) : ""}
-          ${Array.isArray(item.type) && item.type.length
-            ? (item.date || item.client ? " · " : "") + item.type.map(v_htmlEscape).join(", ")
-            : ""}
+          ${ (item.date || item.date_range) ? v_htmlEscape(v_niceDate(item)) : "" }
+          ${ item.client ? ((item.date || item.date_range) ? " · " : "") + v_htmlEscape(item.client) : "" }
+          ${ Array.isArray(item.type) && item.type.length
+              ? ((item.date || item.client || item.date_range) ? " · " : "") + item.type.map(v_htmlEscape).join(", ")
+              : "" }
         </p>
       </div>
       <div class="visual-expand" id="${slug}-details" hidden></div>
@@ -248,8 +288,8 @@ function renderVisuals(items) {
 
     // make the whole card clickable, but let external links work
     card.addEventListener("click", (e) => {
-      if (e.target.closest(".visual-expand a")) return; // allow clicks on links inside expanded
-      if (e.target.closest(".visual-thumb")) { e.preventDefault(); } // stop default hash jump (we handle it)
+      if (e.target.closest(".visual-expand a")) return;      // allow clicks on links inside expanded
+      if (e.target.closest(".visual-thumb")) { e.preventDefault(); }
       toggle(e);
     });
 
@@ -316,6 +356,8 @@ function expandCard(card, item, opts = {}) {
   box.hidden = false;
   card.setAttribute("aria-expanded", "true");
   card.classList.add("is-open");
+
+  // lightbox hooks
   const galleryImgs = box.querySelectorAll('.visual-slide img');
   const galleryData = item.images.map(img => ({ src: img.src, alt: img.alt || item.title }));
 
@@ -324,7 +366,7 @@ function expandCard(card, item, opts = {}) {
     imgEl.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      vb_open(galleryData, idx, item.title);
+      vb_open(galleryData, idx);
     });
   });
 
@@ -344,7 +386,7 @@ function collapseCard(card) {
   card.classList.remove("is-open");
 }
 
-// --- boot ---
+// --- boot -------------------------------------------------------------------
 document.addEventListener("click", (e) => {
   // If lightbox is open, or we just closed it, do nothing
   if (VB.root && VB.root.classList.contains('is-open')) return;
@@ -354,7 +396,6 @@ document.addEventListener("click", (e) => {
   if (!open) return;
   if (!open.contains(e.target)) { collapseCard(open); clearHash(); }
 });
-
 
 document.addEventListener("DOMContentLoaded", async () => {
   const data = await fetch("../assets/data/visuals.json")
