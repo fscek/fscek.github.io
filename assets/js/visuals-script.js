@@ -51,7 +51,6 @@ function v_parseYearRange(rangeStr) {
   const m = /^(\d{4})\s*[—–-]\s*(\d{4}|present|now|ongoing)$/i.exec(s);
   if (!m) return null;
   const start = Number(m[1]);
-  const endRaw = m[2].toLowerCase();
   const isOpen = /^(present|now|ongoing)$/i.test(m[2]);
   const end = isOpen ? new Date().getFullYear() : Number(m[2]);
   return (Number.isFinite(start) && Number.isFinite(end)) ? { start, end, isOpen } : null;
@@ -89,7 +88,6 @@ function v_yearForGrouping(item) {
   return y !== null ? y : null;
 }
 
-
 function v_isMeaningful(item) {
   const hasTitle = typeof item.title === "string" && item.title.trim();
   const hasImages = Array.isArray(item.images) && item.images.length && item.images[0]?.src;
@@ -102,6 +100,12 @@ function v_cleanLinks(arr) {
   return (Array.isArray(arr) ? arr : []).filter(l => l && l.url && l.platform);
 }
 const clearHash = () => history.replaceState(null, "", window.location.pathname + window.location.search);
+
+// New: gallery builder that omits the first image (thumb)
+function v_galleryImagesExcludingThumb(item) {
+  const imgs = Array.isArray(item.images) ? item.images : [];
+  return imgs.slice(1);
+}
 
 // --- lightbox state ----------------------------------------------------------
 let suppressNextDocClick = false;
@@ -243,7 +247,7 @@ function renderVisuals(items) {
     }
 
     const slug = (item.slug || "").trim() || `project-${Math.random().toString(36).slice(2)}`;
-    const first = item.images[0];
+    const first = (Array.isArray(item.images) && item.images[0]) ? item.images[0] : { src: "", alt: "" };
 
     const card = document.createElement("article");
     card.className = "visual-card";
@@ -324,9 +328,11 @@ function expandCard(card, item, opts = {}) {
   const credits = Array.isArray(item.credits) ? item.credits : [];
   const desc = item.description ? `<p class="visual-description">${item.description}</p>` : "";
 
+  // Build gallery from images excluding the first (used as thumb)
+  const galleryImgsData = v_galleryImagesExcludingThumb(item);
   const gallery = `
     <div class="visual-gallery" role="region" aria-label="images for ${v_htmlEscape(item.title)}">
-      ${item.images.map(img => `
+      ${galleryImgsData.map(img => `
         <figure class="visual-slide">
           <img src="${img.src}" alt="${v_htmlEscape(img.alt || item.title)}" loading="lazy" decoding="async">
           ${img.caption ? `<figcaption class="caption fragment-mono-regular">${v_htmlEscape(img.caption)}</figcaption>` : ""}
@@ -357,16 +363,16 @@ function expandCard(card, item, opts = {}) {
   card.setAttribute("aria-expanded", "true");
   card.classList.add("is-open");
 
-  // lightbox hooks
+  // lightbox hooks (also use filtered images)
   const galleryImgs = box.querySelectorAll('.visual-slide img');
-  const galleryData = item.images.map(img => ({ src: img.src, alt: img.alt || item.title }));
+  const galleryData = galleryImgsData.map(img => ({ src: img.src, alt: img.alt || item.title }));
 
   galleryImgs.forEach((imgEl, idx) => {
     imgEl.style.cursor = 'zoom-in';
     imgEl.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      vb_open(galleryData, idx);
+      if (galleryData.length) vb_open(galleryData, idx);
     });
   });
 
