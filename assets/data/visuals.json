@@ -1,13 +1,116 @@
 [
-  {
-    "title": "WORK IN PROGRESS",
-    "date": "",
-    "description": "nothing to see yet!<br>until then, please enjoy the other pages",
-    "images": [
-      "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/sorry.webp"
-    ],
-    "links": [
-      {"platform": "", "url": ""}
-    ]
-  }
+{
+  "slug": "kebab-case-unique-id",
+  "title": "Project title",
+  "date": "2024",
+  "type": ["poster", "design"],
+  "client": "Client / Label / Self",
+  "location": "City, Country",
+  "description": "Short blurb (HTML allowed).",
+  "images": [
+    { "src": "https://…/main.webp", "alt": "Accessible alt text", "caption": "Optional caption" }
+  ],
+  "links": [
+    { "platform": "Instagram", "url": "https://…" }
+  ],
+  "credits": [
+    { "role": "Photography", "name": "Name", "url": "https://…" }
+  ],
+  "tags": ["optional", "keywords"]
+},
+{
+  "slug": "",
+  "title": "Project title",
+  "date": "2023",
+  "type": ["poster", "design"],
+  "client": "Client / Label / Self",
+  "location": "City, Country",
+  "description": "Short blurb (HTML allowed).",
+  "images": [
+    { "src": "https://…/main.webp", "alt": "Accessible alt text", "caption": "Optional caption" }
+  ],
+  "links": [
+    { "platform": "Instagram", "url": "https://…" }
+  ],
+  "credits": [
+    { "role": "Photography", "name": "Name", "url": "https://…" }
+  ],
+  "tags": ["optional", "keywords"]
+},
+{
+  "slug": "",
+  "title": "Project title",
+  "date": "YYYY or YYYY-MM-DD",
+  "type": ["poster", "design"],
+  "client": "Client / Label / Self",
+  "location": "City, Country",
+  "description": "Short blurb (HTML allowed).",
+  "images": [
+    { "src": "https://…/main.webp", "alt": "Accessible alt text", "caption": "Optional caption" }
+  ],
+  "links": [
+    { "platform": "Instagram", "url": "https://…" }
+  ],
+  "credits": [
+    { "role": "Photography", "name": "Name", "url": "https://…" }
+  ],
+  "tags": ["optional", "keywords"]
+},
+{
+  "slug": "",
+  "title": "Project title",
+  "date": "YYYY or YYYY-MM-DD",
+  "type": ["poster", "design"],
+  "client": "Client / Label / Self",
+  "location": "City, Country",
+  "description": "Short blurb (HTML allowed).",
+  "images": [
+    { "src": "https://…/main.webp", "alt": "Accessible alt text", "caption": "Optional caption" }
+  ],
+  "links": [
+    { "platform": "Instagram", "url": "https://…" }
+  ],
+  "credits": [
+    { "role": "Photography", "name": "Name", "url": "https://…" }
+  ],
+  "tags": ["optional", "keywords"]
+},
+{
+  "slug": "",
+  "title": "Project title",
+  "date": "YYYY or YYYY-MM-DD",
+  "type": ["poster", "design"],
+  "client": "Client / Label / Self",
+  "location": "City, Country",
+  "description": "Short blurb (HTML allowed).",
+  "images": [
+    { "src": "https://…/main.webp", "alt": "Accessible alt text", "caption": "Optional caption" }
+  ],
+  "links": [
+    { "platform": "Instagram", "url": "https://…" }
+  ],
+  "credits": [
+    { "role": "Photography", "name": "Name", "url": "https://…" }
+  ],
+  "tags": ["optional", "keywords"]
+},
+{
+  "slug": "",
+  "title": "Project title",
+  "date": "YYYY or YYYY-MM-DD",
+  "type": ["poster", "design"],
+  "client": "Client / Label / Self",
+  "location": "City, Country",
+  "description": "Short blurb (HTML allowed).",
+  "images": [
+    { "src": "https://…/main.webp", "alt": "Accessible alt text", "caption": "Optional caption" }
+  ],
+  "links": [
+    { "platform": "Instagram", "url": "https://…" }
+  ],
+  "credits": [
+    { "role": "Photography", "name": "Name", "url": "https://…" }
+  ],
+  "tags": ["optional", "keywords"]
+}
 ]
