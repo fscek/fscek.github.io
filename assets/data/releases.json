@@ -355,17 +355,6 @@
       ]
     },
     {
-      "title": "",
-      "releaseDate": "",
-      "year": 201,
-      "description": "",
-      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/.webp",
-      "links": [
-        {"platform": "Spotify", "url": ""},
-        {"platform": "Bandcamp", "url": ""}
-      ]
-    },
-    {
       "title": "Learning To Cope",
       "releaseDate": "2017-08-20",
       "year": 2017,
@@ -466,28 +455,6 @@
       "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2015/releases/2015_ix_iii_ep.webp",
       "links": [
         {"platform": "Bandcamp", "url": "https://alwayshumantapes.bandcamp.com/album/ix-iii-aht040"}
-      ]
-    },
-    {
-      "title": "",
-      "releaseDate": "",
-      "year": 201,
-      "description": "",
-      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/.webp",
-      "links": [
-        {"platform": "Spotify", "url": ""},
-        {"platform": "Bandcamp", "url": ""}
-      ]
-    },
-    {
-      "title": "",
-      "releaseDate": "",
-      "year": 201,
-      "description": "",
-      "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2018/releases/.webp",
-      "links": [
-        {"platform": "Spotify", "url": ""},
-        {"platform": "Bandcamp", "url": ""}
       ]
     }
 ]
