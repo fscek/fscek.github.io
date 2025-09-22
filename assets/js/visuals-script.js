@@ -110,6 +110,36 @@ function v_galleryImagesExcludingThumb(item) {
 // --- lightbox state ----------------------------------------------------------
 let suppressNextDocClick = false;
 
+// --- scroll lock (keeps sticky header stable) ---
+const SCROLL_LOCK = { y: 0, active: false };
+
+function lockScroll() {
+  if (SCROLL_LOCK.active) return;
+  SCROLL_LOCK.y = window.scrollY || window.pageYOffset || 0;
+  const b = document.body;
+  b.style.position = 'fixed';
+  b.style.top = `-${SCROLL_LOCK.y}px`;
+  b.style.left = '0';
+  b.style.right = '0';
+  b.style.width = '100%';
+  b.style.overflow = 'hidden'; // optional, belt-and-suspenders
+  SCROLL_LOCK.active = true;
+}
+
+function unlockScroll() {
+  if (!SCROLL_LOCK.active) return;
+  const b = document.body;
+  b.style.position = '';
+  b.style.top = '';
+  b.style.left = '';
+  b.style.right = '';
+  b.style.width = '';
+  b.style.overflow = '';
+  window.scrollTo(0, SCROLL_LOCK.y);
+  SCROLL_LOCK.active = false;
+}
+
+
 const VB = {
   root: null, img: null, prev: null, next: null, close: null,
   items: [], index: 0, touchStartX: null
@@ -118,6 +148,10 @@ const VB = {
 function vb_mount() {
   if (VB.root) return;
   VB.root  = document.getElementById('visuals-lightbox');
+  if (VB.root && VB.root.parentElement && VB.root.parentElement.tagName.toLowerCase() !== 'body') {
+    document.body.appendChild(VB.root);
+  }
+
   if (!VB.root) {
     VB.root = document.createElement('div');
     VB.root.id = 'visuals-lightbox';
@@ -130,6 +164,7 @@ function vb_mount() {
       </div>`;
     document.body.appendChild(VB.root);
   }
+
   VB.img   = VB.root.querySelector('img');
   VB.prev  = VB.root.querySelector('.vb-prev');
   VB.next  = VB.root.querySelector('.vb-next');
@@ -137,17 +172,8 @@ function vb_mount() {
 
   VB.prev.addEventListener('click', () => vb_goto(VB.index - 1));
   VB.next.addEventListener('click', () => vb_goto(VB.index + 1));
-  VB.close.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    vb_close();
-  });
-  VB.root.addEventListener('click', (e) => {
-    if (e.target === VB.root) {
-      e.stopPropagation();
-      vb_close();
-    }
-  });
+  VB.close.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); vb_close(); });
+  VB.root.addEventListener('click', (e) => { if (e.target === VB.root) { e.stopPropagation(); vb_close(); } });
 
   document.addEventListener('keydown', (e) => {
     if (!VB.root.classList.contains('is-open')) return;
@@ -172,8 +198,7 @@ function vb_open(images, startIndex = 0) {
   VB.index = Math.max(0, Math.min(startIndex, VB.items.length - 1));
   VB.root.classList.add('is-open');
   VB.root.setAttribute('aria-hidden', 'false');
-  document.documentElement.style.overflow = 'hidden';
-  document.body.style.overflow = 'hidden';
+  lockScroll();
   vb_render();
 }
 
@@ -195,8 +220,7 @@ function vb_close() {
   suppressNextDocClick = true;  // ignore the very next document click
   VB.root.classList.remove('is-open');
   VB.root.setAttribute('aria-hidden', 'true');
-  document.documentElement.style.overflow = '';
-  document.body.style.overflow = '';
+  unlockScroll();
 }
 
 // --- render -----------------------------------------------------------------
