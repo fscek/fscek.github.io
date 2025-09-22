@@ -1,13 +1,582 @@
 [
   {
-    "title": "WORK IN PROGRESS",
-    "date": "",
-    "description": "nothing to see yet!<br>until then, please enjoy the other pages",
+    "slug": "lis-001",
+    "title": "LI$-001 - artwork",
+    "date": "2015",
+    "client": "Low Income $quad",
+    "type": ["tape cover"],
     "images": [
-      "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/sorry.webp"
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2015/lis-001/2015-lis-001-web-cover-thumb.webp", "alt": "LI$-001 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2015/lis-001/2015-lis-001-web-cover.webp", "alt": "LI$-001 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2015/lis-001/2015-lis-001-tape-cover.webp", "alt": "LI$-001 tape artwork" }
+    ]
+  },
+
+  {
+    "slug": "lis-002",
+    "title": "LI$-002 - artwork",
+    "date": "2016",
+    "client": "Low Income $quad",
+    "type": ["tape cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-002/2016-lis-002-web-cover-thumb.webp", "alt": "LI$-002 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-002/2016-lis-002-web-cover.webp", "alt": "LI$-002 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-002/2016-lis-002-tape-cover.webp", "alt": "LI$-002 tape artwork" }
+    ]
+  },
+  {
+    "slug": "lis-003",
+    "title": "LI$-003 - artwork",
+    "date": "2016",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-003/2016-lis-003-web-cover-thumb.webp", "alt": "LI$-003 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-003/2016-lis-003-web-cover.webp", "alt": "LI$-003 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-003/2016-lis-003-3d-mock.webp", "alt": "LI$-003 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-003/2016-lis-003-tape-cover.webp", "alt": "LI$-003 tape artwork" }
+    ]
+  },
+  {
+    "slug": "lis-004",
+    "title": "LI$-004 - artwork",
+    "date": "2016",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-004/2016-lis-004-web-cover-thumb.webp", "alt": "LI$-004 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-004/2016-lis-004-web-cover.webp", "alt": "LI$-004 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-004/2016-lis-004-3d-mock.webp", "alt": "LI$-004 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lis-004/2016-lis-004-tape-cover.webp", "alt": "LI$-004 tape artwork" }
+    ]
+  },
+  {
+    "slug": "lll-01",
+    "title": "LLL-01 - vinyl artwork",
+    "date": "2016",
+    "client": "LLL",
+    "type": ["vinyl artwork"],
+    "credits": [
+      { "role": "Photography", "name": "Decks.de", "url": "https://decks.de" }
     ],
-    "links": [
-      {"platform": "", "url": ""}
+    "images": [
+        { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lll-01/2016-lll-01-record-thumb.webp", "alt": "LLL-01 record (thumb)" },
+        { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2016/lll-01/2016-lll-01-record.webp", "alt": "LLL-01 record" }
+    ]
+  },
+
+  {
+    "slug": "lis-005",
+    "title": "LI$-005 - artwork",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "sticker", "mockup"],
+    "credits": [
+      { "role": "3D artwork", "name": "Flufflord", "url": "https://www.instagram.com/tea.d.strazicic/" }
+    ],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-005/2017-lis-005-web-cover-thumb.webp", "alt": "LI$-005 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-005/2017-lis-005-web-cover.webp", "alt": "LI$-005 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-005/2017-lis-005-tape-cover.webp", "alt": "LI$-005 tape artwork" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-005/2017-lis-005-3d-mock.webp", "alt": "LI$-005 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-005/2017-lis-005-sticker-01.webp", "alt": "LI$-005 sticker 1" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-005/2017-lis-005-sticker-02.webp", "alt": "LI$-005 sticker 2" }
+    ]
+  },
+  {
+    "slug": "lis-006",
+    "title": "LI$-006 - artwork",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-006/2017-lis-006-web-cover-thumb.webp", "alt": "LI$-006 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-006/2017-lis-006-web-cover.webp", "alt": "LI$-006 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-006/2017-lis-006-3d-mock.webp", "alt": "LI$-006 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-006/2017-lis-006-tape-cover.webp", "alt": "LI$-006 tape artwork" }
+    ]
+  },
+  {
+    "slug": "lis-007",
+    "title": "LI$-007 - artwork",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-007/2017-lis-007-web-cover-thumb.webp", "alt": "LI$-007 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-007/2017-lis-007-web-cover.webp", "alt": "LI$-007 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-007/2017-lis-007-web-cover-horizontal.webp", "alt": "LI$-007 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-007/2017-lis-007-3d-mock.webp", "alt": "LI$-007 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-007/2017-lis-007-tape-cover.webp", "alt": "LI$-007 tape artwork" }
+    ]
+  },
+  {
+    "slug": "lis-008",
+    "title": "LI$-008 - artwork",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "sticker", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-008/2017-lis-008-web-cover-thumb.webp", "alt": "LI$-008 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-008/2017-lis-008-web-cover.webp", "alt": "LI$-008 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-008/2017-lis-008-web-cover-horizontal.webp", "alt": "LI$-008 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-008/2017-lis-008-3d-mock.webp", "alt": "LI$-008 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-008/2017-lis-008-tape-cover.webp", "alt": "LI$-008 tape artwork" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-008/2017-lis-008-sticker.webp", "alt": "LI$-008 sticker" }
+    ]
+  },
+  {
+    "slug": "lis-009",
+    "title": "LI$-009 - artwork",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-009/2017-lis-009-web-cover-thumb.webp", "alt": "LI$-009 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-009/2017-lis-009-web-cover.webp", "alt": "LI$-009 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-009/2017-lis-009-web-cover-horizontal.webp", "alt": "LI$-009 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-009/2017-lis-009-3d-mock.webp", "alt": "LI$-009 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-009/2017-lis-009-tape-cover.webp", "alt": "LI$-009 tape artwork" }
+    ]
+  },
+  {
+    "slug": "lis-event-001",
+    "title": "LI$ - Event 001 poster",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["poster"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-001/2017-lis-event-001-poster-print-thumb.webp", "alt": "Event 001 poster (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-001/2017-lis-event-001-poster-print.webp", "alt": "Event 001 poster" }
+    ]
+  },
+  {
+    "slug": "lis-event-002",
+    "title": "LI$ - Event 002 poster",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["poster"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-002/2017-lis-event-002-poster-print-thumb.webp", "alt": "Event 002 poster (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-002/2017-lis-event-002-poster-print.webp", "alt": "Event 002 poster" }
+    ]
+  },
+  {
+    "slug": "lis-event-003",
+    "title": "LI$ - Event 003 poster",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["poster"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-003/2017-lis-event-003-poster-print-thumb.webp", "alt": "Event 003 poster (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-003/2017-lis-event-003-poster-print.webp", "alt": "Event 003 poster" }
+    ]
+  },
+  {
+    "slug": "lis-nts-2-mix",
+    "title": "LI$ - NTS 2 mix cover",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-nts-2-mix/2017-lis-nts-2-mix-web-cover-thumb.webp", "alt": "NTS 2 mix cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-nts-2-mix/2017-lis-nts-2-mix-web-cover.webp", "alt": "NTS 2 mix cover" }
+    ]
+  },
+  {
+    "slug": "lis-swiss-tour-posters",
+    "title": "LI$ - Swiss Tour posters",
+    "date": "2017",
+    "client": "Low Income $quad",
+    "type": ["poster"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-swiss-tour-posters/2017-lis-swiss-tour-thumb.webp", "alt": "Swiss Tour posters (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-swiss-tour-posters/2017-lis-swiss-tour-1-poster-print.webp", "alt": "Swiss Tour poster 1" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-swiss-tour-posters/2017-lis-swiss-tour-2-poster-print.webp", "alt": "Swiss Tour poster 2" }
+    ]
+  },
+
+  {
+    "slug": "eclectic-mix-2018",
+    "title": "Eclectic Mix 2018 - cover",
+    "date": "2018",
+    "client": "Self",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/eclectic-mix-2018/2018-eclectic-mix-2018-web-cover-thumb.webp", "alt": "Eclectic Mix 2018 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/eclectic-mix-2018/2018-eclectic-mix-2018-web-cover.webp", "alt": "Eclectic Mix 2018 cover" }
+    ]
+  },
+  {
+    "slug": "house-to-save-the-house",
+    "title": "House To Save The House - tape",
+    "date": "2018",
+    "client": "Self",
+    "type": ["tape cover", "insert", "photo"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/house-to-save-the-house/2018-house-to-save-the-house-tape-01-thumb.webp", "alt": "HTSTH photo (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/house-to-save-the-house/2018-house-to-save-the-house-tape-01.webp", "alt": "HTSTH tape photo 1" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/house-to-save-the-house/2018-house-to-save-the-house-tape-02.webp", "alt": "HTSTH tape photo 2" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/house-to-save-the-house/2018-house-to-save-the-house-tape-cover.webp", "alt": "HTSTH tape cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/house-to-save-the-house/2018-house-to-save-the-house-tape-insert.webp", "alt": "HTSTH insert" }
+    ]
+  },
+  {
+    "slug": "lis-010",
+    "title": "LI$-010 - artwork",
+    "date": "2018",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "insert", "mockup"],
+    "credits": [
+      { "role": "Drawings", "name": "Isabela Ghislandi" },
+      { "role": "Additional drawings", "name": "Filip Šćekić" }
+    ],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-010/2018-lis-010-web-cover-thumb.webp", "alt": "LI$-010 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-010/2018-lis-010-web-cover.webp", "alt": "LI$-010 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-010/2018-lis-010-web-cover-horizontal.webp", "alt": "LI$-010 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-010/2018-lis-010-3d-mock.webp", "alt": "LI$-010 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-010/2018-lis-010-tape-cover.webp", "alt": "LI$-010 tape cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-010/2018-lis-010-tape-insert-01.webp", "alt": "LI$-010 insert 1" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-010/2018-lis-010-tape-insert-02.webp", "alt": "LI$-010 insert 2" }
+    ]
+  },
+  {
+    "slug": "lis-011",
+    "title": "LI$-011 - artwork",
+    "date": "2018",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "sticker", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-011/2018-lis-011-web-cover-thumb.webp", "alt": "LI$-011 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-011/2018-lis-011-web-cover.webp", "alt": "LI$-011 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-011/2018-lis-011-web-cover-horizontal.webp", "alt": "LI$-011 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-011/2018-lis-011-3d-mock.webp", "alt": "LI$-011 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-011/2018-lis-011-tape-cover.webp", "alt": "LI$-011 tape cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-011/2018-lis-011-sticker.webp", "alt": "LI$-011 sticker" }
+    ]
+  },
+  {
+    "slug": "lis-012",
+    "title": "LI$-012 - artwork",
+    "date": "2018",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-012/2018-lis-012-web-cover-thumb.webp", "alt": "LI$-012 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-012/2018-lis-012-web-cover.webp", "alt": "LI$-012 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-012/2018-lis-012-web-cover-horizontal.webp", "alt": "LI$-012 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-012/2018-lis-012-3d-mock.webp", "alt": "LI$-012 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2018/lis-012/2018-lis-012-tape-cover.webp", "alt": "LI$-012 tape cover" }
+    ]
+  },
+
+  {
+    "slug": "body-fusion",
+    "title": "Body Fusion - Operator Radio show artwork",
+    "date": "2019",
+    "client": "Body Fusion",
+    "type": ["cover", "web concept"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/body-fusion/2019-body-fusion-operator-radio-web-concept-thumb.webp", "alt": "Operator Radio concept (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/body-fusion/2019-body-fusion-operator-radio-web-concept.webp", "alt": "Operator Radio concept" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/body-fusion/2019-body-fusion-operator-radio-cover-01.webp", "alt": "Operator Radio show 1 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/body-fusion/2019-body-fusion-operator-radio-cover-02.webp", "alt": "Operator Radio show 2 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/body-fusion/2019-body-fusion-operator-radio-cover-03.webp", "alt": "Operator Radio show 3 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/body-fusion/2019-infinite-pleasure-red-light-radio-concept.webp", "alt": "Early Red Light Radio show concept cover" }
+    ]
+  },
+  {
+    "slug": "eclectic-mix-2019",
+    "title": "Eclectic Mix 2019 - cover",
+    "date": "2019",
+    "client": "Self",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/eclectic-mix-2019/2019-eclectic-mix-2019-web-cover-thumb.webp", "alt": "Eclectic Mix 2019 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/eclectic-mix-2019/2019-eclectic-mix-2019-web-cover.webp", "alt": "Eclectic Mix 2019 cover" }
+    ]
+  },
+  {
+    "slug": "lis-014",
+    "title": "LI$-014 - artwork",
+    "date": "2019",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "sticker", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-014/2019-lis-014-web-cover-thumb.webp", "alt": "LI$-014 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-014/2019-lis-014-web-cover.webp", "alt": "LI$-014 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-014/2019-lis-014-web-cover-horizontal.webp", "alt": "LI$-014 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-014/2019-lis-014-3d-mock.webp", "alt": "LI$-014 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-014/2019-lis-014-tape-cover.webp", "alt": "LI$-014 tape cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-014/2019-lis-014-sticker.webp", "alt": "LI$-014 sticker" }
+    ]
+  },
+  {
+    "slug": "lis-016",
+    "title": "LI$-016 - artwork",
+    "date": "2019",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "sticker", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-016/2019-lis-016-web-cover-thumb.webp", "alt": "LI$-016 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-016/2019-lis-016-web-cover.webp", "alt": "LI$-016 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-016/2019-lis-016-web-cover-horizontal.webp", "alt": "LI$-016 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-016/2019-lis-016-3d-mock.webp", "alt": "LI$-016 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-016/2019-lis-016-tape-cover.webp", "alt": "LI$-016 tape cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-016/2019-lis-016-sticker.webp", "alt": "LI$-016 sticker" }
+    ]
+  },
+  {
+    "slug": "lis-017",
+    "title": "LI$-017 - artwork",
+    "date": "2019",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-017/2019-lis-017-web-cover-thumb.webp", "alt": "LI$-017 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-017/2019-lis-017-web-cover.webp", "alt": "LI$-017 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-017/2019-lis-017-web-cover-horizontal.webp", "alt": "LI$-017 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-017/2019-lis-017-3d-mock.webp", "alt": "LI$-017 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-017/2019-lis-017-tape-cover.webp", "alt": "LI$-017 tape cover" }
+    ]
+  },
+  {
+    "slug": "lis-018",
+    "title": "LI$-018 - artwork",
+    "date": "2019",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup", "sticker"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-018/2019-lis-018-web-cover-thumb.webp", "alt": "LI$-018 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-018/2019-lis-018-web-cover.webp", "alt": "LI$-018 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-018/2019-lis-018-3d-mock.webp", "alt": "LI$-018 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-018/2019-lis-018-tape-cover.webp", "alt": "LI$-018 tape cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-018/2019-lis-cd-concept-sticker.webp", "alt": "LIS CD concept sticker" }
+    ]
+  },
+  {
+    "slug": "lis-event-004",
+    "title": "LI$ - Event 004 posters",
+    "date": "2019",
+    "client": "Low Income $quad",
+    "type": ["poster"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-event-004/2019-lis-event-004-web-cover-thumb.webp", "alt": "Event 004 poster (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-event-004/2019-lis-event-004-web-cover.webp", "alt": "Event 004 poster cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-event-004/2019-lis-event-004-poster-print.webp", "alt": "Event 004 poster - print" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-event-004/2019-lis-event-004-poster-zadar-web.webp", "alt": "Event 004 poster - Zadar" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-event-004/2019-lis-event-004-poster-zagreb-web.webp", "alt": "Event 004 poster - Zagreb" }
+    ]
+  },
+  {
+    "slug": "lis-mix-004",
+    "title": "LI$ Mix 004 - artwork",
+    "date": "2019",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-mix-004/2019-lis-mix-004-web-cover-thumb.webp", "alt": "LIS Mix 004 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-mix-004/2019-lis-mix-004-web-cover.webp", "alt": "LIS Mix 004 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-mix-004/2019-lis-mix-004-web-cover-horizontal.webp", "alt": "LIS Mix 004 horizontal" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-mix-004/2019-lis-mix-004-3d-mock.webp", "alt": "LIS Mix 004 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-mix-004/2019-lis-mix-004-tape-cover.webp", "alt": "LIS Mix 004 tape cover" }
+    ]
+  },
+  {
+    "slug": "lis-socks",
+    "title": "LI$ - socks",
+    "date": "2019",
+    "client": "Low Income $quad",
+    "type": ["merch"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-socks/2019-lis-socks-web-cover-thumb.webp", "alt": "LIS socks (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-socks/2019-lis-socks-web-cover.webp", "alt": "LIS socks - promo" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-socks/2019-lis-socks-black.webp", "alt": "LIS socks - black" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-socks/2019-lis-socks-white.webp", "alt": "LIS socks - white" }
+    ]
+  },
+
+  {
+    "slug": "2k18-burnout",
+    "title": "2k18 Burnout - cover",
+    "date": "2020",
+    "client": "Self",
+    "type": ["EP cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/2k18-burnout/2020-2k18-burnout-web-cover-thumb.webp", "alt": "2k18 Burnout cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/2k18-burnout/2020-2k18-burnout-web-cover.webp", "alt": "2k18 Burnout cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/2k18-burnout/2020-2k18-burnout-web-cover-horizontal.webp", "alt": "2k18 Burnout cover (horizontal)" }
+    ]
+  },
+  {
+    "slug": "lis-019",
+    "title": "LI$-019 - artwork",
+    "date": "2020",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "sticker", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-019/2020-lis-019-web-cover-thumb.webp", "alt": "LI$-019 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-019/2020-lis-019-web-cover.webp", "alt": "LI$-019 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-019/2020-lis-019-web-cover-horizontal.webp", "alt": "LI$-019 horizontal cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-019/2020-lis-019-3d-mock.webp", "alt": "LI$-019 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-019/2020-lis-019-tape-cover.webp", "alt": "LI$-019 tape cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-019/2020-lis-019-sticker.webp", "alt": "LI$-019 sticker" }
+    ]
+  },
+  {
+    "slug": "lis-020",
+    "title": "LI$-020 - artwork",
+    "date": "2020",
+    "client": "Low Income $quad",
+    "type": ["tape cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-020/2020-lis-020-web-cover-thumb.webp", "alt": "LI$-020 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-020/2020-lis-020-web-cover.webp", "alt": "LI$-020 cover" }
+    ]
+  },
+  {
+    "slug": "lis-021",
+    "title": "LI$-021 - artwork",
+    "date": "2020",
+    "client": "Low Income $quad",
+    "type": ["tape cover", "mockup"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-021/2020-lis-021-web-cover-thumb.webp", "alt": "LI$-021 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-021/2020-lis-021-web-cover.webp", "alt": "LI$-021 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-021/2020-lis-021-3d-mock.webp", "alt": "LI$-021 mockup" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/lis-021/2020-lis-021-tape-cover.webp", "alt": "LI$-021 tape cover" }
+    ]
+  },
+  {
+    "slug": "singles",
+    "title": "Singles - cover series",
+    "date": "2020",
+    "client": "Self",
+    "type": ["cover series"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/singles/2020-singles-thumb.webp", "alt": "Singles series (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/singles/2020-ada-ciganlija.webp", "alt": "Ada Ciganlija cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/singles/2020-boiler-room-anthem-web-cover.webp", "alt": "Boiler Room Anthem cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2020/singles/2020-effervescent-web-cover.webp", "alt": "Effervescent cover" }
+    ]
+  },
+
+  {
+    "slug": "lis-cd-concept-sticker",
+    "title": "LI$ - CD concept sticker",
+    "date": "2021",
+    "client": "Low Income $quad",
+    "type": ["sticker"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2021/lis-cd-concept-sticker/2021-lis-cd-concept-sticker-thumb.webp", "alt": "LIS CD concept sticker (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2021/lis-cd-concept-sticker/2021-lis-cd-concept-sticker.webp", "alt": "LIS CD concept sticker" }
+    ]
+  },
+  {
+    "slug": "lis-nts-1-mix",
+    "title": "LI$ - NTS 1 mix cover",
+    "date": "2021-07",
+    "client": "Low Income $quad",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2021/lis-nts-1-mix/2021-07-lis-nts-1-mix-web-cover-thumb.webp", "alt": "NTS 1 mix cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2021/lis-nts-1-mix/2021-07-lis-nts-1-mix-web-cover.webp", "alt": "NTS 1 mix cover" }
+    ]
+  },
+
+  {
+    "slug": "fun-mix",
+    "title": "Fun Mix - cover",
+    "date": "2023",
+    "client": "Self",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/fun-mix/2023-fun-mix-web-cover-thumb.webp", "alt": "Fun Mix cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/fun-mix/2023-fun-mix-web-cover.webp", "alt": "Fun Mix cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/fun-mix/2023-fun-mix-web-cover-horizontal.webp", "alt": "Fun Mix horizontal" }
+    ]
+  },
+  {
+    "slug": "mizansen",
+    "title": "Mizansen - scarf & poster",
+    "date": "2023",
+    "client": "Mizansen",
+    "type": ["scarf design", "poster concept"],
+    "credits": [
+      { "role": "Photography", "name": "Mizansen" }
+    ],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/mizansen/2023-mizansen-concept-thumb.webp", "alt": "Mizansen concept (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/mizansen/2023-mizansen-night-poster-concept.webp", "alt": "Mizansen poster concept" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/mizansen/2023-mizansen-scarf-1.webp", "alt": "Mizansen scarf 1" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/mizansen/2023-mizansen-scarf-2.webp", "alt": "Mizansen scarf 2" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/mizansen/2023-mizansen-scarf-3.webp", "alt": "Mizansen scarf 3" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/mizansen/2023-mizansen-scarf-4.webp", "alt": "Mizansen scarf 4" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/mizansen/2023-mizansen-scarf-5.webp", "alt": "Mizansen scarf 5" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/mizansen/2023-mizansen-scarf-6.webp", "alt": "Mizansen scarf 6" }                  
+    ]
+  },
+  {
+    "slug": "never-give-up-mix",
+    "title": "Never Give Up - cover",
+    "date": "2023",
+    "client": "Self",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/never-give-up-mix/2023-never-give-up-mix-web-cover-thumb.webp", "alt": "Never Give Up mix cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/never-give-up-mix/2023-never-give-up-mix-web-cover.webp", "alt": "Never Give Up mix cover" }
+    ]
+  },
+  {
+    "slug": "value-event-001",
+    "title": "Value - event 001",
+    "date": "2023",
+    "client": "Value",
+    "type": ["poster", "cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/value-event-001/2023-value-001-web-cover-thumb.webp", "alt": "Value 001 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/value-event-001/2023-value-001-web-cover.webp", "alt": "Value 001 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/value-event-001/2023-value-001-web-concept.webp", "alt": "Value 001 web concept" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/value-event-001/2023-value-001-poster.webp", "alt": "Value 001 poster" }
+    ]
+  },
+
+  {
+    "slug": "fight-or-flight",
+    "title": "Fight or Flight - cover",
+    "date": "2024",
+    "client": "Self",
+    "type": ["EP cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/fight-or-flight/2024-fight-or-flight-web-cover-square-thumb.webp", "alt": "Fight or Flight square (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/fight-or-flight/2024-fight-or-flight-web-cover-square.webp", "alt": "Fight or Flight square" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/fight-or-flight/2024-fight-or-flight-web-cover-vertical-01.webp", "alt": "Fight or Flight vertical 1" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/fight-or-flight/2024-fight-or-flight-web-cover-vertical-02.webp", "alt": "Fight or Flight vertical 2" }
+    ]
+  },
+  {
+    "slug": "fun-mix-2",
+    "title": "Fun Mix 2 - cover",
+    "date": "2024",
+    "client": "Self",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/fun-mix-2/2024-fun-mix-2-web-cover-thumb.webp", "alt": "Fun Mix 2 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/fun-mix-2/2024-fun-mix-2-web-cover.webp", "alt": "Fun Mix 2 cover" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/fun-mix-2/2024-fun-mix-2-web-cover-horizontal.webp", "alt": "Fun Mix 2 horizontal" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/fun-mix-2/2024-fun-mix-2-web-cover-02.webp", "alt": "Fun Mix 2 alternate" }
+    ]
+  },
+  {
+    "slug": "zagreb-style",
+    "title": "Zagreb Style - cover",
+    "date": "2024",
+    "client": "Self",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/zagreb-style/2024-zagreb-style-web-cover-01-thumb.webp", "alt": "Zagreb Style cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/zagreb-style/2024-zagreb-style-web-cover-01.webp", "alt": "Zagreb Style cover" }
     ]
   }
 ]

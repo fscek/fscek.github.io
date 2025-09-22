@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SZCH Visuals",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["slug", "title", "images"],
+    "additionalProperties": false,
+    "properties": {
+      "slug": { "type": "string", "minLength": 1, "description": "Unique id, kebab-case" },
+      "title": { "type": "string", "minLength": 1 },
+      "date": {
+        "type": "string",
+        "description": "YYYY or YYYY-MM-DD",
+        "pattern": "^(\\d{4})(-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))?$"
+      },
+      "type": {
+        "type": "array",
+        "description": "Free-form labels (e.g. poster, scarf design, vinyl sleeve)",
+        "items": { "type": "string", "minLength": 1 },
+        "uniqueItems": true
+      },
+      "client": { "type": "string" },
+      "location": { "type": "string" },
+      "description": { "type": "string", "description": "HTML allowed" },
+      "images": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["src", "alt"],
+          "additionalProperties": false,
+          "properties": {
+            "src": { "type": "string", "minLength": 1 },
+            "alt": { "type": "string", "minLength": 1 },
+            "caption": { "type": "string" }
+          }
+        }
+      },
+      "links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["platform", "url"],
+          "additionalProperties": false,
+          "properties": {
+            "platform": { "type": "string", "minLength": 1 },
+            "url": { "type": "string", "minLength": 1 }
+          }
+        }
+      },
+      "credits": {
+        "type": "array",
+        "description": "Collaborators/vendors",
+        "items": {
+          "type": "object",
+          "required": ["role", "name"],
+          "additionalProperties": false,
+          "properties": {
+            "role": { "type": "string", "minLength": 1 },
+            "name": { "type": "string", "minLength": 1 },
+            "url": { "type": "string" }
+          }
+        }
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string", "minLength": 1 },
+        "uniqueItems": true
+      }
+    }
+  }
+}

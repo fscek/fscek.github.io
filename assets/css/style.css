@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
     font-family: "Fragment Mono", monospace;
     background-color: #D67DB3;  /* primary color */
@@ -497,38 +501,195 @@ hr.dotted {
 
 /* visuals.html */
 /* styling for the visuals page */
+#visuals-section h2 { font-size: 2em; }
 
-#visuals-section h2 {
-    font-size: 2em; /* Adjust the size as needed */
+/* year headers */
+#visuals-section .visuals-year {
+  border-top: 0.1875rem dotted #0000FF; /* 3px -> rem-ish */
+  padding-top: 0.6rem;
+  margin: 2rem 0 0.75rem;
 }
 
-.visuals-link {
-    text-decoration: underline;
+/* grid */
+#visuals-section .visuals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+  align-items: start;
 }
 
-.visual-description {
-    padding-top: 10px; /* padding above the description */
-    padding-bottom: 10px; /* padding below the description */
+/* card */
+#visuals-section .visual-card {
+  border: 0.0625rem solid #000;      /* 1px */
+  border-radius: 0.75rem;            /* 12px */
+  padding: 0.75rem;
+  background: #fff;
+  color: #000;
+  outline: none;
+  scroll-margin-top: 6.25rem;        /* ~100px: sticky header offset */
+  transition: box-shadow .2s ease;
+  cursor: pointer;
+  overflow: hidden;                   /* nothing escapes the card */
+}
+#visuals-section .visual-card:focus-visible {
+  box-shadow: 0 0 0 0.1875rem rgba(0,0,0,.25); /* 3px */
 }
 
-.visual-title {
-    font-size: 1.3em;
-    margin-bottom: 0.5em; /* some space below the title */
+/* thumbnail — aspect ratio + max height clamp */
+#visuals-section .visual-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: min(30vh, 15rem);      /* clamp for very wide cards */
+  border-radius: 0.375rem;           /* 6px */
+  overflow: hidden;
+}
+#visuals-section .visual-thumb .visual-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                  /* crop nicely inside the clamp */
+  display: block;
 }
 
-.visual-item {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    opacity: 1; /* fully visible by default */
-    transition: opacity 0.5s ease; /* transition for opacity changes */
+/* meta */
+#visuals-section .visual-title {
+  font-size: 1.3em;
+  margin: 0.5rem 0 0.25rem;
+}
+#visuals-section .visual-description { padding: 0.625rem 0; } /* 10px */
+#visuals-section .visuals-link { text-decoration: underline; }
+
+/* expanded details */
+#visuals-section .visual-expand { margin-top: 0.75rem; }
+
+/* gallery (mobile-first, horizontal scroll) */
+#visuals-section .visual-gallery {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+#visuals-section .visual-slide {
+  flex: 0 0 85%;
+  max-width: 85%;
+  scroll-snap-align: center;
+}
+@media (min-width: 56.25rem) {        /* 900px */
+  #visuals-section .visual-slide { flex-basis: 60%; max-width: 60%; }
+}
+#visuals-section .visual-slide img {
+  display: block;
+  max-height: 70vh;                   /* keep inside viewport */
+  height: auto;
+  width: auto;                        /* avoid stretching tall images */
+  border-radius: 0.375rem;
+}
+#visuals-section .caption { margin-top: 0.35rem; opacity: .85; }
+
+/* open state hint */
+#visuals-section .visual-card.is-open {
+  background: #fff;
+  border-color: #000;
 }
 
-.visual-image {
-    max-width: 70%; /* keeps the image as responsive, so it doesn't overflow its container */
-    height: auto; /* keeps the image's aspect ratio */
-    display: block; /* images are inline by default; this ensures margin properties work */
-    margin: 0 0 20px 0; /* applies margin to the bottom; no auto margin for horizontal alignment */
-    border-radius: 5px; /* adds rounded corners for a softer look */
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #visuals-section .visual-gallery { scroll-behavior: auto; }
+}
+
+/* inline expand: slides fill card on mobile, grow sensibly on desktop */
+#visuals-section .visual-card.is-open .visual-gallery {
+  justify-content: center;        /* center slides within the card */
+}
+
+#visuals-section .visual-card.is-open .visual-slide {
+  flex: 0 1 100%;
+  max-width: 100%;                /* full card width on small screens */
+}
+
+/* on wider screens, let the slide grow but cap it with clamp() */
+@media (min-width: 56.25rem) {    /* ~900px */
+  #visuals-section .visual-card.is-open .visual-slide {
+    flex: 0 1 clamp(24rem, 66vw, 48rem);
+    max-width: clamp(24rem, 66vw, 48rem);
+  }
+}
+
+/* images inside inline slides: no cropping, scale to fit, stay within viewport */
+#visuals-section .visual-card.is-open .visual-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;               /* keep below sticky header area */
+  object-fit: contain;            /* no crop inside the slide */
+  background: #fff;               /* avoid dark letterboxing feel */
+  border-radius: 0.375rem;
+}
+
+
+/* === visuals lightbox === */
+#visuals-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  display: none;              /* toggled by .is-open */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#visuals-lightbox.is-open { display: flex; }
+
+#visuals-lightbox .vb-frame {
+  position: relative;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#visuals-lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: .5rem;
+  box-shadow: 0 0 0 .0625rem rgba(255,255,255,.25);
+}
+
+/* controls */
+#visuals-lightbox .vb-close,
+#visuals-lightbox .vb-prev,
+#visuals-lightbox .vb-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,.4);
+  color: #fff;
+  border: .0625rem solid rgba(255,255,255,.5);
+  border-radius: 999rem;
+  padding: .6rem .8rem;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Fragment Mono", monospace;
+}
+
+#visuals-lightbox .vb-prev { left: 1rem; }
+#visuals-lightbox .vb-next { right: 1rem; }
+
+#visuals-lightbox .vb-close {
+  top: 1rem;
+  right: 1rem;
+  transform: none;
+}
+
+/* touch targets a bit larger on mobile */
+@media (max-width: 40rem) {
+  #visuals-lightbox .vb-prev, #visuals-lightbox .vb-next { padding: .8rem 1rem; }
 }
 
 /* Language Filter Buttons */
