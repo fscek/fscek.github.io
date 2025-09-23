@@ -144,7 +144,7 @@
     "title": "LI$ - Event 001 poster",
     "date": "2017",
     "client": "Low Income $quad",
-    "type": ["poster"],
+    "type": ["show poster"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-001/2017-lis-event-001-poster-print-thumb.webp", "alt": "Event 001 poster (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-001/2017-lis-event-001-poster-print.webp", "alt": "Event 001 poster" }
@@ -155,7 +155,7 @@
     "title": "LI$ - Event 002 poster",
     "date": "2017",
     "client": "Low Income $quad",
-    "type": ["poster"],
+    "type": ["show poster"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-002/2017-lis-event-002-poster-print-thumb.webp", "alt": "Event 002 poster (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-002/2017-lis-event-002-poster-print.webp", "alt": "Event 002 poster" }
@@ -166,7 +166,7 @@
     "title": "LI$ - Event 003 poster",
     "date": "2017",
     "client": "Low Income $quad",
-    "type": ["poster"],
+    "type": ["show poster"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-003/2017-lis-event-003-poster-print-thumb.webp", "alt": "Event 003 poster (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-event-003/2017-lis-event-003-poster-print.webp", "alt": "Event 003 poster" }
@@ -177,7 +177,7 @@
     "title": "LI$ - NTS 2 mix cover",
     "date": "2017",
     "client": "Low Income $quad",
-    "type": ["mix cover"],
+    "type": ["radio show cover"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-nts-2-mix/2017-lis-nts-2-mix-web-cover-thumb.webp", "alt": "NTS 2 mix cover (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-nts-2-mix/2017-lis-nts-2-mix-web-cover.webp", "alt": "NTS 2 mix cover" }
@@ -188,7 +188,7 @@
     "title": "LI$ - Swiss Tour posters",
     "date": "2017",
     "client": "Low Income $quad",
-    "type": ["poster"],
+    "type": ["show poster"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-swiss-tour-posters/2017-lis-swiss-tour-thumb.webp", "alt": "Swiss Tour posters (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2017/lis-swiss-tour-posters/2017-lis-swiss-tour-1-poster-print.webp", "alt": "Swiss Tour poster 1" },
@@ -276,7 +276,7 @@
     "title": "Body Fusion - Operator Radio show artwork",
     "date": "2019",
     "client": "Body Fusion",
-    "type": ["cover", "web concept"],
+    "type": ["radio show cover", "web concept"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/body-fusion/2019-body-fusion-operator-radio-web-concept-thumb.webp", "alt": "Operator Radio concept (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/body-fusion/2019-body-fusion-operator-radio-web-concept.webp", "alt": "Operator Radio concept" },
@@ -360,7 +360,7 @@
     "title": "LI$ - Event 004 posters",
     "date": "2019",
     "client": "Low Income $quad",
-    "type": ["poster"],
+    "type": ["show poster"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-event-004/2019-lis-event-004-web-cover-thumb.webp", "alt": "Event 004 poster (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-event-004/2019-lis-event-004-web-cover.webp", "alt": "Event 004 poster cover" },
@@ -388,7 +388,7 @@
     "title": "LI$ - socks",
     "date": "2019",
     "client": "Low Income $quad",
-    "type": ["merch"],
+    "type": ["merch", "photo"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-socks/2019-lis-socks-web-cover-thumb.webp", "alt": "LIS socks (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2019/lis-socks/2019-lis-socks-web-cover.webp", "alt": "LIS socks - promo" },
@@ -464,7 +464,7 @@
 
   {
     "slug": "lis-cd-concept-sticker",
-    "title": "LI$ - CD concept sticker",
+    "title": "LI$ - CD holo concept sticker",
     "date": "2021",
     "client": "Low Income $quad",
     "type": ["sticker"],
@@ -533,7 +533,7 @@
     "title": "Value - event 001",
     "date": "2023",
     "client": "Value",
-    "type": ["poster", "cover"],
+    "type": ["show poster", "cover"],
     "images": [
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/value-event-001/2023-value-001-web-cover-thumb.webp", "alt": "Value 001 cover (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2023/value-event-001/2023-value-001-web-cover.webp", "alt": "Value 001 cover" },
