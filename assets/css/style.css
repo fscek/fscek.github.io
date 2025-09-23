@@ -568,6 +568,14 @@ hr.dotted {
   pointer-events: none;      /* don't block clicks on the thumb */
 }
 
+#visuals-section .visual-credits { margin-top: .5rem; }
+#visuals-section .visual-credits-kicker {
+  margin: 0 0 .25rem;
+  text-transform: lowercase;
+  letter-spacing: .02em;
+  font-size: .85em;
+}
+
 /* meta */
 #visuals-section .visual-title {
   font-size: 1.3em;

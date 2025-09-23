@@ -378,16 +378,19 @@ function expandCard(card, item, opts = {}) {
        </p>`
     : "";
 
-  const creditsHtml = credits.length
-    ? `<div class="fragment-mono-regular muted">
-         ${credits.map(c => {
-            const name = v_htmlEscape(c.name || "");
-            const role = v_htmlEscape(c.role || "");
-            const url  = c.url ? `<a href="${c.url}" target="_blank" rel="noopener">${name}</a>` : name;
-            return role ? `${url} — ${role}` : url;
-          }).join("<br>")}
-       </div>`
-    : "";
+    const creditsHtml = credits.length
+      ? `<div class="visual-credits">
+           <p class="fragment-mono-regular muted visual-credits-kicker">credits</p>
+           <div class="fragment-mono-regular muted">
+             ${credits.map(c => {
+                const name = v_htmlEscape(c.name || "");
+                const role = v_htmlEscape(c.role || "");
+                const url  = c.url ? `<a href="${c.url}" target="_blank" rel="noopener">${name}</a>` : name;
+                return role ? `${url} - ${role}` : url;
+             }).join("<br>")}
+           </div>
+         </div>`
+      : "";
 
   box.innerHTML = `${gallery}${desc}${linksHtml}${creditsHtml}`;
   box.hidden = false;
