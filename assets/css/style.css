@@ -551,6 +551,23 @@ hr.dotted {
   display: block;
 }
 
+/* count bubble on the card thumbnail */
+#visuals-section .visual-thumb { position: relative; }
+#visuals-section .visual-count {
+  position: absolute;
+  right: .5rem;
+  bottom: .5rem;
+  padding: .2rem .5rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  line-height: 1;
+  font-family: "Fragment Mono", monospace;
+  background: #000;          /* badge bg */
+  color: #fff;               /* badge text */
+  border: 1px solid #fff;    /* subtle outline so it pops on darks */
+  pointer-events: none;      /* don't block clicks on the thumb */
+}
+
 /* meta */
 #visuals-section .visual-title {
   font-size: 1.3em;

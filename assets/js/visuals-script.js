@@ -1,4 +1,4 @@
-// visuals-script.js — single-page grid with hash deep links + inline expand
+// visuals-script.js - single-page grid with hash deep links + inline expand
 
 // --- slug helpers -----------------------------------------------------------
 const DIACRITICS = { č:'c', ć:'c', đ:'d', š:'s', ž:'z',
@@ -43,12 +43,12 @@ function v_getYearFromDate(dateStr) {
   return m ? Number(m[1]) : null;
 }
 
-// Parse things like "2017–2024", "2017-2024", "2017 — 2024", "2017–present"
+// Parse things like "2017–2024", "2017-2024", "2017 - 2024", "2017–present"
 function v_parseYearRange(rangeStr) {
   const s = (rangeStr ?? "").toString().trim();
   if (!s) return null;
   // allow hyphen, en-dash, em-dash with optional spaces
-  const m = /^(\d{4})\s*[—–-]\s*(\d{4}|present|now|ongoing)$/i.exec(s);
+  const m = /^(\d{4})\s*[-–-]\s*(\d{4}|present|now|ongoing)$/i.exec(s);
   if (!m) return null;
   const start = Number(m[1]);
   const isOpen = /^(present|now|ongoing)$/i.test(m[2]);
@@ -273,6 +273,12 @@ function renderVisuals(items) {
     const slug = (item.slug || "").trim() || `project-${Math.random().toString(36).slice(2)}`;
     const first = (Array.isArray(item.images) && item.images[0]) ? item.images[0] : { src: "", alt: "" };
 
+    // how many images total (we show the bubble only if > 1)
+    const imgCountTotal = Math.max(0, (Array.isArray(item.images) ? item.images.length - 1 : 0));
+    const countBubble = imgCountTotal > 1
+      ? `<span class="visual-count" aria-label="${imgCountTotal} images">${imgCountTotal}</span>`
+      : "";
+
     const card = document.createElement("article");
     card.className = "visual-card";
     card.id = slug;
@@ -283,6 +289,7 @@ function renderVisuals(items) {
     card.innerHTML = `
       <a class="visual-thumb" href="#${slug}" aria-label="${v_htmlEscape(item.title)}" aria-controls="${slug}-details">
         <img src="${first.src}" alt="${v_htmlEscape(first.alt || item.title)}" class="visual-image" loading="lazy" decoding="async">
+        ${countBubble}
       </a>
       <div class="visual-meta">
         <h4 class="visual-title">${v_htmlEscape(item.title)}</h4>
