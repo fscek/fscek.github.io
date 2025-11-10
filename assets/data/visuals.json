@@ -578,5 +578,16 @@
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/zagreb-style/2024-zagreb-style-web-cover-01-thumb.webp", "alt": "Zagreb Style cover (thumb)" },
       { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2024/zagreb-style/2024-zagreb-style-web-cover-01.webp", "alt": "Zagreb Style cover" }
     ]
+  },
+  {
+    "slug": "zagreb-style-2",
+    "title": "Zagreb Style 2 - cover",
+    "date": "2025",
+    "client": "Self",
+    "type": ["mix cover"],
+    "images": [
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2025/zagreb-style-2/2025-zagreb-style-web-cover-01-thumb.webp", "alt": "Zagreb Style 2 cover (thumb)" },
+      { "src": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2025/zagreb-style-2/2025-zagreb-style-web-cover-01.webp", "alt": "Zagreb Style 2 cover" }
+    ]
   }
 ]
