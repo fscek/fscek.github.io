@@ -343,6 +343,13 @@ hr.dotted {
     text-align: center;
 }
 
+.news-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
 .news-title {
     font-size: 24px;
     padding-bottom: 5px;
@@ -380,6 +387,17 @@ hr.dotted {
     color: #D67DB3; /* using the primary color for headlines */
 }
 
+.news-item--single {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.news-meta {
+    margin-bottom: 0.25rem;
+    font-size: 0.85em;
+    text-transform: lowercase;
+}
+
 .news-item p {
     margin: 5px 0 10px; /* spacing around the paragraph */
 }
@@ -391,6 +409,32 @@ hr.dotted {
 
 .news-item a:hover {
     color: #D67DB3; /* hover effect for links */
+}
+
+.news-links {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.news-links li {
+    margin-bottom: 0.35rem;
+}
+
+.news-inline-link {
+    margin-top: 0.5rem;
+}
+
+.news-back-link {
+    margin-bottom: 1rem;
+}
+
+.news-permalink {
+    color: inherit;
+}
+
+.news-permalink:hover {
+    text-decoration: underline;
 }
 
 /* styling for the music page */
