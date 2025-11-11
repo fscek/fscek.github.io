@@ -170,11 +170,19 @@ hr.dotted {
 .scrolling_text {
     width: 100%;
     overflow: hidden;
-    display: flex;
     white-space: nowrap;
     margin-bottom: -4em;
     z-index: 10;
+    position: relative;
     /* padding-right: 80px; commented out */ 
+}
+
+.scrolling_text-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: animate_text 20s linear infinite;
+    will-change: transform;
 }
 
 /* Styling for Upcoming and Past Buttons - Matching Music Page Buttons */
@@ -207,11 +215,10 @@ hr.dotted {
   }  
 
 .text {
+    flex: 0 0 auto;
     font-weight: 400;
     text-transform: lowercase;
     color: #000000;
-    display: inline-block;
-    animation: animate_text 20s linear infinite;
     font-size: 6em;
     font-family: 'Terminal Grotesque', monospace; /* custom font */
 }
@@ -225,7 +232,7 @@ hr.dotted {
       transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
     }
   }
 

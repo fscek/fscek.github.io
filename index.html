@@ -20,23 +20,29 @@
       .scrolling_text {
         width: 100%;
         overflow: hidden;
-        display: flex;
         white-space: nowrap;
         margin-bottom: -4em;
         z-index: 10;
+        position: relative;
+      }
+      .scrolling_text-track {
+        display: flex;
+        flex-wrap: nowrap;
+        width: max-content;
+        animation: animate_text 20s linear infinite;
+        will-change: transform;
       }
       .text {
+        flex: 0 0 auto;
         font-weight: 400;
         text-transform: lowercase;
         color: #000000;
-        display: inline-block;
-        animation: animate_text 20s linear infinite;
         font-size: 6em;
         font-family: 'Terminal Grotesque', monospace;
       }
       @keyframes animate_text {
         from { transform: translate3d(0, 0, 0); }
-        to { transform: translate3d(-100%, 0, 0); }
+        to { transform: translate3d(-50%, 0, 0); }
       }
       /* helpers */
       .kicker { font-family: 'Fragment Mono', monospace; text-transform: lowercase; opacity: .85; }
@@ -94,11 +100,13 @@
 
       <!-- marquee stays -->
       <div class="scrolling_text" aria-hidden="true">
-        <div class="text">
-          <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
-        </div>
-        <div class="text">
-          <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
+        <div class="scrolling_text-track">
+          <div class="text">
+            <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
+          </div>
+          <div class="text">
+            <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
+          </div>
         </div>
       </div>
 
