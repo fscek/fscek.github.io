@@ -1,4 +1,5 @@
 const LATEST_LIMIT = 3;
+const PER_TYPE_LIMIT = 2;
 const DATE_FMT = new Intl.DateTimeFormat("en-GB", {
   day: "2-digit",
   month: "short",
@@ -254,14 +255,22 @@ async function hydrateLatestFeed() {
     fetchText(DATA_PATHS.news)
   ]);
 
-  const items = [
+  const rawItems = [
     ...mixEntries(mixes),
     ...releaseEntries(releases),
     ...visualEntries(visuals),
     ...newsEntries(newsMd)
-  ]
-    .sort((a, b) => b.ts - a.ts)
-    .slice(0, LATEST_LIMIT);
+  ].sort((a, b) => b.ts - a.ts);
+
+  const perTypeCounts = {};
+  const items = [];
+  for (const item of rawItems) {
+    const count = perTypeCounts[item.type] || 0;
+    if (count >= PER_TYPE_LIMIT) continue;
+    perTypeCounts[item.type] = count + 1;
+    items.push(item);
+    if (items.length >= LATEST_LIMIT) break;
+  }
 
   if (!items.length) {
     feed.innerHTML = '<p class="muted">nothing new just yet.</p>';

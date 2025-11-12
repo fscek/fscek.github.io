@@ -215,6 +215,7 @@ hr.dotted {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.9rem;
 }
 
 .latest-chip-title:hover {
