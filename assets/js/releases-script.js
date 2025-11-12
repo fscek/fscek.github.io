@@ -217,16 +217,29 @@ function fetchAndRenderReleases(releases, filterValue) {
 
 function highlightReleaseSlug(container) {
   if (!RELEASE_TARGET_SLUG) return;
+  let attempts = 0;
+  const MAX_ATTEMPTS = 30;
+  const RETRY_DELAY = 150;
+
   const selector = `[data-slug="${window.CSS?.escape ? CSS.escape(RELEASE_TARGET_SLUG) : RELEASE_TARGET_SLUG}"]`;
-  const target = container.querySelector(selector);
-  if (target) {
-    target.classList.add("release-item--highlight");
-    const offset = getHeaderOffset();
-    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top, behavior: "smooth" });
-    setTimeout(() => window.scrollTo({ top, behavior: "auto" }), 650);
-    RELEASE_TARGET_SLUG = null;
-  }
+  const seek = () => {
+    const target = container.querySelector(selector);
+    if (target) {
+      target.classList.add("release-item--highlight");
+      const offset = getHeaderOffset();
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+      setTimeout(() => window.scrollTo({ top, behavior: "auto" }), 650);
+      RELEASE_TARGET_SLUG = null;
+    } else if (attempts < MAX_ATTEMPTS) {
+      attempts += 1;
+      setTimeout(seek, RETRY_DELAY);
+    } else {
+      console.warn("release highlight: target not found for slug", RELEASE_TARGET_SLUG);
+    }
+  };
+
+  seek();
 }
 
 function getHeaderOffset() {

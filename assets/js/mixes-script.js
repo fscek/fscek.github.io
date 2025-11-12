@@ -190,7 +190,8 @@ let MIX_HEADER_OFFSET_CACHE = null;
 function highlightMixSlug(container) {
   if (!MIX_TARGET_SLUG) return;
   let attemptCount = 0;
-  const MAX_ATTEMPTS = 10;
+  const MAX_ATTEMPTS = 30;
+  const RETRY_DELAY = 150;
 
   const tryHighlight = () => {
     if (!MIX_TARGET_SLUG) return;
@@ -205,7 +206,9 @@ function highlightMixSlug(container) {
       MIX_TARGET_SLUG = null;
     } else if (attemptCount < MAX_ATTEMPTS) {
       attemptCount += 1;
-      setTimeout(tryHighlight, 120);
+      setTimeout(tryHighlight, RETRY_DELAY);
+    } else {
+      console.warn("mix highlight: target not found for slug", MIX_TARGET_SLUG);
     }
   };
 
