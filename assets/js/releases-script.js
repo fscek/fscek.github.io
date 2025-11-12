@@ -52,6 +52,7 @@ function rel_assignSlug(release, used) {
 }
 
 let RELEASE_TARGET_SLUG = null;
+let HEADER_OFFSET_CACHE = null;
 
 async function initReleases() {
   let releases = await fetch("../assets/data/releases.json")
@@ -220,10 +221,26 @@ function highlightReleaseSlug(container) {
   const target = container.querySelector(selector);
   if (target) {
     target.classList.add("release-item--highlight");
-    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    const offset = getHeaderOffset();
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: "smooth" });
+    setTimeout(() => window.scrollTo({ top, behavior: "auto" }), 650);
     RELEASE_TARGET_SLUG = null;
   }
 }
+
+function getHeaderOffset() {
+  if (HEADER_OFFSET_CACHE && Math.abs(window.innerWidth - HEADER_OFFSET_CACHE.width) < 20) {
+    return HEADER_OFFSET_CACHE.offset;
+  }
+  const header = document.querySelector("header");
+  const base = header ? header.getBoundingClientRect().height : 0;
+  const offset = Math.max(90, base + 18);
+  HEADER_OFFSET_CACHE = { width: window.innerWidth, offset };
+  return offset;
+}
+
+window.addEventListener("resize", () => { HEADER_OFFSET_CACHE = null; });
 
 // Boot
 document.addEventListener("DOMContentLoaded", initReleases);

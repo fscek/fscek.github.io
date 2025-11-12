@@ -185,6 +185,8 @@ function fetchAndRenderMixes(mixes, filterValue) {
   }, 400);
 }
 
+let MIX_HEADER_OFFSET_CACHE = null;
+
 function highlightMixSlug(container) {
   if (!MIX_TARGET_SLUG) return;
   const perform = () => {
@@ -193,8 +195,10 @@ function highlightMixSlug(container) {
     const target = container.querySelector(selector);
     if (target) {
       target.classList.add("mix-item--highlight");
-      target.scrollIntoView({ behavior: "smooth", block: "center" });
-      setTimeout(() => target.scrollIntoView({ behavior: "auto", block: "center" }), 800);
+      const offset = getMixHeaderOffset();
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+      setTimeout(() => window.scrollTo({ top, behavior: "auto" }), 650);
       MIX_TARGET_SLUG = null;
     }
   };
@@ -209,6 +213,19 @@ function highlightMixSlug(container) {
     window.addEventListener("releases:ready", handler);
   }
 }
+
+function getMixHeaderOffset() {
+  if (MIX_HEADER_OFFSET_CACHE && Math.abs(window.innerWidth - MIX_HEADER_OFFSET_CACHE.width) < 20) {
+    return MIX_HEADER_OFFSET_CACHE.offset;
+  }
+  const header = document.querySelector("header");
+  const base = header ? header.getBoundingClientRect().height : 0;
+  const offset = Math.max(90, base + 18);
+  MIX_HEADER_OFFSET_CACHE = { width: window.innerWidth, offset };
+  return offset;
+}
+
+window.addEventListener("resize", () => { MIX_HEADER_OFFSET_CACHE = null; });
 
 // Boot
 document.addEventListener("DOMContentLoaded", initMixes);
