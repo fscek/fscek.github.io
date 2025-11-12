@@ -562,11 +562,23 @@ hr.dotted {
     padding-bottom: 20px;
     opacity: 1; /* fully visible by default */
     transition: opacity 0.5s ease; /* transition for opacity changes */
+    scroll-margin-top: 130px;
 }
 
 .release-title, .mix-title {
     font-size: 1.3em; /* Adjust this value as needed */
     margin-bottom: 0.5em; /* Adds some space below the title */
+}
+
+.release-inline-link, .mix-inline-link {
+    margin-top: 0.35rem;
+}
+
+.release-item--highlight, .mix-item--highlight {
+    outline: 3px solid #000;
+    border-radius: 12px;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.04);
 }
 
 /* for fading text content in and out */

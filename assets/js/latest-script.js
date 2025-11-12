@@ -31,6 +31,15 @@ function slugify(str) {
     .replace(/-{2,}/g, "-");
 }
 
+function uniqueSlug(baseParts, used, fallback = "item") {
+  const base = slugify(baseParts.filter(Boolean).join("-")) || fallback;
+  let slug = base || fallback;
+  let i = 2;
+  while (used.has(slug)) slug = `${base}-${i++}`;
+  used.add(slug);
+  return slug;
+}
+
 function parseDateInfo(value) {
   const raw = (value ?? "").toString().trim();
   if (!raw) return { ts: -Infinity, label: "" };
@@ -124,40 +133,48 @@ function markdownToEntries(md) {
 }
 
 function mixEntries(mixes) {
+  const used = new Set();
   return mixes
     .map(mix => {
       const { ts, label } = parseDateInfo(mix.date);
       if (!Number.isFinite(ts)) return null;
-      const link = firstLink(mix.links);
+      const slug = uniqueSlug([(mix.date || "").split("T")[0], mix.title || "mix"], used, "mix");
       return {
         type: "mix",
         title: mix.title || "untitled mix",
         ts,
         dateLabel: label,
-        href: link?.url || "/music/#mixes-section",
-        external: Boolean(link?.url && /^https?:/i.test(link.url)),
+        href: `/music/?mix=${encodeURIComponent(slug)}`,
+        external: false,
         blurb: mix.description ? mix.description.replace(/<br\s*\/?>/gi, " ").slice(0, 140) : "",
-        accent: "mix"
+        accent: "mix",
+        slug
       };
     })
     .filter(Boolean);
 }
 
 function releaseEntries(releases) {
+  const used = new Set();
   return releases
     .map(rel => {
       const { ts, label } = parseDateInfo(rel.releaseDate || rel.year);
       if (!Number.isFinite(ts)) return null;
-      const link = firstLink(rel.links);
+      const slug = uniqueSlug(
+        [(rel.releaseDate || rel.year || "").toString().trim(), rel.title || "release"],
+        used,
+        "release"
+      );
       return {
         type: "release",
         title: rel.title || "untitled release",
         ts,
         dateLabel: label,
-        href: link?.url || "/music/#releases-section",
-        external: Boolean(link?.url && /^https?:/i.test(link.url)),
+        href: `/music/?release=${encodeURIComponent(slug)}`,
+        external: false,
         blurb: rel.description || "",
-        accent: "release"
+        accent: "release",
+        slug
       };
     })
     .filter(Boolean);

@@ -1,5 +1,6 @@
 const REL_YEAR_MIN = 1990;
 const REL_YEAR_MAX = new Date().getFullYear();
+window.__SZCH_RELEASES_READY = window.__SZCH_RELEASES_READY || false;
 
 function rel_yearInBounds(y) {
   return Number.isInteger(y) && y >= REL_YEAR_MIN && y <= REL_YEAR_MAX;
@@ -31,17 +32,40 @@ function rel_isMeaningful(release) {
   return hasTitle || hasAnyLink;
 }
 
+function rel_slugify(str) {
+  return String(str || "")
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
+}
+
+function rel_assignSlug(release, used) {
+  const baseParts = [(release.releaseDate || release.year || "").toString().trim(), release.title || "release"];
+  const base = rel_slugify(baseParts.filter(Boolean).join("-")) || "release";
+  let slug = base;
+  let i = 2;
+  while (used.has(slug)) slug = `${base}-${i++}`;
+  used.add(slug);
+  return slug;
+}
+
+let RELEASE_TARGET_SLUG = null;
+
 async function initReleases() {
   let releases = await fetch("../assets/data/releases.json")
     .then(r => r.json())
     .catch(err => { console.error("Error fetching releases:", err); return []; });
+  const usedSlugs = new Set();
 
   releases = releases
     .filter(rel_isMeaningful)
     .map(r => ({
       ...r,
       links: Array.isArray(r.links) ? r.links.filter(l => l && l.url && l.platform) : [],
-      image: (r.image && !/\/\.webp$/.test(r.image)) ? r.image : ""
+      image: (r.image && !/\/\.webp$/.test(r.image)) ? r.image : "",
+      slug: rel_assignSlug(r, usedSlugs)
     }));
 
   const years = [...new Set(
@@ -50,10 +74,15 @@ async function initReleases() {
 
   const hasUndated = releases.some(rel => rel_getItemYear(rel) === null);
 
+  const params = new URLSearchParams(window.location.search);
+  const releaseSlugParam = params.get("release");
+  const targetRelease = releaseSlugParam ? releases.find(r => r.slug === releaseSlugParam) : null;
+  if (targetRelease) RELEASE_TARGET_SLUG = releaseSlugParam;
+
   generateYearFiltersReleases(years, hasUndated, releases);
 
   // ?releases=YYYY|all|undated, else latest year, else 'all'
-  const urlParam = new URLSearchParams(window.location.search).get("releases");
+  const urlParam = params.get("releases");
   let defaultFilter;
   if (urlParam) {
     if (urlParam === "all" || urlParam === "undated") defaultFilter = urlParam;
@@ -63,6 +92,11 @@ async function initReleases() {
     }
   } else {
     defaultFilter = years[0] ?? (hasUndated ? "undated" : "all");
+  }
+
+  if (targetRelease) {
+    const targetYear = rel_getItemYear(targetRelease);
+    defaultFilter = targetYear ?? (hasUndated ? "undated" : "all");
   }
 
   const btn = document.querySelector(
@@ -134,6 +168,8 @@ function fetchAndRenderReleases(releases, filterValue) {
       filtered.forEach(release => {
         const div = document.createElement("div");
         div.className = "release-item";
+        div.dataset.slug = release.slug;
+        div.id = `release-${release.slug}`;
         let html = `<h3 class="release-title">${release.title || "(untitled)"}</h3>`;
 
         if (release.image) {
@@ -159,15 +195,34 @@ function fetchAndRenderReleases(releases, filterValue) {
           });
         }
 
+        html += `<p class="release-inline-link fragment-mono-regular"><a href="?release=${encodeURIComponent(release.slug)}">permalink →</a></p>`;
+
         div.innerHTML = html;
         contentContainer.appendChild(div);
       });
     }
 
+    highlightReleaseSlug(contentContainer);
+
     requestAnimationFrame(() => {
       contentContainer.style.opacity = 1;
+      if (!window.__SZCH_RELEASES_READY) {
+        window.__SZCH_RELEASES_READY = true;
+        window.dispatchEvent(new Event("releases:ready"));
+      }
     });
   }, 400);
+}
+
+function highlightReleaseSlug(container) {
+  if (!RELEASE_TARGET_SLUG) return;
+  const selector = `[data-slug="${window.CSS?.escape ? CSS.escape(RELEASE_TARGET_SLUG) : RELEASE_TARGET_SLUG}"]`;
+  const target = container.querySelector(selector);
+  if (target) {
+    target.classList.add("release-item--highlight");
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    RELEASE_TARGET_SLUG = null;
+  }
 }
 
 // Boot

@@ -1,4 +1,23 @@
 // ---- helpers ---------------------------------------------------------------
+function mix_slugify(str) {
+  return String(str || "")
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
+}
+
+function mix_assignSlug(mix, used) {
+  const baseParts = [(mix.date || "").split("T")[0], mix.title || "mix"];
+  const base = mix_slugify(baseParts.filter(Boolean).join("-")) || "mix";
+  let slug = base;
+  let i = 2;
+  while (used.has(slug)) slug = `${base}-${i++}`;
+  used.add(slug);
+  return slug;
+}
+
 function getYearFromDate(dateStr) {
   const s = (dateStr ?? "").toString().trim();
   const match = /^(\d{4})/.exec(s);
@@ -17,10 +36,17 @@ function formatDateHuman(dateStr) {
 }
 
 // ---- main mixes flow -------------------------------------------------------
+let MIX_TARGET_SLUG = null;
+
 async function initMixes() {
-  const mixes = await fetch("../assets/data/mixes.json")
+  const rawMixes = await fetch("../assets/data/mixes.json")
     .then(r => r.json())
     .catch(err => { console.error("Error fetching mixes:", err); return []; });
+  const usedSlugs = new Set();
+  const mixes = rawMixes.map(mix => ({
+    ...mix,
+    slug: mix_assignSlug(mix, usedSlugs)
+  }));
 
   const years = [...new Set(
     mixes.map(m => getYearFromDate(m.date)).filter(y => Number.isInteger(y))
@@ -28,10 +54,15 @@ async function initMixes() {
 
   const hasUndated = mixes.some(m => getYearFromDate(m.date) === null);
 
+  const params = new URLSearchParams(window.location.search);
+  const mixSlugParam = params.get("mix");
+  const targetMix = mixSlugParam ? mixes.find(m => m.slug === mixSlugParam) : null;
+  if (targetMix) MIX_TARGET_SLUG = mixSlugParam;
+
   generateMixesYearFilters(years, hasUndated, mixes);
 
   // Default filter: ?year=YYYY|all|undated, else latest year, else 'all'
-  const urlParam = new URLSearchParams(window.location.search).get("year");
+  const urlParam = params.get("year");
   let defaultFilter;
   if (urlParam) {
     if (urlParam === "all" || urlParam === "undated") defaultFilter = urlParam;
@@ -41,6 +72,11 @@ async function initMixes() {
     }
   } else {
     defaultFilter = years[0] ?? (hasUndated ? "undated" : "all");
+  }
+
+  if (targetMix) {
+    const targetYear = getYearFromDate(targetMix.date);
+    defaultFilter = targetYear ?? (hasUndated ? "undated" : "all");
   }
 
   const btn = document.querySelector(
@@ -112,6 +148,8 @@ function fetchAndRenderMixes(mixes, filterValue) {
       filtered.forEach(mix => {
         const mixDiv = document.createElement("div");
         mixDiv.className = "mix-item";
+        mixDiv.dataset.slug = mix.slug;
+        mixDiv.id = `mix-${mix.slug}`;
         let mixHTML = `<h3 class="mix-title">${mix.title}</h3>`;
 
         if (mix.image) {
@@ -132,15 +170,44 @@ function fetchAndRenderMixes(mixes, filterValue) {
           });
         }
 
+        mixHTML += `<p class="mix-inline-link fragment-mono-regular"><a href="?mix=${encodeURIComponent(mix.slug)}">permalink →</a></p>`;
+
         mixDiv.innerHTML = mixHTML;
         mixesContainer.appendChild(mixDiv);
       });
     }
 
+    highlightMixSlug(mixesContainer);
+
     requestAnimationFrame(() => {
       mixesContainer.style.opacity = 1;
     });
   }, 400);
+}
+
+function highlightMixSlug(container) {
+  if (!MIX_TARGET_SLUG) return;
+  const perform = () => {
+    if (!MIX_TARGET_SLUG) return;
+    const selector = `[data-slug="${window.CSS?.escape ? CSS.escape(MIX_TARGET_SLUG) : MIX_TARGET_SLUG}"]`;
+    const target = container.querySelector(selector);
+    if (target) {
+      target.classList.add("mix-item--highlight");
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => target.scrollIntoView({ behavior: "auto", block: "center" }), 800);
+      MIX_TARGET_SLUG = null;
+    }
+  };
+
+  if (window.__SZCH_RELEASES_READY) {
+    perform();
+  } else {
+    const handler = () => {
+      window.removeEventListener("releases:ready", handler);
+      perform();
+    };
+    window.addEventListener("releases:ready", handler);
+  }
 }
 
 // Boot
