@@ -51,6 +51,62 @@
       .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
       .feature { border: 1px solid #000; padding: 1rem; border-radius: 12px; }
       .muted { opacity: .8; }
+      .latest-section {
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid #000;
+        border-radius: 18px;
+        padding: 1.25rem 1.2rem 1rem;
+      }
+      .latest-feed {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .6rem;
+      }
+      .latest-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: .45rem;
+        border: 1px solid #000;
+        border-radius: 999px;
+        padding: .4rem .9rem;
+        background: #fff;
+        line-height: 1.2;
+        flex: 1 1 250px;
+        min-width: 220px;
+      }
+      .latest-chip-icon {
+        font-size: .9rem;
+      }
+      .latest-chip-tag {
+        font-size: .7rem;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        background: #000;
+        color: #D67DB3;
+        border-radius: 999px;
+        padding: 0.05rem 0.55rem;
+      }
+      .latest-chip-title {
+        color: #000;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .latest-chip-title:hover { text-decoration: underline; }
+      .latest-chip-sep {
+        color: rgba(0,0,0,.45);
+      }
+      .latest-chip-date {
+        font-size: .78rem;
+        text-transform: lowercase;
+        color: rgba(0,0,0,.68);
+      }
+      .latest-chip[data-kind="mix"] { border-color: #0000FF; }
+      .latest-chip[data-kind="release"] { border-color: #D67DB3; }
+      .latest-chip[data-kind="visual"] { border-color: #00B894; }
+      .latest-chip[data-kind="news"] { border-color: #FF8A00; }
     </style>
 
     <!-- Meta / SEO -->
@@ -133,6 +189,14 @@
         <h1 class="display-font" style="margin:.25rem 0 0;">szch dot me</h1>
       </section>
 
+      <!-- LATEST -->
+      <section id="latest" class="latest-section" aria-live="polite" style="margin-top:1.75rem;">
+        <h2 class="display-font" style="margin-bottom:.6rem;">new stuff</h2>
+        <div id="latest-feed" class="latest-feed fragment-mono-regular">
+          <p class="muted">loading…</p>
+        </div>
+      </section>
+
       <!-- ABOUT -->
       <section id="about" style="margin-top:2.5rem;">
         <h2 class="display-font">about</h2>
@@ -208,6 +272,7 @@
     <!-- Scripts -->
     <script src="assets/js/menu-toggle.js" defer></script>
     <script src="assets/js/dates-script.js" defer></script>
+    <script src="assets/js/latest-script.js" defer></script>
     <script src="assets/js/toggle-bio.js" defer></script>
   </body>
 </html>

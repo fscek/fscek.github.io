@@ -166,6 +166,87 @@ hr.dotted {
     border-radius: 1.3em;
 }
 
+/* latest feed capsules */
+.latest-section {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #000;
+    border-radius: 18px;
+    padding: 1.25rem 1.2rem 1rem;
+}
+
+.latest-feed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.latest-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border: 1px solid #000;
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    background: #fff;
+    line-height: 1.2;
+    flex: 1 1 250px;
+    min-width: 220px;
+}
+
+.latest-chip-icon {
+    font-size: 0.9rem;
+}
+
+.latest-chip-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: #000;
+    color: #D67DB3;
+    border-radius: 999px;
+    padding: 0.05rem 0.55rem;
+}
+
+.latest-chip-title {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.latest-chip-title:hover {
+    text-decoration: underline;
+}
+
+.latest-chip-sep {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.latest-chip-date {
+    font-size: 0.78rem;
+    text-transform: lowercase;
+    color: rgba(0, 0, 0, 0.68);
+}
+
+.latest-chip[data-kind="mix"] {
+    border-color: #0000FF;
+}
+
+.latest-chip[data-kind="release"] {
+    border-color: #D67DB3;
+}
+
+.latest-chip[data-kind="visual"] {
+    border-color: #00B894;
+}
+
+.latest-chip[data-kind="news"] {
+    border-color: #FF8A00;
+}
+
 /* scrolling text banner */
 .scrolling_text {
     width: 100%;
