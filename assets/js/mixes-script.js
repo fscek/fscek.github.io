@@ -200,9 +200,8 @@ function highlightMixSlug(container) {
     if (target) {
       target.classList.add("mix-item--highlight");
       const offset = getMixHeaderOffset();
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: "smooth" });
-      setTimeout(() => window.scrollTo({ top, behavior: "auto" }), 650);
+      scrollMixTarget(target, offset, "smooth");
+      settleMixAfterImages(target, offset);
       MIX_TARGET_SLUG = null;
     } else if (attemptCount < MAX_ATTEMPTS) {
       attemptCount += 1;
@@ -235,6 +234,38 @@ function getMixHeaderOffset() {
 }
 
 window.addEventListener("resize", () => { MIX_HEADER_OFFSET_CACHE = null; });
+
+function scrollMixTarget(target, offset, behavior) {
+  const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+  try {
+    window.scrollTo({ top, behavior });
+  } catch {
+    window.scrollTo(0, top);
+  }
+}
+
+function settleMixAfterImages(target, offset) {
+  const images = Array.from(target.querySelectorAll("img"));
+  const pending = images.filter(img => !img.complete);
+  if (!pending.length) {
+    setTimeout(() => scrollMixTarget(target, offset, "auto"), 100);
+    return;
+  }
+  let remaining = pending.length;
+  const failSafe = setTimeout(() => scrollMixTarget(target, offset, "auto"), 1800);
+  const finalize = () => {
+    remaining -= 1;
+    if (remaining <= 0) {
+      clearTimeout(failSafe);
+      scrollMixTarget(target, offset, "auto");
+    }
+  };
+  pending.forEach(img => {
+    img.addEventListener("load", finalize, { once: true });
+    img.addEventListener("error", finalize, { once: true });
+  });
+}
+
 
 // Boot
 document.addEventListener("DOMContentLoaded", initMixes);

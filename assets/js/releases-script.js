@@ -227,9 +227,8 @@ function highlightReleaseSlug(container) {
     if (target) {
       target.classList.add("release-item--highlight");
       const offset = getHeaderOffset();
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: "smooth" });
-      setTimeout(() => window.scrollTo({ top, behavior: "auto" }), 650);
+      scrollReleaseTarget(target, offset, "smooth");
+      settleReleaseAfterImages(target, offset);
       RELEASE_TARGET_SLUG = null;
     } else if (attempts < MAX_ATTEMPTS) {
       attempts += 1;
@@ -254,6 +253,37 @@ function getHeaderOffset() {
 }
 
 window.addEventListener("resize", () => { HEADER_OFFSET_CACHE = null; });
+
+function scrollReleaseTarget(target, offset, behavior) {
+  const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+  try {
+    window.scrollTo({ top, behavior });
+  } catch {
+    window.scrollTo(0, top);
+  }
+}
+
+function settleReleaseAfterImages(target, offset) {
+  const images = Array.from(target.querySelectorAll("img"));
+  const pending = images.filter(img => !img.complete);
+  if (!pending.length) {
+    setTimeout(() => scrollReleaseTarget(target, offset, "auto"), 100);
+    return;
+  }
+  let remaining = pending.length;
+  const failSafe = setTimeout(() => scrollReleaseTarget(target, offset, "auto"), 1800);
+  const finalize = () => {
+    remaining -= 1;
+    if (remaining <= 0) {
+      clearTimeout(failSafe);
+      scrollReleaseTarget(target, offset, "auto");
+    }
+  };
+  pending.forEach(img => {
+    img.addEventListener("load", finalize, { once: true });
+    img.addEventListener("error", finalize, { once: true });
+  });
+}
 
 // Boot
 document.addEventListener("DOMContentLoaded", initReleases);
