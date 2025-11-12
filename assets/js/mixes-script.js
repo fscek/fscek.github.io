@@ -197,11 +197,8 @@ function highlightMixSlug(container) {
     const target = container.querySelector(selector);
     if (target) {
       target.classList.add("mix-item--highlight");
-      try {
-        target.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-      } catch {
-        target.scrollIntoView();
-      }
+      scrollMixCard(target, "smooth");
+      settleMixAfterImages(target);
       MIX_TARGET_SLUG = null;
     } else if (attemptCount < MAX_ATTEMPTS) {
       attemptCount += 1;
@@ -220,6 +217,46 @@ function highlightMixSlug(container) {
     };
     window.addEventListener("releases:ready", handler);
   }
+}
+
+function getMixHeaderOffset() {
+  const header = document.querySelector("header");
+  const base = header ? header.getBoundingClientRect().height : 0;
+  return Math.max(140, base + 32);
+}
+
+function scrollMixCard(target, behavior = "smooth") {
+  const offset = getMixHeaderOffset();
+  const original = target.style.scrollMarginTop;
+  target.style.scrollMarginTop = `${offset}px`;
+  const options = { block: "start", inline: "nearest", behavior };
+  try {
+    target.scrollIntoView(options);
+  } catch {
+    target.scrollIntoView();
+  }
+  setTimeout(() => { target.style.scrollMarginTop = original; }, 1800);
+}
+
+function settleMixAfterImages(target) {
+  const pending = Array.from(target.querySelectorAll("img")).filter(img => !img.complete);
+  if (!pending.length) {
+    setTimeout(() => scrollMixCard(target, "auto"), 150);
+    return;
+  }
+  let remaining = pending.length;
+  const failSafe = setTimeout(() => scrollMixCard(target, "auto"), 2200);
+  const finalize = () => {
+    remaining -= 1;
+    if (remaining <= 0) {
+      clearTimeout(failSafe);
+      scrollMixCard(target, "auto");
+    }
+  };
+  pending.forEach(img => {
+    img.addEventListener("load", finalize, { once: true });
+    img.addEventListener("error", finalize, { once: true });
+  });
 }
 
 
