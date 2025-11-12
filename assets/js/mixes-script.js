@@ -189,7 +189,10 @@ let MIX_HEADER_OFFSET_CACHE = null;
 
 function highlightMixSlug(container) {
   if (!MIX_TARGET_SLUG) return;
-  const perform = () => {
+  let attemptCount = 0;
+  const MAX_ATTEMPTS = 10;
+
+  const tryHighlight = () => {
     if (!MIX_TARGET_SLUG) return;
     const selector = `[data-slug="${window.CSS?.escape ? CSS.escape(MIX_TARGET_SLUG) : MIX_TARGET_SLUG}"]`;
     const target = container.querySelector(selector);
@@ -200,15 +203,18 @@ function highlightMixSlug(container) {
       window.scrollTo({ top, behavior: "smooth" });
       setTimeout(() => window.scrollTo({ top, behavior: "auto" }), 650);
       MIX_TARGET_SLUG = null;
+    } else if (attemptCount < MAX_ATTEMPTS) {
+      attemptCount += 1;
+      setTimeout(tryHighlight, 120);
     }
   };
 
   if (window.__SZCH_RELEASES_READY) {
-    perform();
+    tryHighlight();
   } else {
     const handler = () => {
       window.removeEventListener("releases:ready", handler);
-      perform();
+      tryHighlight();
     };
     window.addEventListener("releases:ready", handler);
   }
