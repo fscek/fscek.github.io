@@ -197,8 +197,11 @@ function highlightMixSlug(container) {
     const target = container.querySelector(selector);
     if (target) {
       target.classList.add("mix-item--highlight");
-      scrollMixTarget(target, "smooth");
-      settleMixAfterImages(target);
+      try {
+        target.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+      } catch {
+        target.scrollIntoView();
+      }
       MIX_TARGET_SLUG = null;
     } else if (attemptCount < MAX_ATTEMPTS) {
       attemptCount += 1;
@@ -217,38 +220,6 @@ function highlightMixSlug(container) {
     };
     window.addEventListener("releases:ready", handler);
   }
-}
-
-function scrollMixTarget(target, behavior) {
-  const opts = { block: "start", inline: "nearest" };
-  if (behavior) opts.behavior = behavior;
-  try {
-    target.scrollIntoView(opts);
-  } catch {
-    target.scrollIntoView();
-  }
-}
-
-function settleMixAfterImages(target) {
-  const images = Array.from(target.querySelectorAll("img"));
-  const pending = images.filter(img => !img.complete);
-  if (!pending.length) {
-    setTimeout(() => scrollMixTarget(target, "auto"), 100);
-    return;
-  }
-  let remaining = pending.length;
-  const failSafe = setTimeout(() => scrollMixTarget(target, "auto"), 2000);
-  const finalize = () => {
-    remaining -= 1;
-    if (remaining <= 0) {
-      clearTimeout(failSafe);
-      scrollMixTarget(target, "auto");
-    }
-  };
-  pending.forEach(img => {
-    img.addEventListener("load", finalize, { once: true });
-    img.addEventListener("error", finalize, { once: true });
-  });
 }
 
 

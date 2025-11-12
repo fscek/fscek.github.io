@@ -225,8 +225,11 @@ function highlightReleaseSlug(container) {
     const target = container.querySelector(selector);
     if (target) {
       target.classList.add("release-item--highlight");
-      scrollReleaseTarget(target, "smooth");
-      settleReleaseAfterImages(target);
+      try {
+        target.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+      } catch {
+        target.scrollIntoView();
+      }
       RELEASE_TARGET_SLUG = null;
     } else if (attempts < MAX_ATTEMPTS) {
       attempts += 1;
@@ -237,38 +240,6 @@ function highlightReleaseSlug(container) {
   };
 
   seek();
-}
-
-function scrollReleaseTarget(target, behavior) {
-  const opts = { block: "start", inline: "nearest" };
-  if (behavior) opts.behavior = behavior;
-  try {
-    target.scrollIntoView(opts);
-  } catch {
-    target.scrollIntoView();
-  }
-}
-
-function settleReleaseAfterImages(target) {
-  const images = Array.from(target.querySelectorAll("img"));
-  const pending = images.filter(img => !img.complete);
-  if (!pending.length) {
-    setTimeout(() => scrollReleaseTarget(target, "auto"), 100);
-    return;
-  }
-  let remaining = pending.length;
-  const failSafe = setTimeout(() => scrollReleaseTarget(target, "auto"), 2000);
-  const finalize = () => {
-    remaining -= 1;
-    if (remaining <= 0) {
-      clearTimeout(failSafe);
-      scrollReleaseTarget(target, "auto");
-    }
-  };
-  pending.forEach(img => {
-    img.addEventListener("load", finalize, { once: true });
-    img.addEventListener("error", finalize, { once: true });
-  });
 }
 
 // Boot
