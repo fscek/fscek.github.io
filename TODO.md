@@ -2,7 +2,6 @@
 - Images on the homepage?
 - Simple chat on the homepage?
 - Contact button on the lower right side (sticky)?
-- Add a single (the latest instance) of the news to the homepage
 - Include overlay on the heading as well when the menu bar is open
 - Locally store and display body and display fonts
 - Implement JS embed logic for Soundcloud, Bandcamp and YouTube preview embeds
