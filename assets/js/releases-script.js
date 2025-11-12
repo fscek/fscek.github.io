@@ -52,7 +52,6 @@ function rel_assignSlug(release, used) {
 }
 
 let RELEASE_TARGET_SLUG = null;
-let HEADER_OFFSET_CACHE = null;
 
 async function initReleases() {
   let releases = await fetch("../assets/data/releases.json")
@@ -226,9 +225,8 @@ function highlightReleaseSlug(container) {
     const target = container.querySelector(selector);
     if (target) {
       target.classList.add("release-item--highlight");
-      const offset = getHeaderOffset();
-      scrollReleaseTarget(target, offset, "smooth");
-      settleReleaseAfterImages(target, offset);
+      scrollReleaseTarget(target, "smooth");
+      settleReleaseAfterImages(target);
       RELEASE_TARGET_SLUG = null;
     } else if (attempts < MAX_ATTEMPTS) {
       attempts += 1;
@@ -241,42 +239,30 @@ function highlightReleaseSlug(container) {
   seek();
 }
 
-function getHeaderOffset() {
-  if (HEADER_OFFSET_CACHE && Math.abs(window.innerWidth - HEADER_OFFSET_CACHE.width) < 20) {
-    return HEADER_OFFSET_CACHE.offset;
-  }
-  const header = document.querySelector("header");
-  const base = header ? header.getBoundingClientRect().height : 0;
-  const offset = Math.max(90, base + 18);
-  HEADER_OFFSET_CACHE = { width: window.innerWidth, offset };
-  return offset;
-}
-
-window.addEventListener("resize", () => { HEADER_OFFSET_CACHE = null; });
-
-function scrollReleaseTarget(target, offset, behavior) {
-  const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+function scrollReleaseTarget(target, behavior) {
+  const opts = { block: "start", inline: "nearest" };
+  if (behavior) opts.behavior = behavior;
   try {
-    window.scrollTo({ top, behavior });
+    target.scrollIntoView(opts);
   } catch {
-    window.scrollTo(0, top);
+    target.scrollIntoView();
   }
 }
 
-function settleReleaseAfterImages(target, offset) {
+function settleReleaseAfterImages(target) {
   const images = Array.from(target.querySelectorAll("img"));
   const pending = images.filter(img => !img.complete);
   if (!pending.length) {
-    setTimeout(() => scrollReleaseTarget(target, offset, "auto"), 100);
+    setTimeout(() => scrollReleaseTarget(target, "auto"), 100);
     return;
   }
   let remaining = pending.length;
-  const failSafe = setTimeout(() => scrollReleaseTarget(target, offset, "auto"), 1800);
+  const failSafe = setTimeout(() => scrollReleaseTarget(target, "auto"), 2000);
   const finalize = () => {
     remaining -= 1;
     if (remaining <= 0) {
       clearTimeout(failSafe);
-      scrollReleaseTarget(target, offset, "auto");
+      scrollReleaseTarget(target, "auto");
     }
   };
   pending.forEach(img => {

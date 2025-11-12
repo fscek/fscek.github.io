@@ -185,8 +185,6 @@ function fetchAndRenderMixes(mixes, filterValue) {
   }, 400);
 }
 
-let MIX_HEADER_OFFSET_CACHE = null;
-
 function highlightMixSlug(container) {
   if (!MIX_TARGET_SLUG) return;
   let attemptCount = 0;
@@ -199,9 +197,8 @@ function highlightMixSlug(container) {
     const target = container.querySelector(selector);
     if (target) {
       target.classList.add("mix-item--highlight");
-      const offset = getMixHeaderOffset();
-      scrollMixTarget(target, offset, "smooth");
-      settleMixAfterImages(target, offset);
+      scrollMixTarget(target, "smooth");
+      settleMixAfterImages(target);
       MIX_TARGET_SLUG = null;
     } else if (attemptCount < MAX_ATTEMPTS) {
       attemptCount += 1;
@@ -222,42 +219,30 @@ function highlightMixSlug(container) {
   }
 }
 
-function getMixHeaderOffset() {
-  if (MIX_HEADER_OFFSET_CACHE && Math.abs(window.innerWidth - MIX_HEADER_OFFSET_CACHE.width) < 20) {
-    return MIX_HEADER_OFFSET_CACHE.offset;
-  }
-  const header = document.querySelector("header");
-  const base = header ? header.getBoundingClientRect().height : 0;
-  const offset = Math.max(90, base + 18);
-  MIX_HEADER_OFFSET_CACHE = { width: window.innerWidth, offset };
-  return offset;
-}
-
-window.addEventListener("resize", () => { MIX_HEADER_OFFSET_CACHE = null; });
-
-function scrollMixTarget(target, offset, behavior) {
-  const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+function scrollMixTarget(target, behavior) {
+  const opts = { block: "start", inline: "nearest" };
+  if (behavior) opts.behavior = behavior;
   try {
-    window.scrollTo({ top, behavior });
+    target.scrollIntoView(opts);
   } catch {
-    window.scrollTo(0, top);
+    target.scrollIntoView();
   }
 }
 
-function settleMixAfterImages(target, offset) {
+function settleMixAfterImages(target) {
   const images = Array.from(target.querySelectorAll("img"));
   const pending = images.filter(img => !img.complete);
   if (!pending.length) {
-    setTimeout(() => scrollMixTarget(target, offset, "auto"), 100);
+    setTimeout(() => scrollMixTarget(target, "auto"), 100);
     return;
   }
   let remaining = pending.length;
-  const failSafe = setTimeout(() => scrollMixTarget(target, offset, "auto"), 1800);
+  const failSafe = setTimeout(() => scrollMixTarget(target, "auto"), 2000);
   const finalize = () => {
     remaining -= 1;
     if (remaining <= 0) {
       clearTimeout(failSafe);
-      scrollMixTarget(target, offset, "auto");
+      scrollMixTarget(target, "auto");
     }
   };
   pending.forEach(img => {
