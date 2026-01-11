@@ -936,7 +936,8 @@ hr.dotted {
     display: block;
     margin-top: 10px;
     text-decoration: underline;
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
     color: #D67DB3;
 }
 

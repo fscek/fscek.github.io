@@ -79,7 +79,7 @@ function fetchAndRenderPress() {
 
                 // Build HTML string for the press item
                 let pressHTML = `<p class="press-content">${press.content}</p>`;
-                pressHTML += `<a href="https://cloud.szch.me/s/gEWGGNtjH8s3PYC" target="_blank" class="press-link">photo and video material</a>`;
+                pressHTML += `<a href="https://cloud.szch.me/s/gEWGGNtjH8s3PYC" target="_blank" class="press-link">** photo and video material **</a>`;
 
                 // Set the inner HTML of the press item
                 pressItem.innerHTML = pressHTML;
