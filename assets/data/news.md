@@ -1,11 +1,45 @@
-## club night ⚠️ upcoming ⚠️!
-date: 2025-03-04
-image:
-tags: News
+## club night ⚠️ incoming ⚠️!
+date: 2026-01-16
+image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/news/2026/01/2026_01_dubok20yrs_delaygrounds.webp
+tags: News, Event
 links:
+- Instagram | https://www.instagram.com/p/DTlX_mBCCrh/
 
-we are preparing a club night on 28 March at AKC Attack, Zagreb.
-join Dapaliyo, MKB, Meka Drina, Strahinja Arbutina, Viatori and myself.
+my friend Ante is celebrating 20 years as a music, visual and everything-artist and person!
+
+and with that same weekend also being his birthday, for this very special occasion, [Delay Grounds](https://soundcloud.com/delay-grounds) is bringing his special live set to the gathering: straight from the UK and to his 🇭🇷 debut!
+
+
+see you on Jan 30 in AKC Attack for this amazing gathering!!
+
+---
+
+## new mix released: 'zagreb style 2'
+date: 2025-11-09
+image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2025/zagreb-style-2/2025-zagreb-style-2-web-cover-01-thumb.webp
+tags: Mix
+links:
+- SoundCloud | https://soundcloud.com/filipscekic/zagreb-style-2?si=19f0872a1e6d474b954c4d27009e5b2f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+- YouTube | https://youtu.be/1A3n_VKECsg?si=rMGICeNdpRWDMtvP
+
+staying in line with unfinished traditions, "zagreb style 2" mix has been uploaded to SoundCloud and YouTube.
+recorded on 2025-10-24 in the AKC Attack, Zagreb.
+
+thanks for the invite Paško and Luka! the full tracklist is on both links.
+
+---
+
+## AAJA Music guest mix'
+date: 2025-04-25
+image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2025/mixes/2025_aaja.webp
+tags: Mix
+links:
+- SoundCloud | https://soundcloud.com/filipscekic/nebo-arts-w-szch-aaja?si=caef44623fa542d5b45d873f1f07e4ad&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
+- YouTube | https://youtu.be/oHJ_WpTYPcU?si=1YRybRxunMraFMg5
+
+during my London visit to play at the Nebo Arts show, Daniel was kind enough to get a guest slot at Deptford's finest AAJA Radio the day after.
+
+the full tracklist is on YouTube.
 
 ---
 
