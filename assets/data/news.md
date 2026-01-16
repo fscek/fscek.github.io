@@ -14,7 +14,7 @@ see you on Jan 30 in AKC Attack for this amazing gathering!!
 
 ---
 
-## new mix released: 'zagreb style 2'
+## zaaaaaagreb styleeeeeeee (2)'
 date: 2025-11-09
 image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2025/zagreb-style-2/2025-zagreb-style-2-web-cover-01-thumb.webp
 tags: Mix
