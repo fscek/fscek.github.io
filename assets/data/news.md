@@ -13,7 +13,7 @@ see you on Jan 30 at AKC Attack for this special night!!
 
 ---
 
-## KIOSK Branding Conference sonic branding
+## KIOSK Branding Conference sonic identity
 date: 2026-01-14
 image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/news/2026/01/2026_01_kiosk_news.webp
 tags: News, Music
