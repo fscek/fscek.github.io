@@ -5,15 +5,15 @@ tags: News, Event
 links:
 - Instagram | https://www.instagram.com/p/DTlX_mBCCrh/
 
-my dear friend Ante is celebrating 20 years as a music, visual and everything-artist and creative person!
+my dear friend Ante is celebrating 20 years as a music and visual artist and an all-around creative!
 
-and with that same weekend also being his birthday, for this very special occasion, [Delay Grounds](https://soundcloud.com/delay-grounds) is bringing his freshly rethought live set to the gathering: straight from the UK and to his 🇭🇷 debut!
+and it's his b-day weekend too! so for this very special occasion, [Delay Grounds](https://soundcloud.com/delay-grounds) is bringing his freshly rethought live set to the gathering: straight from the UK and to his 🇭🇷 debut!
 
 see you on Jan 30 in AKC Attack for this amazing gathering!!
 
 ---
 
-## KIOSK Branding Conference sonics
+## KIOSK Branding Conference sonic branding
 date: 2026-01-14
 image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/news/2026/01/2026_01_kiosk_news.webp
 tags: News, Music
@@ -24,9 +24,9 @@ links:
 - KIOSK Instagram | https://www.instagram.com/kiosk_conf/
 - KIOSK Web | https://www.kioskconference.com/after-dark-kiosk
 
-over the past few months, i've had the opportunity to do some sonic branding work for my friends over at the KIOSK Branding Conference! the whole process was a joy and a breeze to work through, and i like the end results very much so, and i hope you'll like them as well!
+over the past few months, i've had the opportunity to do some sonic branding work for my friends over at the KIOSK Branding Conference! the process was a joy from start to finish, and i like the end results very much so, and i hope you'll like them as well!
 
-the whole set of work included creating a sonic logo (which you'll get to hear at the conference itself), as well as 2 tracks:
+the work included a sonic logo (which you'll get to hear at the conference itself), + 2 tracks:
 - [one made for the day](https://open.spotify.com/track/4uG99Sdl3cUkx7ZzF3FwZA?si=c7be467ed5d64eba)
 - and [the other for the night](https://open.spotify.com/track/0g0iqb9aiO9eLbPEzAaNLu?si=9bcd3fa4511b42fc).
 
