@@ -5,12 +5,34 @@ tags: News, Event
 links:
 - Instagram | https://www.instagram.com/p/DTlX_mBCCrh/
 
-my friend Ante is celebrating 20 years as a music, visual and everything-artist and person!
+my dear friend Ante is celebrating 20 years as a music, visual and everything-artist and creative person!
 
-and with that same weekend also being his birthday, for this very special occasion, [Delay Grounds](https://soundcloud.com/delay-grounds) is bringing his special live set to the gathering: straight from the UK and to his 🇭🇷 debut!
-
+and with that same weekend also being his birthday, for this very special occasion, [Delay Grounds](https://soundcloud.com/delay-grounds) is bringing his freshly rethought live set to the gathering: straight from the UK and to his 🇭🇷 debut!
 
 see you on Jan 30 in AKC Attack for this amazing gathering!!
+
+---
+
+## KIOSK Branding Conference sonics
+date: 2026-01-14
+image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/news/2026/01/2026_01_kiosk_news.webp
+tags: News, Music
+links:
+- SZCH - KIOSK | https://open.spotify.com/track/4uG99Sdl3cUkx7ZzF3FwZA?si=c7be467ed5d64eba
+- SZCH - KIOSK AFTER DARK | https://open.spotify.com/track/0g0iqb9aiO9eLbPEzAaNLu?si=9bcd3fa4511b42fc
+- Glazba.hr Article (in Croatian) | https://glazba.hr/vijesti/sve-vijesti/producent-szch-pretvara-sum-tramvaja-i-cvrkut-ptica-u-ucinkoviti-sonic-branding/
+- KIOSK Instagram | https://www.instagram.com/kiosk_conf/
+- KIOSK Web | https://www.kioskconference.com/after-dark-kiosk
+
+over the past few months, i've had the opportunity to do some sonic branding work for my friends over at the KIOSK Branding Conference! the whole process was a joy and a breeze to work through, and i like the end results very much so, and i hope you'll like them as well!
+
+the whole set of work included creating a sonic logo (which you'll get to hear at the conference itself), as well as 2 tracks:
+- [one made for the day](https://open.spotify.com/track/4uG99Sdl3cUkx7ZzF3FwZA?si=c7be467ed5d64eba)
+- and [the other for the night](https://open.spotify.com/track/0g0iqb9aiO9eLbPEzAaNLu?si=9bcd3fa4511b42fc).
+
+the KIOSK AFTER DARK [after-party is also freshly announced](https://www.instagram.com/p/DTlSaOBjaqD/), with the second track becoming its soundtrack.
+
+see you at the show in Peti Kupe on Feb 6 with Detroit In Effect (US), Madam X (UK) & Sun People (AT)!
 
 ---
 
