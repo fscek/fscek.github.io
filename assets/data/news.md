@@ -5,11 +5,11 @@ tags: News, Event
 links:
 - Instagram | https://www.instagram.com/p/DTlX_mBCCrh/
 
-my dear friend Ante is celebrating 20 years as a music and visual artist and an all-around creative!
+my dear friend Ante is celebrating 20 years as a music and visual artist and an all-around creative person!
 
-and it's his b-day weekend too! so for this very special occasion, [Delay Grounds](https://soundcloud.com/delay-grounds) is bringing his freshly rethought live set to the gathering: straight from the UK and to his 🇭🇷 debut!
+and since it's also his b-day weekend, [Delay Grounds](https://soundcloud.com/delay-grounds) is bringing his freshly rethought live set to the gathering: straight from the UK and to his 🇭🇷 debut!
 
-see you on Jan 30 in AKC Attack for this amazing gathering!!
+see you on Jan 30 at AKC Attack for this special night!!
 
 ---
 
@@ -20,17 +20,17 @@ tags: News, Music
 links:
 - SZCH - KIOSK | https://open.spotify.com/track/4uG99Sdl3cUkx7ZzF3FwZA?si=c7be467ed5d64eba
 - SZCH - KIOSK AFTER DARK | https://open.spotify.com/track/0g0iqb9aiO9eLbPEzAaNLu?si=9bcd3fa4511b42fc
-- Glazba.hr Article (in Croatian) | https://glazba.hr/vijesti/sve-vijesti/producent-szch-pretvara-sum-tramvaja-i-cvrkut-ptica-u-ucinkoviti-sonic-branding/
+- Glazba.hr article on the KIOSK sound identity (Croatian) | https://glazba.hr/vijesti/sve-vijesti/producent-szch-pretvara-sum-tramvaja-i-cvrkut-ptica-u-ucinkoviti-sonic-branding/
 - KIOSK Instagram | https://www.instagram.com/kiosk_conf/
 - KIOSK Web | https://www.kioskconference.com/after-dark-kiosk
 
-over the past few months, i've had the opportunity to do some sonic branding work for my friends over at the KIOSK Branding Conference! the process was a joy from start to finish, and i like the end results very much so, and i hope you'll like them as well!
+over the past few months, i had the chance to do sonic branding for my friends at the KIOSK Branding Conference. the whole process was a joy, and i love how it turned out. hope you do too!
 
-the work included a sonic logo (which you'll get to hear at the conference itself), + 2 tracks:
-- [one made for the day](https://open.spotify.com/track/4uG99Sdl3cUkx7ZzF3FwZA?si=c7be467ed5d64eba)
-- and [the other for the night](https://open.spotify.com/track/0g0iqb9aiO9eLbPEzAaNLu?si=9bcd3fa4511b42fc).
+the work included a sonic logo (you'll hear it at the conference), + 2 tracks:
+- [one for the day](https://open.spotify.com/track/4uG99Sdl3cUkx7ZzF3FwZA?si=c7be467ed5d64eba)
+- [one for the night](https://open.spotify.com/track/0g0iqb9aiO9eLbPEzAaNLu?si=9bcd3fa4511b42fc).
 
-the KIOSK AFTER DARK [after-party is also freshly announced](https://www.instagram.com/p/DTlSaOBjaqD/), with the second track becoming its soundtrack.
+the KIOSK AFTER DARK [after-party was just announced](https://www.instagram.com/p/DTlSaOBjaqD/), and the second track is its soundtrack.
 
 see you at the show in Peti Kupe on Feb 6 with Detroit In Effect (US), Madam X (UK) & Sun People (AT)!
 
