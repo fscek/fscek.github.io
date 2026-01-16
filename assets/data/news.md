@@ -4,6 +4,8 @@ image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/news/2026/01/2026
 tags: News, Event
 links:
 - Instagram | https://www.instagram.com/p/DTlX_mBCCrh/
+- Facebook | https://www.facebook.com/events/898312555887186/
+- RA | https://ra.co/events/2348962
 
 my dear friend Ante is celebrating 20 years as a music and visual artist and an all-around creative person!
 
