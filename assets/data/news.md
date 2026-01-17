@@ -61,7 +61,7 @@ links:
 - SoundCloud | https://soundcloud.com/filipscekic/nebo-arts-w-szch-aaja?si=caef44623fa542d5b45d873f1f07e4ad&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
 - YouTube | https://youtu.be/oHJ_WpTYPcU?si=1YRybRxunMraFMg5
 
-during my London visit to play at the Nebo Arts show, Daniel was kind enough to get a guest slot at Deptford's finest AAJA Radio the day after.
+during my London visit to play at the [Nebo Arts show](https://ra.co/events/2128515), Daniel was kind enough to get a guest slot at Deptford's finest AAJA Radio the day after.
 
 the full tracklist is on YouTube.
 
