@@ -32,13 +32,13 @@ the work included a sonic logo (you'll hear it at the conference), + 2 tracks:
 - [one for the day](https://open.spotify.com/track/4uG99Sdl3cUkx7ZzF3FwZA?si=c7be467ed5d64eba)
 - [one for the night](https://open.spotify.com/track/0g0iqb9aiO9eLbPEzAaNLu?si=9bcd3fa4511b42fc).
 
-the KIOSK AFTER DARK [after-party was just announced](https://www.instagram.com/p/DTlSaOBjaqD/), and the second track is its soundtrack.
+also, the KIOSK AFTER DARK [after-party was just announced](https://www.instagram.com/p/DTlSaOBjaqD/), and the second track is its soundtrack.
 
 see you at the show in Peti Kupe on Feb 6 with Detroit In Effect (US), Madam X (UK) & Sun People (AT)!
 
 ---
 
-## zaaaaaagreb styleeeeeeee (2)'
+## zaaaaaagreb styleeeeeeee (2)
 date: 2025-11-09
 image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/visuals/2025/zagreb-style-2/2025-zagreb-style-2-web-cover-01-thumb.webp
 tags: Mix
@@ -53,7 +53,7 @@ thanks for the invite Paško and Luka! the full tracklist is on both links.
 
 ---
 
-## AAJA Music guest mix'
+## AAJA Music guest mix
 date: 2025-04-25
 image: https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2025/mixes/2025_aaja.webp
 tags: Mix
