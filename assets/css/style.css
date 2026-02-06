@@ -980,6 +980,19 @@ hr.dotted {
     text-decoration: underline;
 }
 
+.rider-list {
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1.2rem;
+    margin: 0 auto 0.75rem;
+    display: inline-block;
+    text-align: left;
+}
+
+.rider-heading {
+    margin-bottom: 0.4rem;
+}
+
 .not-found-404-links {
     text-decoration: underline;
 }
