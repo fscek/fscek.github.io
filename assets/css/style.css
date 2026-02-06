@@ -993,6 +993,12 @@ hr.dotted {
     margin-bottom: 0.4rem;
 }
 
+.rider-note {
+    font-size: 0.9em;
+    opacity: 0.85;
+    margin-bottom: 0.6rem;
+}
+
 .not-found-404-links {
     text-decoration: underline;
 }
