@@ -3,8 +3,16 @@
   if (!marquees.length) return;
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if (prefersReducedMotion.matches) {
-    marquees.forEach((marquee) => marquee.classList.add("is-ready"));
+  const isLocalPreviewHost = /^(localhost|127(?:\.\d{1,3}){3}|0\.0\.0\.0)$/.test(location.hostname);
+  const isVsCodePreview =
+    typeof window.acquireVsCodeApi === "function" ||
+    /vscode|electron/i.test(navigator.userAgent) ||
+    isLocalPreviewHost;
+  const forceMotionInPreview = prefersReducedMotion.matches && isVsCodePreview;
+
+  if (forceMotionInPreview) {
+    document.documentElement.classList.add("marquee-force-motion");
+  } else if (prefersReducedMotion.matches) {
     return;
   }
 
@@ -26,6 +34,8 @@
 
     const segmentWidth = Math.ceil(firstSegment.getBoundingClientRect().width);
     if (!segmentWidth) {
+      marquee.style.setProperty("--marquee-distance", "50%");
+      marquee.style.setProperty("--marquee-distance-negative", "-50%");
       marquee.classList.add("is-ready");
       return;
     }

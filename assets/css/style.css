@@ -269,7 +269,6 @@ hr.dotted {
     gap: var(--marquee-gap);
     transform: translate3d(0, 0, 0);
     animation: marquee-scroll var(--marquee-duration) linear infinite;
-    will-change: transform;
 }
 
 /* Styling for Upcoming and Past Buttons - Matching Music Page Buttons */
@@ -322,7 +321,13 @@ hr.dotted {
 
 @media (prefers-reduced-motion: reduce) {
   .scrolling_text-track {
-    animation-duration: calc(var(--marquee-duration) * 1.8);
+    animation: none;
+    transform: none;
+  }
+
+  html.marquee-force-motion .scrolling_text-track {
+    animation: marquee-scroll var(--marquee-duration) linear infinite;
+    transform: translate3d(0, 0, 0);
   }
 }
 
