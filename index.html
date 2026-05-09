@@ -17,33 +17,6 @@
 
     <!-- Page-specific tweaks -->
     <style>
-      .scrolling_text {
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        margin-bottom: -4em;
-        z-index: 10;
-        position: relative;
-      }
-      .scrolling_text-track {
-        display: flex;
-        flex-wrap: nowrap;
-        width: max-content;
-        animation: animate_text 20s linear infinite;
-        will-change: transform;
-      }
-      .text {
-        flex: 0 0 auto;
-        font-weight: 400;
-        text-transform: lowercase;
-        color: #000000;
-        font-size: 6em;
-        font-family: 'Terminal Grotesque', monospace;
-      }
-      @keyframes animate_text {
-        from { transform: translate3d(0, 0, 0); }
-        to { transform: translate3d(-50%, 0, 0); }
-      }
       /* helpers */
       .kicker { font-family: 'Fragment Mono', monospace; text-transform: lowercase; opacity: .85; }
       .cta-row { display: flex; gap: .75rem; flex-wrap: wrap; margin: .5rem 0 0; }
@@ -157,12 +130,8 @@
       <!-- marquee stays -->
       <div class="scrolling_text" aria-hidden="true">
         <div class="scrolling_text-track">
-          <div class="text">
-            <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
-          </div>
-          <div class="text">
-            <span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span><span>szch.me </span>
-          </div>
+          <div class="text">szch.me szch.me szch.me szch.me szch.me</div>
+          <div class="text">szch.me szch.me szch.me szch.me szch.me</div>
         </div>
       </div>
 
@@ -270,6 +239,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="assets/js/marquee.js" defer></script>
     <script src="assets/js/menu-toggle.js" defer></script>
     <script src="assets/js/dates-script.js" defer></script>
     <script src="assets/js/latest-script.js" defer></script>

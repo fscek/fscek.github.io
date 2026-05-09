@@ -250,20 +250,25 @@ hr.dotted {
 
 /* scrolling text banner */
 .scrolling_text {
+    --marquee-gap: 1.6rem;
+    --marquee-duration: 20s;
+    --marquee-distance: 50%;
+    --marquee-distance-negative: -50%;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     margin-bottom: -4em;
     z-index: 10;
     position: relative;
-    /* padding-right: 80px; commented out */ 
 }
 
 .scrolling_text-track {
     display: flex;
     flex-wrap: nowrap;
     width: max-content;
-    animation: animate_text 20s linear infinite;
+    gap: var(--marquee-gap);
+    transform: translate3d(0, 0, 0);
+    animation: marquee-scroll var(--marquee-duration) linear infinite;
     will-change: transform;
 }
 
@@ -302,21 +307,24 @@ hr.dotted {
     text-transform: lowercase;
     color: #000000;
     font-size: 6em;
+    line-height: 1;
     font-family: 'Terminal Grotesque', monospace; /* custom font */
 }
 
-.text span {
-    margin: 0 0.2em;
-}
-
-@keyframes animate_text {
+@keyframes marquee-scroll {
     from {
       transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translate3d(-50%, 0, 0);
+      transform: translate3d(var(--marquee-distance-negative), 0, 0);
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrolling_text-track {
+    animation-duration: calc(var(--marquee-duration) * 1.8);
   }
+}
 
   /* link custom fonts */
   @font-face {
