@@ -55,9 +55,6 @@ let RELEASE_TARGET_SLUG = null;
 let RELEASE_RENDER_TOKEN = 0;
 
 async function initReleases() {
-  const releasesContainer = document.querySelector(".releases-content-container");
-  window.SZCHSkeleton?.show(releasesContainer, "music", { count: 1 });
-
   let releases = await fetch("../assets/data/releases.json")
     .then(r => r.json())
     .catch(err => { console.error("Error fetching releases:", err); return []; });
@@ -143,39 +140,38 @@ function fetchAndRenderReleases(releases, filterValue) {
 
   const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
   const FADE_MS = 180;
-  const SKELETON_HOLD_MS = 220;
   const token = ++RELEASE_RENDER_TOKEN;
   const isStale = () => token !== RELEASE_RENDER_TOKEN;
+  const preloadImages = window.SZCHSkeleton?.preloadImages;
+
+  const filtered = releases.filter(release => {
+    const y = rel_getItemYear(release);
+    if (filterValue === "all") return true;
+    if (filterValue === "undated") return y === null;
+    if (typeof filterValue === "number" || /^\d{4}$/.test(String(filterValue))) {
+      return y === Number(filterValue);
+    }
+    return true;
+  });
+  filtered.sort((a, b) => {
+    const ta = Date.parse(a.releaseDate || "");
+    const tb = Date.parse(b.releaseDate || "");
+    if (Number.isFinite(tb) && Number.isFinite(ta)) return tb - ta;
+    const ya = rel_getItemYear(a);
+    const yb = rel_getItemYear(b);
+    if (ya === null && yb === null) return 0;
+    if (ya === null) return 1;
+    if (yb === null) return -1;
+    return yb - ya;
+  });
 
   const renderContent = () => {
     if (isStale()) return;
     contentContainer.innerHTML = "";
 
-    const filtered = releases.filter(release => {
-      const y = rel_getItemYear(release);
-      if (filterValue === "all") return true;
-      if (filterValue === "undated") return y === null;
-      if (typeof filterValue === "number" || /^\d{4}$/.test(String(filterValue))) {
-        return y === Number(filterValue);
-      }
-      return true;
-    });
-
     if (filtered.length === 0) {
       contentContainer.innerHTML = '<p class="fragment-mono-regular muted">No releases for this selection (yet).</p>';
     } else {
-      filtered.sort((a, b) => {
-        const ta = Date.parse(a.releaseDate || "");
-        const tb = Date.parse(b.releaseDate || "");
-        if (Number.isFinite(tb) && Number.isFinite(ta)) return tb - ta;
-        const ya = rel_getItemYear(a);
-        const yb = rel_getItemYear(b);
-        if (ya === null && yb === null) return 0;
-        if (ya === null) return 1;
-        if (yb === null) return -1;
-        return yb - ya;
-      });
-
       filtered.forEach(release => {
         const div = document.createElement("div");
         div.className = "release-item";
@@ -228,7 +224,7 @@ function fetchAndRenderReleases(releases, filterValue) {
 
   if (hasSkeleton) {
     contentContainer.style.opacity = 0;
-    setTimeout(() => {
+    setTimeout(async () => {
       if (isStale()) return;
       window.SZCHSkeleton.show(contentContainer, "music", { count: 1 });
       requestAnimationFrame(() => {
@@ -236,11 +232,14 @@ function fetchAndRenderReleases(releases, filterValue) {
         contentContainer.style.opacity = 1;
       });
 
-      setTimeout(() => {
+      if (preloadImages) {
+        const imageUrls = filtered.map(r => r.image).filter(Boolean);
+        await preloadImages(imageUrls, { timeoutMs: 4200 });
         if (isStale()) return;
-        contentContainer.style.opacity = 0;
-        setTimeout(renderContent, FADE_MS);
-      }, SKELETON_HOLD_MS);
+      }
+
+      contentContainer.style.opacity = 0;
+      setTimeout(renderContent, FADE_MS);
     }, FADE_MS);
     return;
   }

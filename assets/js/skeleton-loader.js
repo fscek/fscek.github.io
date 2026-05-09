@@ -110,11 +110,40 @@
     container.innerHTML = templates[type](options);
   }
 
+  function preloadImages(urls = [], { timeoutMs = 4200 } = {}) {
+    const unique = [...new Set((Array.isArray(urls) ? urls : []).filter(Boolean))];
+    if (!unique.length) return Promise.resolve();
+
+    return Promise.all(unique.map(src => new Promise((resolve) => {
+      const img = new Image();
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        resolve();
+      };
+      const finalizeLoaded = () => {
+        if (typeof img.decode === "function") {
+          img.decode().catch(() => {}).finally(finish);
+        } else {
+          finish();
+        }
+      };
+      const timer = setTimeout(finish, timeoutMs);
+      img.onload = finalizeLoaded;
+      img.onerror = finish;
+      img.decoding = "async";
+      img.src = src;
+      if (img.complete) finalizeLoaded();
+    }))).then(() => undefined);
+  }
+
   function done(container) {
     if (!container) return;
     container.removeAttribute("aria-busy");
     container.classList.remove("szch-loading");
   }
 
-  window.SZCHSkeleton = { show, done };
+  window.SZCHSkeleton = { show, done, preloadImages };
 })();

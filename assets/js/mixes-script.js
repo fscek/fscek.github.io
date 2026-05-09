@@ -40,9 +40,6 @@ let MIX_TARGET_SLUG = null;
 let MIX_RENDER_TOKEN = 0;
 
 async function initMixes() {
-  const mixesContainer = document.querySelector(".mixes-content-container");
-  window.SZCHSkeleton?.show(mixesContainer, "music", { count: 1 });
-
   const rawMixes = await fetch("../assets/data/mixes.json")
     .then(r => r.json())
     .catch(err => { console.error("Error fetching mixes:", err); return []; });
@@ -123,39 +120,38 @@ function fetchAndRenderMixes(mixes, filterValue) {
 
   const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
   const FADE_MS = 180;
-  const SKELETON_HOLD_MS = 220;
   const token = ++MIX_RENDER_TOKEN;
   const isStale = () => token !== MIX_RENDER_TOKEN;
+  const preloadImages = window.SZCHSkeleton?.preloadImages;
+
+  const filtered = mixes.filter(mix => {
+    const y = getYearFromDate(mix.date);
+    if (filterValue === "all") return true;
+    if (filterValue === "undated") return y === null;
+    if (typeof filterValue === "number" || /^\d{4}$/.test(String(filterValue))) {
+      return y === Number(filterValue);
+    }
+    return true;
+  });
+  filtered.sort((a, b) => {
+    const ta = Date.parse(a.date || "");
+    const tb = Date.parse(b.date || "");
+    if (Number.isFinite(tb) && Number.isFinite(ta)) return tb - ta;
+    const ya = getYearFromDate(a.date);
+    const yb = getYearFromDate(b.date);
+    if (ya === null && yb === null) return 0;
+    if (ya === null) return 1;
+    if (yb === null) return -1;
+    return yb - ya;
+  });
 
   const renderContent = () => {
     if (isStale()) return;
     mixesContainer.innerHTML = "";
 
-    const filtered = mixes.filter(mix => {
-      const y = getYearFromDate(mix.date);
-      if (filterValue === "all") return true;
-      if (filterValue === "undated") return y === null;
-      if (typeof filterValue === "number" || /^\d{4}$/.test(String(filterValue))) {
-        return y === Number(filterValue);
-      }
-      return true;
-    });
-
     if (filtered.length === 0) {
       mixesContainer.innerHTML = '<p class="fragment-mono-regular muted">No mixes for this selection (yet).</p>';
     } else {
-      filtered.sort((a, b) => {
-        const ta = Date.parse(a.date || "");
-        const tb = Date.parse(b.date || "");
-        if (Number.isFinite(tb) && Number.isFinite(ta)) return tb - ta;
-        const ya = getYearFromDate(a.date);
-        const yb = getYearFromDate(b.date);
-        if (ya === null && yb === null) return 0;
-        if (ya === null) return 1;
-        if (yb === null) return -1;
-        return yb - ya;
-      });
-
       filtered.forEach(mix => {
         const mixDiv = document.createElement("div");
         mixDiv.className = "mix-item";
@@ -199,7 +195,7 @@ function fetchAndRenderMixes(mixes, filterValue) {
 
   if (hasSkeleton) {
     mixesContainer.style.opacity = 0;
-    setTimeout(() => {
+    setTimeout(async () => {
       if (isStale()) return;
       window.SZCHSkeleton.show(mixesContainer, "music", { count: 1 });
       requestAnimationFrame(() => {
@@ -207,11 +203,14 @@ function fetchAndRenderMixes(mixes, filterValue) {
         mixesContainer.style.opacity = 1;
       });
 
-      setTimeout(() => {
+      if (preloadImages) {
+        const imageUrls = filtered.map(m => m.image).filter(Boolean);
+        await preloadImages(imageUrls, { timeoutMs: 4200 });
         if (isStale()) return;
-        mixesContainer.style.opacity = 0;
-        setTimeout(renderContent, FADE_MS);
-      }, SKELETON_HOLD_MS);
+      }
+
+      mixesContainer.style.opacity = 0;
+      setTimeout(renderContent, FADE_MS);
     }, FADE_MS);
     return;
   }

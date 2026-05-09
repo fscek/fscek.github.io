@@ -166,6 +166,12 @@ async function initNews() {
       }
     }
 
+    const preloadImages = window.SZCHSkeleton?.preloadImages;
+    if (preloadImages) {
+      const imageUrls = renderItems.map(item => item.image).filter(Boolean);
+      await preloadImages(imageUrls, { timeoutMs: 4200 });
+    }
+
     renderItems.forEach(item => newsFeed.appendChild(renderNewsItem(item, { single })));
 
     if (single && activeItem) {

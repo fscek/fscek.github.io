@@ -439,14 +439,15 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("DOMContentLoaded", async () => {
   const section = document.getElementById("visuals-section");
+  let skeletonCount = 3;
   const loadingMount = section ? document.createElement("div") : null;
   if (loadingMount) {
     loadingMount.className = "visuals-loading-skeleton";
     section.appendChild(loadingMount);
     const sectionWidth = section.getBoundingClientRect().width || window.innerWidth || 320;
     const estimatedCardWidth = 270;
-    const count = Math.max(1, Math.floor(sectionWidth / estimatedCardWidth));
-    window.SZCHSkeleton?.show(loadingMount, "visuals", { count });
+    skeletonCount = Math.max(1, Math.floor(sectionWidth / estimatedCardWidth));
+    window.SZCHSkeleton?.show(loadingMount, "visuals", { count: skeletonCount });
   }
 
   const data = await fetch("../assets/data/visuals.json")
@@ -460,6 +461,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     return { ...it, slug: safe };
   });
 
+  const meaningful = items.filter(v_isMeaningful);
+  const preloadImages = window.SZCHSkeleton?.preloadImages;
+  if (preloadImages && meaningful.length) {
+    const sorted = meaningful.slice().sort((a, b) => {
+      const ya = v_yearForGrouping(a) ?? -Infinity;
+      const yb = v_yearForGrouping(b) ?? -Infinity;
+      if (yb !== ya) return yb - ya;
+      const ta = Date.parse(a.date || "");
+      const tb = Date.parse(b.date || "");
+      if (Number.isFinite(tb) && Number.isFinite(ta)) return tb - ta;
+      return 0;
+    });
+    const preloadCount = Math.max(3, Math.min(8, skeletonCount * 2));
+    const imageUrls = sorted
+      .slice(0, preloadCount)
+      .map(item => (Array.isArray(item.images) && item.images[0] ? item.images[0].src : ""))
+      .filter(Boolean);
+    await preloadImages(imageUrls, { timeoutMs: 4200 });
+  }
+
   loadingMount?.remove();
-  renderVisuals(items.filter(v_isMeaningful));
+  renderVisuals(meaningful);
 });
