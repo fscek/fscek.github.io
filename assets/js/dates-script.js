@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   filterContainer.appendChild(upcomingButton);
   filterContainer.appendChild(pastButton);
   datesSection.insertBefore(filterContainer, datesSection.querySelector('ul'));
+  const datesList = document.getElementById('club-dates-list');
+  window.SZCHSkeleton?.show(datesList, 'dates', { count: 4 });
 
   let allDates = [];
 
@@ -37,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => {
       console.error('Error fetching club dates:', error);
+      if (datesList) {
+        datesList.innerHTML = '<li class="fragment-mono-regular">Unable to load dates right now.</li>';
+        window.SZCHSkeleton?.done(datesList);
+      }
     });
 
   // Function to filter and render dates
@@ -98,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Fade-in effect after content is updated
       datesList.style.opacity = 1;
+      window.SZCHSkeleton?.done(datesList);
     }, 300); // Delay should match the CSS transition time
   }
 

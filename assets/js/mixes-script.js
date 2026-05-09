@@ -37,8 +37,12 @@ function formatDateHuman(dateStr) {
 
 // ---- main mixes flow -------------------------------------------------------
 let MIX_TARGET_SLUG = null;
+let MIX_RENDER_TOKEN = 0;
 
 async function initMixes() {
+  const mixesContainer = document.querySelector(".mixes-content-container");
+  window.SZCHSkeleton?.show(mixesContainer, "music", { count: 1 });
+
   const rawMixes = await fetch("../assets/data/mixes.json")
     .then(r => r.json())
     .catch(err => { console.error("Error fetching mixes:", err); return []; });
@@ -115,9 +119,16 @@ function generateMixesYearFilters(years, hasUndated, mixes) {
 
 function fetchAndRenderMixes(mixes, filterValue) {
   const mixesContainer = document.querySelector(".mixes-content-container");
-  mixesContainer.style.opacity = 0;
+  if (!mixesContainer) return;
 
-  setTimeout(() => {
+  const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
+  const FADE_MS = 180;
+  const SKELETON_HOLD_MS = 220;
+  const token = ++MIX_RENDER_TOKEN;
+  const isStale = () => token !== MIX_RENDER_TOKEN;
+
+  const renderContent = () => {
+    if (isStale()) return;
     mixesContainer.innerHTML = "";
 
     const filtered = mixes.filter(mix => {
@@ -180,9 +191,33 @@ function fetchAndRenderMixes(mixes, filterValue) {
     highlightMixSlug(mixesContainer);
 
     requestAnimationFrame(() => {
+      if (isStale()) return;
       mixesContainer.style.opacity = 1;
+      if (hasSkeleton) window.SZCHSkeleton.done(mixesContainer);
     });
-  }, 400);
+  };
+
+  if (hasSkeleton) {
+    mixesContainer.style.opacity = 0;
+    setTimeout(() => {
+      if (isStale()) return;
+      window.SZCHSkeleton.show(mixesContainer, "music", { count: 1 });
+      requestAnimationFrame(() => {
+        if (isStale()) return;
+        mixesContainer.style.opacity = 1;
+      });
+
+      setTimeout(() => {
+        if (isStale()) return;
+        mixesContainer.style.opacity = 0;
+        setTimeout(renderContent, FADE_MS);
+      }, SKELETON_HOLD_MS);
+    }, FADE_MS);
+    return;
+  }
+
+  mixesContainer.style.opacity = 0;
+  setTimeout(renderContent, 400);
 }
 
 function highlightMixSlug(container) {

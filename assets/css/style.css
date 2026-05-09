@@ -248,6 +248,191 @@ hr.dotted {
     border-color: #FF8A00;
 }
 
+/* custom skeleton loaders */
+.szch-loading {
+  position: relative;
+}
+
+.szch-skeleton-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.szch-skeleton-stack--chips {
+  gap: 0.65rem;
+}
+
+.szch-skeleton-stack--music {
+  gap: 0;
+}
+
+.szch-skeleton-card {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #000;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 0.8rem;
+}
+
+.szch-skeleton-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(110deg,
+      rgba(214, 125, 179, 0) 0%,
+      rgba(214, 125, 179, 0.06) 36%,
+      rgba(0, 0, 255, 0.18) 50%,
+      rgba(214, 125, 179, 0.06) 64%,
+      rgba(214, 125, 179, 0) 100%);
+  transform: translateX(-120%);
+  animation: szch-skeleton-scan 1.25s linear infinite;
+}
+
+.szch-skeleton-card--chip {
+  border-radius: 999px;
+  padding: 0.55rem 0.85rem;
+}
+
+.szch-skeleton-media-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.szch-skeleton-media-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(110deg,
+      rgba(214, 125, 179, 0) 0%,
+      rgba(214, 125, 179, 0.06) 36%,
+      rgba(0, 0, 255, 0.18) 50%,
+      rgba(214, 125, 179, 0.06) 64%,
+      rgba(214, 125, 179, 0) 100%);
+  transform: translateX(-120%);
+  animation: szch-skeleton-scan 1.25s linear infinite;
+}
+
+.szch-skeleton-chip-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.szch-skeleton-chip-row--meta {
+  margin-top: 0.35rem;
+}
+
+.szch-skeleton-dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  flex: 0 0 auto;
+}
+
+.szch-skeleton-line {
+  display: block;
+  height: 0.64rem;
+  width: var(--szch-skel-width, 100%);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 0.45rem;
+}
+
+.szch-skeleton-line.is-tag {
+  height: 0.72rem;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.szch-skeleton-line.is-title {
+  height: 0.78rem;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.szch-skeleton-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.45rem;
+  border: 2px dashed rgba(0, 0, 0, 0.42);
+  background:
+    repeating-linear-gradient(
+      -35deg,
+      rgba(0, 0, 0, 0.08) 0,
+      rgba(0, 0, 0, 0.08) 10px,
+      rgba(255, 255, 255, 0.22) 10px,
+      rgba(255, 255, 255, 0.22) 20px
+    );
+  margin-bottom: 0.65rem;
+}
+
+.szch-skeleton-thumb--music {
+  width: min(70%, 24rem);
+  max-height: min(42vw, 18rem);
+  aspect-ratio: 1 / 1;
+  margin-top: 0.5rem;
+}
+
+.szch-skeleton-thumb--visual {
+  max-height: min(30vh, 15rem);
+}
+
+.szch-skeleton-date-row {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+  border-left: 2px dotted rgba(0, 0, 255, 0.55);
+  padding: 0.25rem 0 0.25rem 0.7rem;
+}
+
+.szch-skeleton-date-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(214, 125, 179, 0), rgba(214, 125, 179, 0.25), rgba(214, 125, 179, 0));
+  transform: translateX(-120%);
+  animation: szch-skeleton-scan 1.35s linear infinite;
+}
+
+.szch-skeleton-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+@keyframes szch-skeleton-scan {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(120%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .szch-skeleton-card::after,
+  .szch-skeleton-date-row::after,
+  .szch-skeleton-media-item::after {
+    animation: none;
+    transform: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .szch-skeleton-thumb--music {
+    width: min(30%, 18rem);
+    max-height: min(24vw, 14rem);
+  }
+}
+
 /* scrolling text banner */
 .scrolling_text {
     --marquee-gap: 1.6rem;

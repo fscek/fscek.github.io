@@ -247,6 +247,7 @@ function renderChip(item) {
 async function hydrateLatestFeed() {
   const feed = document.getElementById("latest-feed");
   if (!feed) return;
+  window.SZCHSkeleton?.show(feed, "latest", { count: LATEST_LIMIT });
 
   const [mixes, releases, visuals, newsMd] = await Promise.all([
     fetchJson(DATA_PATHS.mixes),
@@ -274,10 +275,12 @@ async function hydrateLatestFeed() {
 
   if (!items.length) {
     feed.innerHTML = '<p class="muted">nothing new just yet.</p>';
+    window.SZCHSkeleton?.done(feed);
     return;
   }
 
   feed.innerHTML = items.map(renderChip).join("");
+  window.SZCHSkeleton?.done(feed);
 }
 
 document.addEventListener("DOMContentLoaded", hydrateLatestFeed);

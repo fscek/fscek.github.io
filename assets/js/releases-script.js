@@ -52,8 +52,12 @@ function rel_assignSlug(release, used) {
 }
 
 let RELEASE_TARGET_SLUG = null;
+let RELEASE_RENDER_TOKEN = 0;
 
 async function initReleases() {
+  const releasesContainer = document.querySelector(".releases-content-container");
+  window.SZCHSkeleton?.show(releasesContainer, "music", { count: 1 });
+
   let releases = await fetch("../assets/data/releases.json")
     .then(r => r.json())
     .catch(err => { console.error("Error fetching releases:", err); return []; });
@@ -135,9 +139,16 @@ function generateYearFiltersReleases(years, hasUndated, releases) {
 
 function fetchAndRenderReleases(releases, filterValue) {
   const contentContainer = document.querySelector(".releases-content-container");
-  contentContainer.style.opacity = 0;
+  if (!contentContainer) return;
 
-  setTimeout(() => {
+  const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
+  const FADE_MS = 180;
+  const SKELETON_HOLD_MS = 220;
+  const token = ++RELEASE_RENDER_TOKEN;
+  const isStale = () => token !== RELEASE_RENDER_TOKEN;
+
+  const renderContent = () => {
+    if (isStale()) return;
     contentContainer.innerHTML = "";
 
     const filtered = releases.filter(release => {
@@ -205,13 +216,37 @@ function fetchAndRenderReleases(releases, filterValue) {
     highlightReleaseSlug(contentContainer);
 
     requestAnimationFrame(() => {
+      if (isStale()) return;
       contentContainer.style.opacity = 1;
+      if (hasSkeleton) window.SZCHSkeleton.done(contentContainer);
       if (!window.__SZCH_RELEASES_READY) {
         window.__SZCH_RELEASES_READY = true;
         window.dispatchEvent(new Event("releases:ready"));
       }
     });
-  }, 400);
+  };
+
+  if (hasSkeleton) {
+    contentContainer.style.opacity = 0;
+    setTimeout(() => {
+      if (isStale()) return;
+      window.SZCHSkeleton.show(contentContainer, "music", { count: 1 });
+      requestAnimationFrame(() => {
+        if (isStale()) return;
+        contentContainer.style.opacity = 1;
+      });
+
+      setTimeout(() => {
+        if (isStale()) return;
+        contentContainer.style.opacity = 0;
+        setTimeout(renderContent, FADE_MS);
+      }, SKELETON_HOLD_MS);
+    }, FADE_MS);
+    return;
+  }
+
+  contentContainer.style.opacity = 0;
+  setTimeout(renderContent, 400);
 }
 
 function highlightReleaseSlug(container) {

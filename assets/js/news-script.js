@@ -133,6 +133,10 @@ function renderNewsItem(item, { single } = {}) {
 async function initNews() {
   const newsFeed = document.getElementById('news-feed');
   if (!newsFeed) return;
+  const params = new URLSearchParams(window.location.search);
+  const requestedSlug = params.get('post');
+  window.SZCHSkeleton?.show(newsFeed, 'news', { count: requestedSlug ? 1 : 2 });
+
   try {
     const response = await fetch(NEWS_PATH);
     if (!response.ok) throw new Error(`Failed to fetch news (${response.status})`);
@@ -140,12 +144,10 @@ async function initNews() {
     const items = parseNewsMarkdown(raw);
     if (!items.length) {
       newsFeed.innerHTML = '<p class="fragment-mono-regular">No news just yet.</p>';
+      window.SZCHSkeleton?.done(newsFeed);
       return;
     }
     newsFeed.innerHTML = '';
-
-    const params = new URLSearchParams(window.location.search);
-    const requestedSlug = params.get('post');
     let renderItems = items;
     let single = false;
     let activeItem = null;
@@ -177,9 +179,11 @@ async function initNews() {
         window.history.replaceState(null, '', url);
       }
     }
+    window.SZCHSkeleton?.done(newsFeed);
   } catch (err) {
     console.error('Error fetching news:', err);
     newsFeed.innerHTML = '<p class="fragment-mono-regular">Unable to load news right now. Try again later.</p>';
+    window.SZCHSkeleton?.done(newsFeed);
   }
 }
 

@@ -438,6 +438,17 @@ document.addEventListener("click", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
+  const section = document.getElementById("visuals-section");
+  const loadingMount = section ? document.createElement("div") : null;
+  if (loadingMount) {
+    loadingMount.className = "visuals-loading-skeleton";
+    section.appendChild(loadingMount);
+    const sectionWidth = section.getBoundingClientRect().width || window.innerWidth || 320;
+    const estimatedCardWidth = 270;
+    const count = Math.max(1, Math.floor(sectionWidth / estimatedCardWidth));
+    window.SZCHSkeleton?.show(loadingMount, "visuals", { count });
+  }
+
   const data = await fetch("../assets/data/visuals.json")
     .then(r => r.json())
     .catch(err => { console.error("Error fetching visuals:", err); return []; });
@@ -449,5 +460,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     return { ...it, slug: safe };
   });
 
+  loadingMount?.remove();
   renderVisuals(items.filter(v_isMeaningful));
 });

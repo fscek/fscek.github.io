@@ -63,16 +63,26 @@ function generateLengthFiltersPress() {
 
 // Fetch and render press content based on the selected language and length
 function fetchAndRenderPress() {
+    const contentContainer = document.querySelector('.press-content-container');
+    if (!contentContainer) return;
+    window.SZCHSkeleton?.show(contentContainer, 'press', { count: 2 });
+
     fetch('/assets/data/press.json')
     .then(response => response.json())
     .then(pressContent => {
-        const contentContainer = document.querySelector('.press-content-container');
         contentContainer.style.opacity = 0; // Start fade-out
 
         setTimeout(() => {
             contentContainer.innerHTML = ''; // Clear existing press content after fade-out
 
             const filteredPress = pressContent.filter(press => press.language === selectedLanguage && press.length === selectedLength);
+            if (filteredPress.length === 0) {
+                contentContainer.innerHTML = '<p class="fragment-mono-regular muted">No press text for this filter yet.</p>';
+                contentContainer.style.opacity = 1;
+                window.SZCHSkeleton?.done(contentContainer);
+                return;
+            }
+
             filteredPress.forEach(press => {
                 const pressItem = document.createElement('div');
                 pressItem.className = 'press-item';
@@ -90,9 +100,15 @@ function fetchAndRenderPress() {
 
             // Start fade-in
             contentContainer.style.opacity = 1;
+            window.SZCHSkeleton?.done(contentContainer);
         }, 400); // Delay should match the CSS transition time
     })
-    .catch(error => console.error('Error fetching press content:', error));
+    .catch(error => {
+        console.error('Error fetching press content:', error);
+        contentContainer.innerHTML = '<p class="fragment-mono-regular">Unable to load press text right now.</p>';
+        contentContainer.style.opacity = 1;
+        window.SZCHSkeleton?.done(contentContainer);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
