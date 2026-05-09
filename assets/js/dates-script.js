@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
   filterContainer.appendChild(pastButton);
   datesSection.insertBefore(filterContainer, datesSection.querySelector('ul'));
   const datesList = document.getElementById('club-dates-list');
-  window.SZCHSkeleton?.show(datesList, 'dates', { count: 4 });
+  const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
+  const skeletonStartedAt = performance.now();
+  const MIN_INITIAL_SKELETON_MS = 420;
+  if (hasSkeleton) window.SZCHSkeleton.show(datesList, 'dates', { count: 2 });
 
   let allDates = [];
 
@@ -34,8 +37,17 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(dates => {
       allDates = dates;
-      filterDates(true); // Initially show upcoming dates
-      setActiveFilterButton(upcomingButton); // Set the upcoming button as active initially
+      const boot = () => {
+        filterDates(true); // Initially show upcoming dates
+        setActiveFilterButton(upcomingButton); // Set the upcoming button as active initially
+      };
+      if (!hasSkeleton) {
+        boot();
+        return;
+      }
+      const elapsed = performance.now() - skeletonStartedAt;
+      const remaining = Math.max(0, MIN_INITIAL_SKELETON_MS - elapsed);
+      setTimeout(boot, remaining);
     })
     .catch(error => {
       console.error('Error fetching club dates:', error);

@@ -224,15 +224,17 @@ function vb_close() {
 }
 
 // --- render -----------------------------------------------------------------
-function renderVisuals(items) {
+function renderVisuals(items, mount) {
   const section = document.getElementById("visuals-section");
   if (!section) return;
+  const targetMount = mount || section;
+  targetMount.innerHTML = "";
 
   if (!items.length) {
     const empty = document.createElement("p");
     empty.className = "fragment-mono-regular muted";
     empty.textContent = "No visuals yet.";
-    section.appendChild(empty);
+    targetMount.appendChild(empty);
     return;
   }
 
@@ -263,11 +265,11 @@ function renderVisuals(items) {
       const yearHeader = document.createElement("h3");
       yearHeader.className = "display-font visuals-year";
       yearHeader.textContent = String(year);
-      section.appendChild(yearHeader);
+      targetMount.appendChild(yearHeader);
 
       yearGrid = document.createElement("div");
       yearGrid.className = "visuals-grid";
-      section.appendChild(yearGrid);
+      targetMount.appendChild(yearGrid);
     }
 
     const slug = (item.slug || "").trim() || `project-${Math.random().toString(36).slice(2)}`;
@@ -439,15 +441,23 @@ document.addEventListener("click", (e) => {
 
 document.addEventListener("DOMContentLoaded", async () => {
   const section = document.getElementById("visuals-section");
+  if (!section) return;
+
+  const contentMount = document.createElement("div");
+  contentMount.className = "visuals-content";
+  section.appendChild(contentMount);
+
+  const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
+  const MIN_SKELETON_MS = 420;
+  const FADE_MS = 220;
   let skeletonCount = 3;
-  const loadingMount = section ? document.createElement("div") : null;
-  if (loadingMount) {
-    loadingMount.className = "visuals-loading-skeleton";
-    section.appendChild(loadingMount);
+  const skeletonShownAt = performance.now();
+
+  if (hasSkeleton) {
     const sectionWidth = section.getBoundingClientRect().width || window.innerWidth || 320;
     const estimatedCardWidth = 270;
     skeletonCount = Math.max(1, Math.floor(sectionWidth / estimatedCardWidth));
-    window.SZCHSkeleton?.show(loadingMount, "visuals", { count: skeletonCount });
+    window.SZCHSkeleton.show(contentMount, "visuals", { count: skeletonCount });
   }
 
   const data = await fetch("../assets/data/visuals.json")
@@ -481,6 +491,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     await preloadImages(imageUrls, { timeoutMs: 4200 });
   }
 
-  loadingMount?.remove();
-  renderVisuals(meaningful);
+  if (hasSkeleton) {
+    const elapsed = performance.now() - skeletonShownAt;
+    const remaining = Math.max(0, MIN_SKELETON_MS - elapsed);
+    if (remaining) {
+      await new Promise(resolve => setTimeout(resolve, remaining));
+    }
+    contentMount.style.opacity = "0";
+    await new Promise(resolve => setTimeout(resolve, FADE_MS));
+  }
+
+  renderVisuals(meaningful, contentMount);
+  window.SZCHSkeleton?.done(contentMount);
+  requestAnimationFrame(() => {
+    contentMount.style.opacity = "1";
+  });
 });

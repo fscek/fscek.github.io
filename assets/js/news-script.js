@@ -133,9 +133,25 @@ function renderNewsItem(item, { single } = {}) {
 async function initNews() {
   const newsFeed = document.getElementById('news-feed');
   if (!newsFeed) return;
+  const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
+  const FADE_MS = 180;
   const params = new URLSearchParams(window.location.search);
   const requestedSlug = params.get('post');
-  window.SZCHSkeleton?.show(newsFeed, 'news', { count: requestedSlug ? 1 : 2 });
+  const swapIn = (render) => {
+    newsFeed.style.opacity = 0;
+    setTimeout(() => {
+      newsFeed.innerHTML = '';
+      render();
+      if (hasSkeleton) window.SZCHSkeleton.done(newsFeed);
+      requestAnimationFrame(() => { newsFeed.style.opacity = 1; });
+    }, FADE_MS);
+  };
+
+  if (hasSkeleton) {
+    newsFeed.style.opacity = 0;
+    window.SZCHSkeleton.show(newsFeed, 'news', { count: requestedSlug ? 1 : 2 });
+    requestAnimationFrame(() => { newsFeed.style.opacity = 1; });
+  }
 
   try {
     const response = await fetch(NEWS_PATH);
@@ -143,14 +159,16 @@ async function initNews() {
     const raw = await response.text();
     const items = parseNewsMarkdown(raw);
     if (!items.length) {
-      newsFeed.innerHTML = '<p class="fragment-mono-regular">No news just yet.</p>';
-      window.SZCHSkeleton?.done(newsFeed);
+      swapIn(() => {
+        newsFeed.innerHTML = '<p class="fragment-mono-regular">No news just yet.</p>';
+      });
       return;
     }
-    newsFeed.innerHTML = '';
+
     let renderItems = items;
     let single = false;
     let activeItem = null;
+    let showFallbackNotice = false;
 
     if (requestedSlug) {
       activeItem = items.find(item => item.slug === requestedSlug);
@@ -159,10 +177,7 @@ async function initNews() {
         single = true;
         document.title = `${activeItem.title} - szch.me news`;
       } else {
-        const notice = document.createElement('p');
-        notice.className = 'fragment-mono-regular';
-        notice.textContent = 'News item not found. Showing the latest updates instead.';
-        newsFeed.appendChild(notice);
+        showFallbackNotice = true;
       }
     }
 
@@ -172,24 +187,32 @@ async function initNews() {
       await preloadImages(imageUrls, { timeoutMs: 4200 });
     }
 
-    renderItems.forEach(item => newsFeed.appendChild(renderNewsItem(item, { single })));
-
-    if (single && activeItem) {
-      const back = document.createElement('p');
-      back.className = 'news-back-link fragment-mono-regular';
-      back.innerHTML = `<a href="./">← back to all news</a>`;
-      newsFeed.insertBefore(back, newsFeed.firstChild);
-      if (window.history?.replaceState) {
-        const url = new URL(window.location);
-        url.searchParams.set('post', activeItem.slug);
-        window.history.replaceState(null, '', url);
+    swapIn(() => {
+      if (showFallbackNotice) {
+        const notice = document.createElement('p');
+        notice.className = 'fragment-mono-regular';
+        notice.textContent = 'News item not found. Showing the latest updates instead.';
+        newsFeed.appendChild(notice);
       }
-    }
-    window.SZCHSkeleton?.done(newsFeed);
+      renderItems.forEach(item => newsFeed.appendChild(renderNewsItem(item, { single })));
+
+      if (single && activeItem) {
+        const back = document.createElement('p');
+        back.className = 'news-back-link fragment-mono-regular';
+        back.innerHTML = `<a href="./">← back to all news</a>`;
+        newsFeed.insertBefore(back, newsFeed.firstChild);
+        if (window.history?.replaceState) {
+          const url = new URL(window.location);
+          url.searchParams.set('post', activeItem.slug);
+          window.history.replaceState(null, '', url);
+        }
+      }
+    });
   } catch (err) {
     console.error('Error fetching news:', err);
-    newsFeed.innerHTML = '<p class="fragment-mono-regular">Unable to load news right now. Try again later.</p>';
-    window.SZCHSkeleton?.done(newsFeed);
+    swapIn(() => {
+      newsFeed.innerHTML = '<p class="fragment-mono-regular">Unable to load news right now. Try again later.</p>';
+    });
   }
 }
 

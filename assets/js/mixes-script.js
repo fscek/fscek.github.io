@@ -120,6 +120,7 @@ function fetchAndRenderMixes(mixes, filterValue) {
 
   const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
   const FADE_MS = 180;
+  const MIN_SKELETON_MS = 520;
   const token = ++MIX_RENDER_TOKEN;
   const isStale = () => token !== MIX_RENDER_TOKEN;
   const preloadImages = window.SZCHSkeleton?.preloadImages;
@@ -198,6 +199,7 @@ function fetchAndRenderMixes(mixes, filterValue) {
     setTimeout(async () => {
       if (isStale()) return;
       window.SZCHSkeleton.show(mixesContainer, "music", { count: 1 });
+      const shownAt = performance.now();
       requestAnimationFrame(() => {
         if (isStale()) return;
         mixesContainer.style.opacity = 1;
@@ -206,6 +208,13 @@ function fetchAndRenderMixes(mixes, filterValue) {
       if (preloadImages) {
         const imageUrls = filtered.map(m => m.image).filter(Boolean);
         await preloadImages(imageUrls, { timeoutMs: 4200 });
+        if (isStale()) return;
+      }
+
+      const elapsed = performance.now() - shownAt;
+      const remaining = Math.max(0, MIN_SKELETON_MS - elapsed);
+      if (remaining) {
+        await new Promise(resolve => setTimeout(resolve, remaining));
         if (isStale()) return;
       }
 

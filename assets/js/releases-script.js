@@ -140,6 +140,7 @@ function fetchAndRenderReleases(releases, filterValue) {
 
   const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
   const FADE_MS = 180;
+  const MIN_SKELETON_MS = 520;
   const token = ++RELEASE_RENDER_TOKEN;
   const isStale = () => token !== RELEASE_RENDER_TOKEN;
   const preloadImages = window.SZCHSkeleton?.preloadImages;
@@ -227,6 +228,7 @@ function fetchAndRenderReleases(releases, filterValue) {
     setTimeout(async () => {
       if (isStale()) return;
       window.SZCHSkeleton.show(contentContainer, "music", { count: 1 });
+      const shownAt = performance.now();
       requestAnimationFrame(() => {
         if (isStale()) return;
         contentContainer.style.opacity = 1;
@@ -235,6 +237,13 @@ function fetchAndRenderReleases(releases, filterValue) {
       if (preloadImages) {
         const imageUrls = filtered.map(r => r.image).filter(Boolean);
         await preloadImages(imageUrls, { timeoutMs: 4200 });
+        if (isStale()) return;
+      }
+
+      const elapsed = performance.now() - shownAt;
+      const remaining = Math.max(0, MIN_SKELETON_MS - elapsed);
+      if (remaining) {
+        await new Promise(resolve => setTimeout(resolve, remaining));
         if (isStale()) return;
       }
 

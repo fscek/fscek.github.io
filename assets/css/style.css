@@ -178,6 +178,8 @@ hr.dotted {
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
+    opacity: 1;
+    transition: opacity 0.28s ease;
 }
 
 .latest-chip {
@@ -259,7 +261,14 @@ hr.dotted {
 }
 
 .szch-skeleton-stack--chips {
-  gap: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.szch-skeleton-stack--chips .szch-skeleton-card--chip {
+  flex: 1 1 250px;
+  min-width: 220px;
 }
 
 .szch-skeleton-stack--music {
@@ -292,8 +301,10 @@ hr.dotted {
 }
 
 .szch-skeleton-card--chip {
+  border-width: 1px;
   border-radius: 999px;
-  padding: 0.55rem 0.85rem;
+  padding: 0.4rem 0.9rem;
+  line-height: 1.2;
 }
 
 .szch-skeleton-media-item {
@@ -306,27 +317,53 @@ hr.dotted {
 .szch-skeleton-media-item::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: -42%;
+  width: 42%;
   pointer-events: none;
-  background:
-    linear-gradient(110deg,
-      rgba(214, 125, 179, 0) 0%,
-      rgba(214, 125, 179, 0.06) 36%,
-      rgba(0, 0, 255, 0.18) 50%,
-      rgba(214, 125, 179, 0.06) 64%,
-      rgba(214, 125, 179, 0) 100%);
-  transform: translateX(-120%);
-  animation: szch-skeleton-scan 1.25s linear infinite;
+  background: linear-gradient(
+    100deg,
+    rgba(214, 125, 179, 0) 0%,
+    rgba(214, 125, 179, 0.16) 46%,
+    rgba(0, 0, 255, 0.18) 50%,
+    rgba(214, 125, 179, 0.16) 54%,
+    rgba(214, 125, 179, 0) 100%
+  );
+  transform: translateX(0);
+  animation: szch-skeleton-scan-narrow 1.6s ease-in-out infinite;
 }
 
 .szch-skeleton-chip-row {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
+}
+
+.szch-skeleton-chip-row--single {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.szch-skeleton-chip-row .szch-skeleton-line {
+  margin-top: 0;
+  flex: 0 0 auto;
+}
+
+.szch-skeleton-sep {
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  flex: 0 0 auto;
 }
 
 .szch-skeleton-chip-row--meta {
   margin-top: 0.35rem;
+}
+
+.szch-skeleton-chip-row--meta .szch-skeleton-line {
+  margin-top: 0;
 }
 
 .szch-skeleton-dot {
@@ -383,7 +420,29 @@ hr.dotted {
 }
 
 .szch-skeleton-thumb--visual {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.26);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.58), rgba(0, 0, 0, 0.07));
   max-height: min(30vh, 15rem);
+  margin-bottom: 0.55rem;
+  position: relative;
+}
+
+.szch-skeleton-count {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  width: 1.8rem;
+  height: 0.85rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+}
+
+.szch-skeleton-card--visual {
+  border-width: 1px;
 }
 
 .szch-skeleton-date-row {
@@ -412,9 +471,25 @@ hr.dotted {
   margin-top: 0.75rem;
 }
 
+.szch-skeleton-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.features-loading-skeleton {
+  opacity: 1;
+  transition: opacity 0.28s ease;
+}
+
 @keyframes szch-skeleton-scan {
   from { transform: translateX(-120%); }
   to { transform: translateX(120%); }
+}
+
+@keyframes szch-skeleton-scan-narrow {
+  from { transform: translateX(0); }
+  to { transform: translateX(350%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -628,6 +703,8 @@ hr.dotted {
     flex-direction: column;
     gap: 1.5rem;
     margin-top: 1.5rem;
+    opacity: 1;
+    transition: opacity 0.28s ease;
 }
 
 .news-title {
@@ -782,7 +859,7 @@ hr.dotted {
 
 /* for fading text content in and out */
 .releases-content-container {
-    transition: opacity 0.4s ease;
+    transition: opacity 0.18s ease;
     opacity: 1;
 }
 
@@ -807,7 +884,7 @@ hr.dotted {
 }
 
 .mixes-content-container {
-    transition: opacity 0.4s ease;
+    transition: opacity 0.18s ease;
     opacity: 1; /* Initial opacity */
 }
 
@@ -859,6 +936,11 @@ hr.dotted {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   gap: 1rem;
   align-items: start;
+}
+
+#visuals-section .visuals-content {
+  opacity: 1;
+  transition: opacity 0.28s ease;
 }
 
 /* card */

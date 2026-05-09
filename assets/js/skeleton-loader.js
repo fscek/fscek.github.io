@@ -30,14 +30,28 @@
         <div class="szch-skeleton-stack szch-skeleton-stack--chips" aria-hidden="true">
           ${repeat(count, () => `
             <article class="szch-skeleton-card szch-skeleton-card--chip">
-              <div class="szch-skeleton-chip-row">
+              <div class="szch-skeleton-chip-row szch-skeleton-chip-row--single">
                 <span class="szch-skeleton-dot"></span>
-                ${line("22%", "is-tag")}
-                ${line("45%")}
+                ${line("18%", "is-tag")}
+                ${line("40%")}
+                <span class="szch-skeleton-sep"></span>
+                ${line("16%")}
               </div>
-              <div class="szch-skeleton-chip-row szch-skeleton-chip-row--meta">
-                ${line("30%")}
-              </div>
+            </article>
+          `)}
+        </div>
+      `;
+    },
+
+    features({ count = 4 } = {}) {
+      return `
+        <div class="szch-skeleton-feature-grid" aria-hidden="true">
+          ${repeat(count, () => `
+            <article class="feature szch-skeleton-card szch-skeleton-card--feature">
+              ${line("46%", "is-title")}
+              ${line("82%")}
+              ${line("76%")}
+              ${line("38%")}
             </article>
           `)}
         </div>
@@ -78,9 +92,13 @@
         <div class="szch-skeleton-visual-grid" aria-hidden="true">
           ${repeat(count, () => `
             <article class="visual-card szch-skeleton-card szch-skeleton-card--visual">
-              <div class="visual-thumb szch-skeleton-thumb szch-skeleton-thumb--visual"></div>
-              ${line("64%", "is-title")}
-              ${line("42%")}
+              <div class="visual-thumb szch-skeleton-thumb szch-skeleton-thumb--visual">
+                <span class="szch-skeleton-count"></span>
+              </div>
+              <div class="visual-meta">
+                ${line("64%", "is-title")}
+                ${line("46%")}
+              </div>
             </article>
           `)}
         </div>

@@ -247,7 +247,34 @@ function renderChip(item) {
 async function hydrateLatestFeed() {
   const feed = document.getElementById("latest-feed");
   if (!feed) return;
-  window.SZCHSkeleton?.show(feed, "latest", { count: LATEST_LIMIT });
+  const hasSkeleton = Boolean(window.SZCHSkeleton?.show);
+  const FADE_MS = 180;
+  const MIN_SKELETON_MS = 420;
+  const skeletonShownAt = hasSkeleton ? performance.now() : 0;
+
+  const waitForSkeletonWindow = async () => {
+    if (!hasSkeleton) return;
+    const elapsed = performance.now() - skeletonShownAt;
+    const remaining = Math.max(0, MIN_SKELETON_MS - elapsed);
+    if (remaining) {
+      await new Promise(resolve => setTimeout(resolve, remaining));
+    }
+  };
+
+  const swapIn = (html) => {
+    feed.style.opacity = 0;
+    setTimeout(() => {
+      feed.innerHTML = html;
+      if (hasSkeleton) window.SZCHSkeleton.done(feed);
+      requestAnimationFrame(() => { feed.style.opacity = 1; });
+    }, FADE_MS);
+  };
+
+  if (hasSkeleton) {
+    feed.style.opacity = 0;
+    window.SZCHSkeleton.show(feed, "latest", { count: LATEST_LIMIT });
+    requestAnimationFrame(() => { feed.style.opacity = 1; });
+  }
 
   const [mixes, releases, visuals, newsMd] = await Promise.all([
     fetchJson(DATA_PATHS.mixes),
@@ -274,13 +301,13 @@ async function hydrateLatestFeed() {
   }
 
   if (!items.length) {
-    feed.innerHTML = '<p class="muted">nothing new just yet.</p>';
-    window.SZCHSkeleton?.done(feed);
+    await waitForSkeletonWindow();
+    swapIn('<p class="muted">nothing new just yet.</p>');
     return;
   }
 
-  feed.innerHTML = items.map(renderChip).join("");
-  window.SZCHSkeleton?.done(feed);
+  await waitForSkeletonWindow();
+  swapIn(items.map(renderChip).join(""));
 }
 
 document.addEventListener("DOMContentLoaded", hydrateLatestFeed);
