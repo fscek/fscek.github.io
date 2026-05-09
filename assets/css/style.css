@@ -579,18 +579,6 @@ hr.dotted {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .scrolling_text-track {
-    animation: none;
-    transform: none;
-  }
-
-  html.marquee-force-motion .scrolling_text-track {
-    animation: marquee-scroll var(--marquee-duration) linear infinite;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
   /* link custom fonts */
   @font-face {
     font-family: 'Terminal Grotesque';

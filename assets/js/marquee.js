@@ -2,20 +2,6 @@
   const marquees = Array.from(document.querySelectorAll(".scrolling_text"));
   if (!marquees.length) return;
 
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const isLocalPreviewHost = /^(localhost|127(?:\.\d{1,3}){3}|0\.0\.0\.0)$/.test(location.hostname);
-  const isVsCodePreview =
-    typeof window.acquireVsCodeApi === "function" ||
-    /vscode|electron/i.test(navigator.userAgent) ||
-    isLocalPreviewHost;
-  const forceMotionInPreview = prefersReducedMotion.matches && isVsCodePreview;
-
-  if (forceMotionInPreview) {
-    document.documentElement.classList.add("marquee-force-motion");
-  } else if (prefersReducedMotion.matches) {
-    return;
-  }
-
   const SPEED_PX_PER_SECOND = 95;
 
   function ensureSecondSegment(track) {
@@ -63,6 +49,7 @@
   }
 
   window.addEventListener("load", scheduleMeasure, { once: true });
+  window.addEventListener("pageshow", scheduleMeasure, { passive: true });
   window.addEventListener("resize", scheduleMeasure, { passive: true });
 
   // Fail-safe: never leave the marquee paused if measurement is delayed or skipped.
