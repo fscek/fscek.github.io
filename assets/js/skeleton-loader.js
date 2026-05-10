@@ -24,6 +24,18 @@
     `;
   }
 
+  function splitIntoGroups(total, groups) {
+    const safeTotal = Math.max(1, Number(total) || 1);
+    const safeGroups = Math.max(1, Math.min(safeTotal, Number(groups) || 1));
+    const base = Math.floor(safeTotal / safeGroups);
+    let remainder = safeTotal % safeGroups;
+    return Array.from({ length: safeGroups }, () => {
+      const size = base + (remainder > 0 ? 1 : 0);
+      remainder = Math.max(0, remainder - 1);
+      return size;
+    }).filter(Boolean);
+  }
+
   const templates = {
     latest({ count = 3 } = {}) {
       return `
@@ -75,9 +87,11 @@
         <div class="szch-skeleton-stack" aria-hidden="true">
           ${repeat(count, () => `
             <article class="szch-skeleton-card szch-skeleton-card--news">
-              ${line("34%")}
+              <div class="szch-skeleton-news-meta">
+                ${line("36%")}
+              </div>
               ${line("62%", "is-title")}
-              <div class="szch-skeleton-thumb"></div>
+              <div class="szch-skeleton-thumb szch-skeleton-thumb--news"></div>
               ${line("94%")}
               ${line("88%")}
               ${line("42%")}
@@ -87,20 +101,28 @@
       `;
     },
 
-    visuals({ count = 3 } = {}) {
+    visuals({ count = 3, yearCount = 2 } = {}) {
+      const groups = splitIntoGroups(count, yearCount);
       return `
-        <div class="szch-skeleton-visual-grid" aria-hidden="true">
-          ${repeat(count, () => `
-            <article class="visual-card szch-skeleton-card szch-skeleton-card--visual">
-              <div class="visual-thumb szch-skeleton-thumb szch-skeleton-thumb--visual">
-                <span class="szch-skeleton-count"></span>
-              </div>
-              <div class="visual-meta">
-                ${line("64%", "is-title")}
-                ${line("46%")}
-              </div>
-            </article>
-          `)}
+        <div class="szch-skeleton-visual-layout" aria-hidden="true">
+          ${groups.map((groupCount, groupIdx) => `
+            <div class="szch-skeleton-visual-year">
+              ${line(groupIdx === 0 ? "4.6rem" : "4rem", "is-title szch-skeleton-line--year")}
+            </div>
+            <div class="szch-skeleton-visual-grid">
+              ${repeat(groupCount, () => `
+                <article class="visual-card szch-skeleton-card szch-skeleton-card--visual">
+                  <div class="visual-thumb szch-skeleton-thumb szch-skeleton-thumb--visual">
+                    <span class="szch-skeleton-count"></span>
+                  </div>
+                  <div class="visual-meta">
+                    ${line("64%", "is-title")}
+                    ${line("46%")}
+                  </div>
+                </article>
+              `)}
+            </div>
+          `).join("")}
         </div>
       `;
     },

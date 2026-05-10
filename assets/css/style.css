@@ -419,6 +419,13 @@ hr.dotted {
   margin-top: 0.5rem;
 }
 
+.szch-skeleton-thumb--news {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.75rem;
+}
+
 .szch-skeleton-thumb--visual {
   border-style: solid;
   border-width: 1px;
@@ -445,6 +452,21 @@ hr.dotted {
   border-width: 1px;
 }
 
+.szch-skeleton-card--news .szch-skeleton-line {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.szch-skeleton-news-meta {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+
+.szch-skeleton-news-meta .szch-skeleton-line {
+  margin-top: 0;
+}
+
 .szch-skeleton-date-row {
   list-style: none;
   position: relative;
@@ -469,6 +491,22 @@ hr.dotted {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   gap: 1rem;
   margin-top: 0.75rem;
+}
+
+.szch-skeleton-visual-layout {
+  margin-top: 0.75rem;
+}
+
+.szch-skeleton-visual-year {
+  border-top: 0.1875rem dotted #0000FF;
+  padding-top: 0.6rem;
+  margin: 2rem 0 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.szch-skeleton-line--year {
+  margin-top: 0;
 }
 
 .szch-skeleton-feature-grid {
