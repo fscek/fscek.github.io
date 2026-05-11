@@ -452,6 +452,13 @@ hr.dotted {
   border-width: 1px;
 }
 
+.szch-skeleton-card--feature {
+  background: transparent;
+  border-width: 1px;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
 .szch-skeleton-card--news .szch-skeleton-line {
   margin-left: auto;
   margin-right: auto;
