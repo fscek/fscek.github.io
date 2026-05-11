@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   section.insertBefore(mount, grid);
 
   window.SZCHSkeleton.show(mount, "features", { count: 4 });
+  const FADE_MS = 280;
   grid.style.opacity = "0";
-  grid.style.transition = "opacity 0.28s ease";
+  grid.style.visibility = "hidden";
+  grid.style.transition = `opacity ${FADE_MS}ms ease`;
 
   const startedAt = performance.now();
   const MIN_VISIBLE_MS = 420;
@@ -20,10 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const remaining = Math.max(0, MIN_VISIBLE_MS - elapsed);
     setTimeout(() => {
       mount.style.opacity = "0";
-      requestAnimationFrame(() => {
-        grid.style.opacity = "1";
-      });
-      setTimeout(() => mount.remove(), 320);
+      setTimeout(() => {
+        mount.remove();
+        grid.style.visibility = "visible";
+        requestAnimationFrame(() => {
+          grid.style.opacity = "1";
+        });
+      }, FADE_MS);
     }, remaining);
   });
 });

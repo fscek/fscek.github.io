@@ -73,8 +73,7 @@
     dates({ count = 4 } = {}) {
       return repeat(count, () => `
         <li class="szch-skeleton-date-row" aria-hidden="true">
-          ${line("92%")}
-          ${line("58%")}
+          ${line("68%")}
         </li>
       `);
     },
