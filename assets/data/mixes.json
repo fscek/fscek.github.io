@@ -1,9 +1,19 @@
 [
   {
+    "title": "https://soundcloud.com/filipscekic/surf2026",
+    "date": "2026-08-02",
+    "description": "shout out to Surf for the invite, to Boris Sound System and to all the dancers<br>photo credit: Teodor Kopicl (www.instagram.com/whopicl)<br>recorded live on 2026-06-26<br>thanks Meka Drina for hosting me!",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2026/mixes/2026_surf_festival.webp",
+    "links": [
+      {"platform": "SoundCloud", "url": "https://soundcloud.com/filipscekic/surf2026?si=b14b083f82ce4dc7a9acc710d9045c1e&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"},
+      {"platform": "YouTube", "url": "https://youtu.be/CIAndKVEYDo?si=SY5mQnDEo20dz4j9"}
+    ]
+  },
+  {
     "title": "Black Teeth Radio: BALKAN REVELRY with SZCH",
     "date": "2026-02-13",
     "description": "'This edition of Balkan Revelry we have a very special guest and true heavy hitter hailing from Zagreb, SZCH.'<br>thanks Meka Drina for hosting me!",
-    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2026/mixes/2026_balkan_revelvry_black_teeth_radio.webp",
+    "image": "https://cdn.jsdelivr.net/gh/fscek/szch-me-assets/images/music/2026/mixes/2026_balkan_revelry_black_teeth_radio.webp",
     "links": [
       {"platform": "SoundCloud", "url": "https://soundcloud.com/blackteethrecords/szch-balkan-revelry-with-szch?si=cd0a5e43d938446f845c3b54ff23ebbe&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"},
       {"platform": "YouTube", "url": "https://youtu.be/RmwxCcEMZNM?si=u4Rp-u1Upm7i2BIv"}
